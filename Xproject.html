@@ -1,0 +1,134 @@
+
+<html> <!-- início do html -->
+    <meta charset="UTF-8"> <!-- este comando serve para que os caracteres especiais apareçam em dispositivos diferentes, sem ele, por exemlpo, os textos ficavam estranhos no celular -->
+<title>projectX</title>
+
+<head> <!-- esta é a "cabeça" do html, nela serão inseridos artifícios de estilização em CSS-->
+<body> <!-- não ironicamente, aqui temos um "corpo" html, separado da cabeça... ele ficará com a "pança" do site, imagine que é a parte maior, como em um corpo mesmo-->
+    
+<div> <!-- aqui nada mais que uma divisão para definir elementos do jogo que serão utilizados mais à frente -->
+    <div id="game-container"> <!-- ou seja, uma identidade unica "id" para cada elemento no conteúdo do jogo -->
+        <p id="narrativa"> <!-- no caso, serão os textos da narrativa -->
+        <div id="opcoes"> <!-- e aqui, para as opções que aparecerão nos quadradinhos dos botões clicáveis -->
+     
+        </div> <!-- aqui outra divisão para marcar o final da seção -->
+    </div>
+</body>
+</html> <!-- até aqui, em html -->
+
+<script> // esta é a parte funcional, ou seja, o "script" em JavaScript, engraçado que até o coisinha de comentar já muda de "<-- -->" para "//"
+
+const historia = { // criando uma constante, chamada história para armazenar o conteúdo de cada "página" do GameBook
+    pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" do jogo, no caso, "página 0_0" será a interface inicial.
+    {          // note que "pagina 0_0" foi nomeada com _ poara não atrapalhar o reconhecimento pelo browser
+        texto: '"Achamos que somos livres mas não somos, seguimos sempre o mesmo caminho."',
+        opcoes: [ // lembra que "opcoes" já foi visto anteriormente no html? posteriormente veremos também a sua definição em JS
+            {     // aqui, dentro das chaves, cada opção terá um texto, visível no quadradinho, e "página" referenete a ele
+                texto: "INICIAR JORNADA",    // eis aqui o texto do enunciado, que no caso, é a opção que será utilizada para iniciar a jogada, ou seja, levar para a interface
+                proximaPagina: "pagina1_0"   // e aqui, a página que ele buscará
+            }
+        ]
+    },
+    pagina1_0: { // nessa página, 1_0, já haverá mais de uma opção 
+        texto: "Em derradeiro de setembro de 1923, na manhã daquele domingo nublado, depois de tomar um café na padaria da esquina e ler o seu jornal matinal, Adam estava caminhando para casa intrigado com a notícia dos arrombamentos rece",
+        opcoes: [
+            {
+                texto: "PROSSEGUIR",
+                proximaPagina: "pagina2_0"
+            }, // naturalmente as opções são separadas aqui com o uso de vírgulas ","
+            {
+                texto: "VOLTAR PARA A PADARIA",
+                proximaPagina: "pagina2_1"
+            },
+            {
+                texto: "JÁ ME ENCHEU O SACO", // nessa opção, o texto traz uma possibilidade de enredo imprevisível, para surpreender o jogador
+                proximaPagina: "pagina2_2"
+            }
+        ]
+    },
+    pagina2_0: {
+        texto: "A movimentada cidade em que residia, onde normalmente ninguém se importaria com as singularidades de transeuntes aleatórios, era o cenário perfeito para quem deseja passar despercebido.",
+        opcoes: [
+            {
+                texto: "PROSSEGUIR",
+                proximaPagina: "pagina3_0"
+            },
+        ]
+    },
+    pagina2_1: {
+        texto: "Você já tomou café! Não há mais nada interessante a se fazer por aqui!",
+        opcoes: [
+            {
+                texto: "SAIR DA PADARIA",
+                proximaPagina: "pagina1_0"
+            },
+            {
+                texto: "TOMAR OUTRO CAFÉ",
+                proximaPagina: "pagina0_0"
+            },
+            {
+                texto: "JOGO ENFADONHO",
+                proximaPagina: "pagina2_0"
+            }
+        ]
+    },
+    pagina2_2: {
+        texto: "Lamentamos o infortúnio! Vá descansar!",
+        opcoes: [
+            {
+                texto: "REINICIAR JORNADA",
+                proximaPagina: "pagina0_0"
+            },
+            {
+                texto: "VOLTAR PARA O JOGO",
+                proximaPagina: "pagina2_1"
+            }
+        ]
+    },
+    pagina3_0: {
+        texto: "Adam Lawrence, costumava se fechar completamente para as possibilidades do mundo alheias à sua rotina, entretanto, era domingo, e ele percebeu um rapaz saindo pela janela do apartamento de sua vizinha, Elena.",
+        opcoes: []
+    }
+}
+
+// a seguir, optei por não currificar as funções, para que estas fiquem bem descritivas "function"
+//cada função, sujestivamente "function", implementará algum mecanismo no jogo
+function mostrarPagina(pagina) {  //como diz o nome, esta função 
+    const ElementoTextoHistoria = document.getElementById("narrativa")
+    const ElementoOpcoes = document.getElementById("opcoes")
+
+    const paginaAtualObj = historia[pagina]
+
+    ElementoTextoHistoria.textContent = paginaAtualObj.texto
+    
+    // é necessário limpar as opções anteriores quando se escolhe a próxima
+    ElementoOpcoes.innerHTML = ""; // a princípio, tentei implementar o código sem esta função, mas, na interface acontecia algo inesperado com os botões - ficavam se acumulano
+    
+    // adiciona as novas opções usando recursão
+    function criarOpcao(opcao) {  
+        const button = document.createElement("button")
+        button.textContent = opcao.texto
+        button.addEventListener("click", () => escolherOpcao(opcao.proximaPagina))
+        ElementoOpcoes.appendChild(button)
+    }
+
+    if (paginaAtualObj.opcoes.length > 0) {
+        criarOpcao(paginaAtualObj.opcoes[0])
+        if (paginaAtualObj.opcoes.length > 1) {
+            criarOpcao(paginaAtualObj.opcoes[1])
+        }
+    }
+}
+
+function escolherOpcao(proximaPagina) { 
+    if (historia[proximaPagina]) {
+        mostrarPagina(proximaPagina)
+    } else {
+        // Lida com o fim do jogo ou páginas inexistentes
+        alert("Fim do jogo!")
+    }
+}
+
+// Mostra a página inicial ao carregar o jogo
+mostrarPagina("pagina0_0")
+</script>
