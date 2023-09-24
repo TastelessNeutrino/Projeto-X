@@ -338,7 +338,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
         texto: "Você desiste da investigação e decide jogar um textbased rpg. Ao jogar um pouco, você percebe que o jogo é sobre um detetive que faz exatamente as mesmas escolhas que você fez ou cogitou fazer, porém com um nome diferente. Você se sente um pouco melhor depois de perceber o fato, mas ainda assim, não é mais o mesmo.",
         opcoes: [{
                 texto: "SAIR DA MATRIX",
-                proximaPagina: "pagina?"
+                proximaPagina: "paginamatrix"
             },
             {
                 texto: "NOVA JORNADA",
@@ -485,8 +485,12 @@ function escolherOpcao(proximaPagina) {
     // reproduz o efeito sonoro ao clicar em uma opção
     const efeitoSonoro = document.getElementById("efeitoSonoro");
     efeitoSonoro.play()
-    } else {
-        // para lidar com o fim do jogo ou páginas inexistentes
+    }
+    else if (proximaPagina === "paginamatrix") {
+        alert("Você venceu o jogo")
+    }
+    else {
+        // para lidar com o fim do jogo ou páginas inexistentes e um final alternativo
         alert("Fim do jogo!")
     }
 }
