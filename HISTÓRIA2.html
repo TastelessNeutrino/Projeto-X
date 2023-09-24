@@ -1,1 +1,135 @@
 HISTORIA 2
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitor</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90h;
+      margin: 3;
+      background-color: #f0f0f0;
+      margin: 0;
+    }
+
+    /*Monitor cria a moldura em preto na qual está a screen e o texto*/
+    .monitor {
+      width: 500px;
+      height: 400px;
+      background-color: #faf7f797;
+      border: 10px solid #333;
+      border-radius: 9px;
+      position: relative;
+
+    }
+
+    /* Aqui está a tela translúcida que permite a parcial visualização do fundo*/
+    .screen {
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff92;
+      border-radius: 5px;
+      overflow: hidden;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    /*A seguir há o uso de um artifício de edição de fonte, centralização do texto presente no parágrafo p da screen*/
+    .screen p {
+      font-size: 16px;
+      text-align: justify;
+      margin: 0;
+      padding-top: 15px;
+      font-family: serif;
+      font-family: fantasy;
+    }
+
+    /*Edição de botão*/
+    .buttons {
+      display: inline;
+      justify-content: safe;
+      width: 100%;
+    }
+
+    /*Estilização de conteúdo do botão*/
+    button {
+      padding: 24px 25px;
+      font-size: 16px;
+      color: rgba(229, 134, 17, 0.905);
+      font-style: oblique;
+    }
+
+    /*Isso foi usado só para organizar os botões na parte inferior, colocando-os numa div junto ao monitor. Visualize isso no Html*/
+    .all {
+      display: block;
+
+    }
+
+    /*Usado para colocar imagem como plano de fundo da página- background*/
+    .fundo {
+      background-image: url("https://mobdica.com/wp-content/uploads/2021/08/Jack-Kirby-Marvel-Quadrinhos.jpeg");
+      background-size: cover;
+      padding: 50px;
+    }
+  </style>
+  <script>
+    /* Função em construção que irá modificar o conteúdo do botão e da screen a depender do botão de escola do usuário. */
+    const mudarconteudotxtbt1ebt2 = (novotxt, botao1, botao2) => {
+       document.getElementById("p1").innerHTML = novotxt;
+       
+       document.getElementById("op1").innerHTML = botao1;
+       
+      document.getElementById("op2").innerHTML = botao2;
+   
+    }
+
+    const a=()=>{
+mudarconteudotxtbt1ebt2("casa", "botão1", "botão2")
+    }
+  </script>
+</head>
+
+<body>
+  <!--Abaixo segue as divisórias, div, usadas para separar elementos. A partir delas, mais especificamente das class, referencia no css para fazer as devidas alterações estéticas-->
+  <div class="fundo">
+
+
+
+    <div class="all"><br><br><br><br><br><br>
+
+      <div class="monitor">
+        <div clas="m1">
+          <div class="screen"> <!--Abaixo há o parágrafo que corresponde ao conteudo presente na screen, na tag p e o conteúdo da tag button-->
+            <p id="p1">Você acabou de acordar no chão de uma sala pouco iluminada, úmida e com um forte cheiro de corpos
+              em
+              decomposição.<br> Sua cabeça e corpo doem muito, e você não se lembra de nada; parece que sua memória se
+              perdeu.<br> Ao se levantar, tenta sair daquele lugar, mas está muito escuro para enxergar algo.
+              <br>Tocando
+              desesperadamente as paredes sujas da sala, encontra o que parece ser a chave de luz.<br> Você, então,
+              aperta
+              alguns botões, e as luzes começam a oscilar entre acesas e apagadas.<br> Ao dar uma olhada ao seu redor,
+              percebe que existem diversos corpos sem vida na sala, e tudo está muito sujo de sangue. <br>Todas as
+              pessoas
+              estão com aventais azuis claros, então você constata que aquilo deve ser um hospital ou algum tipo de
+              laboratório.<br> Alguns instantes depois, sirenes são acionadas, e luzes vermelhas começam a piscar na
+              sala.
+            </p>
+          </div>
+        </div> 
+        <!-- O onclick-->
+        <div class="buttons"><button id="op1" onclick="a()">Você tenta sair</button>
+          <button id="op2" onclick="a()">Fingir que ainda dorme e ir esconder-se</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
