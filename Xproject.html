@@ -1,19 +1,78 @@
-
 <html> <!-- início do html -->
+
     <meta charset="UTF-8"> <!-- este comando serve para que os caracteres especiais apareçam em dispositivos diferentes, sem ele, por exemlpo, os textos ficavam estranhos no celular -->
 <title>projectX</title>
 
-<head> <!-- esta é a "cabeça" do html, nela serão inseridos artifícios de estilização em CSS-->
+<head> <!-- esta é a "cabeça" do html-->
+
+<style>
+    
+    #opcoes {
+    text-align: center; /* Centraliza os botões horizontalmente */
+    margin-top: 45px; /* adiciona espaço na parte superior do contêiner */
+}
+        button { /* define a cor dos quadradinhos dos botões */
+
+            background-color: #500000;
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            border: none; 
+            cursor: pointer; /* o comando define o cursor como uma mãozinha quando o mouse está sobre o botão clicavel */
+            display: block; /* este serve para exibe os botões em uma nova linha, ao invés de ser um ao lado do outro */
+            margin: 0 auto; /* centraliza horizontalmente dentro do seu contêiner */
+            margin-bottom: 10px; /* adiciona espaço entre os botões */
+
+}
+
+        button:hover {
+            background-color: #000000; /* define a cor do quadradinho quando o mouse está sobre o botão */
+        }
+            
+        /* comando para centralizar o texto da narrativa */
+        #narrativa {
+            text-align: center;
+            margin-bottom: 20px; /* adiciona um espaço entre o texto e os botões */
+            margin-top: 200px; /* adiciona espaço na parte superior do contêiner */
+            margin-left: 250px; /* adiciona espaço na parte superior do contêiner */
+            margin-right: 250px; /* adiciona espaço na parte superior do contêiner */
+            font-size: 20px; /* tamanho da fonte do texto da historia */
+
+        }
+        
+       /* Estilos específicos para a página 0_0 */
+       .pagina0_0 {
+        margin-top: 10px;
+        background-image: url('detective.jpg');
+        background-size: cover; /* para ajustar a imagem ao tamanho da tela */
+        background-repeat: no-repeat; /* para evitar a repetição da imagem */
+        height: 100vh; /* para ocupar a altura total da tela */
+    }
+     /* falta terminar a implementação dessas imagens de fundo! */
+     
+    </style>
+
+</head>
 <body> <!-- não ironicamente, aqui temos um "corpo" html, separado da cabeça... ele ficará com a "pança" do site, imagine que é a parte maior, como em um corpo mesmo-->
-
-<div> <!-- aqui nada mais que uma divisão para definir elementos do jogo que serão utilizados mais à frente -->
-    <div id="game-container"> <!-- ou seja, uma identidade unica "id" para cada elemento no conteúdo do jogo -->
-        <p id="narrativa"> <!-- no caso, serão os textos da narrativa -->
-        <div id="opcoes"> <!-- e aqui, para as opções que aparecerão nos quadradinhos dos botões clicáveis -->
-
-        </div> <!-- aqui outra divisão para marcar o final da seção -->
+    
+    <audio id="efeitoSonoro">
+        <source src="efeitosonoro.mp3" type="audio/mpeg">
+    </audio>
+    
+    <div> <!-- aqui nada mais que uma divisão para definir elementos do jogo que serão utilizados mais à frente -->       
+        <div id="game-container"> <!-- ou seja, uma identidade unica "id" para cada elemento no conteúdo do jogo -->
+            <p id="narrativa"> <!-- no caso, serão os textos da narrativa -->
+            <div id="opcoes"> <!-- e aqui, para as opções que aparecerão nos quadradinhos dos botões clicáveis -->
+        </div> 
+    </div>  <!-- aqui outra divisão para marcar o final da seção -->
+    
     </div>
-</body>
+
+    <div class="pagina0_0"></div>
+    <div class="pagina1_0"></div>
+    <!-- falta terminar a implementação dessas imagens de fundo! -->
+
+
+
 </html> <!-- até aqui, em html -->
 
 <script> // esta é a parte funcional, ou seja, o "script" em JavaScript, engraçado que até o coisinha de comentar já muda de "<-- -->" para "//"
@@ -30,7 +89,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
         ]
     },
     pagina1_0: { // nessa página, 1_0, já haverá mais de uma opção
-        texto: "Em derradeiro de setembro de 1923, na manhã daquele domingo nublado, depois de tomar um café na padaria da esquina e ler o seu jornal matinal, Adam estava caminhando para casa intrigado com a notícia dos arrombamentos rece",
+        texto: "Em derradeiro de setembro de 1923, na manhã daquele domingo nublado, depois de tomar um café na padaria da esquina e ler o seu jornal matinal, Adam estava caminhando para casa intrigado com a notícia dos arrombamentos recentes.",
         opcoes: [
             {
                 texto: "PROSSEGUIR",
@@ -133,7 +192,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
            ]
     },
      pagina4_1: {
-        texto: "Adam não se importou com o que viu e voltou para casa.",
+        texto: "Adam se apressou demais para seguir prosseguir o seu percuso e não percebeu quando um luxuoso Rolls-Royce Silver Ghost 1907 o acertou em cheio! R.I.P.",
         opcoes: [{
                 texto: "SAIR DO JOGO",
                 proximaPagina: "?"
@@ -229,44 +288,57 @@ const historia = { // criando uma constante, chamada história para armazenar o 
 
 }
 
+
 // a seguir, optei por não currificar as funções, para que estas fiquem bem descritivas "function"
-//cada função, sujestivamente "function", implementará algum mecanismo no jogo
-function mostrarPagina(pagina) {  //como diz o nome, esta função
+// cada função, sujestivamente "function", implementará algum mecanismo no jogo
+function mostrarPagina(pagina) {  // como diz o nome, esta função serve para  exibir a página, ou seja,  atualiza a interface do jogo e com o texto da página atual e cria botões para as opções disponíveis na página.
     const ElementoTextoHistoria = document.getElementById("narrativa")
     const ElementoOpcoes = document.getElementById("opcoes")
 
     const paginaAtualObj = historia[pagina]
 
     ElementoTextoHistoria.textContent = paginaAtualObj.texto
-
+    
     // é necessário limpar as opções anteriores quando se escolhe a próxima
     ElementoOpcoes.innerHTML = ""; // a princípio, tentei implementar o código sem esta função, mas, na interface acontecia algo inesperado com os botões - ficavam se acumulano
-
+    
     // adiciona as novas opções usando recursão
-    function criarOpcao(opcao) {
-        const button = document.createElement("button")
-        button.textContent = opcao.texto
-        button.addEventListener("click", () => escolherOpcao(opcao.proximaPagina))
-        ElementoOpcoes.appendChild(button)
+    // função recursiva para criar botões para todas as opções
+function criarOpcoes(opcoes) {
+        if (opcoes.length === 0) {
+            return;
+        }
+
+        const opcaoAtual = opcoes[0];
+        const button = document.createElement("button");
+        button.textContent = opcaoAtual.texto;
+        button.addEventListener("click", () => escolherOpcao(opcaoAtual.proximaPagina));
+        ElementoOpcoes.appendChild(button);
+
+        // chamada recursiva para criar botões para as opções restantes
+        criarOpcoes(opcoes.slice(1));
     }
 
     if (paginaAtualObj.opcoes.length > 0) {
-        criarOpcao(paginaAtualObj.opcoes[0])
-        if (paginaAtualObj.opcoes.length > 1) {
-            criarOpcao(paginaAtualObj.opcoes[1])
-        }
+        criarOpcoes(paginaAtualObj.opcoes); // Cria botões para todas as opções
     }
 }
 
-function escolherOpcao(proximaPagina) {
+function escolherOpcao(proximaPagina) { 
     if (historia[proximaPagina]) {
-        mostrarPagina(proximaPagina)
+    
+         mostrarPagina(proximaPagina)
+         
+    // reproduz o efeito sonoro ao clicar em uma opção
+    const efeitoSonoro = document.getElementById("efeitoSonoro");
+    efeitoSonoro.play()
     } else {
-        // Lida com o fim do jogo ou páginas inexistentes
+        // para lidar com o fim do jogo ou páginas inexistentes
         alert("Fim do jogo!")
     }
 }
 
-// Mostra a página inicial ao carregar o jogo !
+// para mostrar a página inicial ao carregar o jogo
 mostrarPagina("pagina0_0")
 </script>
+</body>
