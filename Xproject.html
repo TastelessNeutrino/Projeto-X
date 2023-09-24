@@ -6,7 +6,7 @@
 <head> <!-- esta é a "cabeça" do html-->
 
 <style>
-    
+
     #opcoes {
     text-align: center; /* Centraliza os botões horizontalmente */
     margin-top: 45px; /* adiciona espaço na parte superior do contêiner */
@@ -16,7 +16,7 @@
             background-color: #500000;
             color: rgb(255, 255, 255);
             padding: 10px 20px;
-            border: none; 
+            border: none;
             cursor: pointer; /* o comando define o cursor como uma mãozinha quando o mouse está sobre o botão clicavel */
             display: block; /* este serve para exibe os botões em uma nova linha, ao invés de ser um ao lado do outro */
             margin: 0 auto; /* centraliza horizontalmente dentro do seu contêiner */
@@ -27,7 +27,7 @@
         button:hover {
             background-color: #000000; /* define a cor do quadradinho quando o mouse está sobre o botão */
         }
-            
+
         /* comando para centralizar o texto da narrativa */
         #narrativa {
             text-align: center;
@@ -38,7 +38,7 @@
             font-size: 20px; /* tamanho da fonte do texto da historia */
 
         }
-        
+
        /* Estilos específicos para a página 0_0 */
        .pagina0_0 {
         margin-top: 10px;
@@ -48,23 +48,23 @@
         height: 100vh; /* para ocupar a altura total da tela */
     }
      /* falta terminar a implementação dessas imagens de fundo! */
-     
+
     </style>
 
 </head>
 <body> <!-- não ironicamente, aqui temos um "corpo" html, separado da cabeça... ele ficará com a "pança" do site, imagine que é a parte maior, como em um corpo mesmo-->
-    
+
     <audio id="efeitoSonoro">
         <source src="efeitosonoro.mp3" type="audio/mpeg">
     </audio>
-    
-    <div> <!-- aqui nada mais que uma divisão para definir elementos do jogo que serão utilizados mais à frente -->       
+
+    <div> <!-- aqui nada mais que uma divisão para definir elementos do jogo que serão utilizados mais à frente -->
         <div id="game-container"> <!-- ou seja, uma identidade unica "id" para cada elemento no conteúdo do jogo -->
             <p id="narrativa"> <!-- no caso, serão os textos da narrativa -->
             <div id="opcoes"> <!-- e aqui, para as opções que aparecerão nos quadradinhos dos botões clicáveis -->
-        </div> 
+        </div>
     </div>  <!-- aqui outra divisão para marcar o final da seção -->
-    
+
     </div>
 
     <div class="pagina0_0"></div>
@@ -135,7 +135,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
         texto: "Lamentamos o infortúnio! Vá descansar!",
         opcoes: [
             {
-                texto: "REINICIAR JORNADA",
+                texto: "NOVA JORNADA",
                 proximaPagina: "pagina0_0"
             },
             {
@@ -145,7 +145,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
         ]
     },
     pagina3_0: {
-        texto: "Adam Lawrence, costumava se fechar completamente para as possibilidades do mundo alheias à sua rotina, entretanto, era domingo, e ele percebeu um rapaz saindo pela janela do apartamento de sua vizinha, Elena.",
+        texto: "Adam Lawrence, costumava se fechar completamente para as possibilidades do mundo alheias à sua rotina, entretanto, era domingo, e ele percebeu um rapaz saindo pela janela do apartamento de sua vizinha, Isabella.",
         opcoes: [
             {
                 texto: "SEGUIR SUSPEITO",
@@ -159,34 +159,31 @@ const historia = { // criando uma constante, chamada história para armazenar o 
                 texto: "IGNORAR O SUSPEITO E VOLTAR PARA CASA",
                 proximaPagina: "pagina4_1"
             },
-            {
-                texto: "SEGUIR SUSPEITO",
-                proximaPagina: "pagina4_2"
-            }]
+        ]
     },
     pagina2_2cafe: {
         texto: "Testemunhas relataram às autoridades, o comportamento frenético e alucinado de Adam que enfartou ao ingerir quantidades inacreditáveis do líquido. R.I.P.",
         opcoes: [{
-                texto: "REINICIAR JORNADA",
+                texto: "NOVA JORNADA",
                 proximaPagina: "pagina0_0"
             },
             {
-                texto: "Sair do jogo",
+                texto: "SAIR DO JOGO",
                 proximaPagina: "pagina ?"
             }]
     },
      pagina4_2: {
         texto: "Despretensiosamente, ele resolve seguir o sujeito até um pub. Chegando lá ele se depara com Michelle, sua colega do escritório.",
         opcoes: [{
-                texto: "Falar com Michelle",
+                texto: "FALAR COM MICHELLE",
                 proximaPagina: "pagina7_0"
             },
             {
-                texto: "Ignorar Michelle e beberricar um pouco",
-                proximaPagina: "pagina7_1"
+                texto: "IGNORAR MICHELLE E BEBERRICAR UM POUCO",
+                proximaPagina: "pagina2_2cafe"
             },
             {
-                texto: "Continuar seguindo o suspeito",
+                texto: "CONTINUAR SEGUINDO O SUSPEITO",
                 proximaPagina: "pagina7_2"
             }
            ]
@@ -198,7 +195,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
                 proximaPagina: "?"
             },
             {
-                texto: "REINICIAR JORNADA",
+                texto: "NOVA JORNADA",
                 proximaPagina: "pagina0_0"
             }]
     },
@@ -206,7 +203,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
         texto: "Adam tentou se desculpar, mas as desculpas não foram aceitas e as autoridades foram acionadas. Trágico fim! Adam foi institucionalizado.",
         opcoes: [
             {
-                texto: "REINICIAR JORNADA",
+                texto: "NOVA JORNADA",
                 proximaPagina: "pagina0_0"
             },
             {
@@ -215,13 +212,13 @@ const historia = { // criando uma constante, chamada história para armazenar o 
             }]
     },
     pagina4_0: {
-        texto: "Adam arremessou uma pedra na direção do suspeito, que se virou e o encarou com um olhar de desdém.",
+        texto: "Adam, se enfureceu ao ponto de atingir o suspeito com uma pedra. Estranhamente, Isabella, sua vizinha, correu para socorrer o suposto invasor que na verdade era um caso extraconjugal.",
         opcoes: [{
                 texto: "SE DESCULPAR",
                 proximaPagina: "pagina5_0"
             },
             {
-                texto: "REINICIAR JORNADA",
+                texto: "NOVA JORNADA",
                 proximaPagina: "pagina0_0"
             },
             {
@@ -244,48 +241,204 @@ const historia = { // criando uma constante, chamada história para armazenar o 
         texto: "Adam escolhe se aproximar para obter mais informações e, em um momento inesperado, acaba se envolvendo em um confronto com o invasor. As coisas podem ficar perigosas, e Adam terá que tomar decisões rápidas para lidar com a situação.",
         opcoes: [{
                 texto: "PRENDER O SUSPEITO",
-                proximaPagina: "453544"
+                proximaPagina: "pagina88_1"
             },
-            ,
+
         {
                 texto: "FAZER ACORDO COM O SUSPEITO",
-                proximaPagina: "pagina5544"
+                proximaPagina: "pagina88_2"
             },
         {
                 texto: "DEIXAR ELE ESCAPAR",
-                proximaPagina: "pagina555555"
+                proximaPagina: "pagina88_3"
             },
         {
                 texto: "INTIMIDAR O SUSPEITO",
-                proximaPagina: "pagina555"
+                proximaPagina: "pagina88_4"
             }]
     },
 
     pagina8_0: {
         texto: "A dupla de detetives amadores, Michelle e Adam, decidem iniciar suas investigações, mergulhando no mistério que envolve o suspeito e o que está acontecendo com Isabella. Eles suspeitam que há segredos ocultos a serem descobertos e estão determinados a descobrir a verdade, mesmo que isso os leve a lugares obscuros e perigosos na cidade.",
         opcoes: [{
-                texto: "Hmm, interessante...",
+                texto: "HMM, INTERESSANTE...",
                 proximaPagina: "pagina8_1"
             },
             {
-                texto: "Ok",
+                texto: "OK",
                 proximaPagina: "pagina8_1"
             }]
     },
-         pagina8_1: {
+    pagina8_1: {
         texto: "Michelle e Adam decidem procurar Isabella para esclarecer a situação e obter mais informações. Ao se aproximarem dela com cautela, Isabella começa a revelar gradualmente os segredos que ela estava escondendo, levando-os a perceber que há um conflito oculto acontecendo nos bastidores, do qual ela é parte fundamental.",
         opcoes: [{
-                texto: "",
-                proximaPagina: ""
+                texto: "ADAM X ISABELLA",
+                proximaPagina: "paginadella"
             },
             {
-                texto: "",
-                proximaPagina: "pagina"
+                texto: "MICHELLE X ISABELLA",
+                proximaPagina: "paginamibella"
+            }]
+    },
+    pagina88_1: {
+        texto: "Adam, após o confronto, decide chamar a polícia e entregar o suspeito às autoridades. O invasor é preso preventivamente, mas Adam continua ignorante sobre sua verdadeira identidade. A polícia agradece a colaboração de Adam e promete investigar o caso com seriedade.",
+        opcoes: [{
+            texto: "NOVA JORNADA",
+            proximaPagina: "pagina0_0"
+        },
+            {
+                texto: " SAIR DO JOGO   ",
+                proximaPagina: "paginanothing"
+            }]
+    },
+        pagina88_2: {
+        texto: "Em vez de entregá-lo à polícia, Adam decide fazer um acordo com o suspeito, negociando informações em troca de sua liberdade. O suspeito concorda em revelar detalhes sobre sua relação extraconjugal com Isabella e suas atividades suspeitas.",
+        opcoes: [{
+                texto: "CAIR NO PAPINHO",
+                proximaPagina: "paginafuienganado"
             }]
     },
 
+        pagina88_3: {
+        texto: "Adam, em um momento de dúvida, permite que o suspeito fuja do confronto. O suspeito desaparece na escuridão, deixando Adam com mais perguntas do que respostas.",
+        opcoes: [{
+                texto: "DESISTIR DA INVESTIGAÇÃO E FAZER ALGO MAIS INTERESSANTE",
+                proximaPagina: "paginaescape"
+            },
+            {
+                texto: "PERDER DO JOGO",
+                proximaPagina: "pagina?"
+            }]
+    },
+        pagina88_4: {
+        texto: "As ações de Adam têm consequências. Ele pode enfrentar acusações de perturbação da ordem pública e briga de bar. Sua imagem e reputação podem ser afetadas",
+        opcoes: [{
+                texto: "ESPANCAR O SUSPEITO",
+                proximaPagina: "paginaespancar"
+            },
+            {
+                texto: "DEIXAR O SUSPEITO ESCAPAR",
+                proximaPagina: "pagina???"
+            },
+            {
+                texto: "FORÇÁ-LO A ENTREGAR INFORMAÇÕES",
+                proximaPagina: "paginafuienganado"
 
+            }]
+    },
+        paginafuienganado: {
+        texto: " As informações fornecidas pelo suspeito eram falsas, e os criminosos aproveitaram a confiança de Adam para encobrir suas atividades. Os culpados escapam impunes, a conspiração se aprofunda e a cidade continua a ser assolada pelos arrombamentos. Adam enfrenta a devastação de ter confiado nas informações erradas, e a verdadeira figura por trás dos crimes permanece oculta.",
+        opcoes: [{
+                texto: "NOVA JORNADA",
+                proximaPagina: "pagina0_0"
+            },
+            ]
+    },
+        paginaescape: {
+        texto: "Você desiste da investigação e decide jogar um textbased rpg. Ao jogar um pouco, você percebe que o jogo é sobre um detetive que faz exatamente as mesmas escolhas que você fez ou cogitou fazer, porém um nome diferente. Você se sente um pouco melhor depois de perceber o fato, mas ainda assim, não é mais o mesmo.",
+        opcoes: [{
+                texto: "SAIR DA MATRIX",
+                proximaPagina: "pagina?"
+            },
+            {
+                texto: "NOVA JORNADA",
+                proximaPagina: "pagina0_0"
+            }]
+    },
+        paginaespancar: {
+        texto: "Após a escalada das hostilidades, o caos se instala no pub. Adam, em sua tentativa de obter informações do suspeito, se vê preso na confusão e acaba sendo detido junto com o suspeito pela polícia.",
+        opcoes: [{
+                texto: "NOVA JORNADA",
+                proximaPagina: "pagina0_0"
+            },
+            {
+                texto: "SAIR DO JOGO",
+                proximaPagina: "pagina???"
+            }]
+    },
 
+        paginamibella: {
+        texto: "Enquanto investigam os vínculos do relacionamento de Isabella com Sandro, Michelle dobra a aposta e acaba descobrindo que Isabella é, na verdade, a filha de Don Vincenzo Romano, um mafioso poderoso na cidade. Isabella acaba confessando que está sendo ameaçada como parte dos planos de uma seita que busca influencia na máfia local e ganhar acesso às atividades criminosas de Don Vincenzo.",
+        opcoes: [{
+                texto: "SEGUIR",
+                proximaPagina: "paginaquasefinal"
+            },
+            ]
+    },
+        paginadella: {
+        texto: "Isabella mostrou uma notável resistência em compartilhar informações com Adam. Cada vez que ele tentava se aproximar do cerne do mistério, ela parecia habilmente desviar suas perguntas ou fornecer respostas evasivas. Ela mantinha uma muralha de segredos em torno de sua vida e dos perigos que enfrentava, fazendo com que Adam se sentisse constantemente em desvantagem.",
+        opcoes: [{
+                texto: "BLÁ-BLÁ-BLÁ ENCHEU O SACO",
+                proximaPagina: "perdeuhihihihi"
+            },
+            {
+                texto: "MICHELLE X ISABELLA (canon)",
+                proximaPagina: "paginamibella"
+            }]
+    },
+        paginaquasefinal: {
+        texto: "Os invasores roubam documentos confidenciais, registros financeiros e informações pessoais que podem ser usados como alavancagem contra figuras poderosas da cidade. Invasões paralelas foram planejadas para criar distrações e desviar a atenção das atividades de chantagem e conspiração do grupo.",
+        opcoes: [{
+                texto: "AJUDAR ISABELLA",
+                proximaPagina: "paginajuda"
+            },
+            {
+                texto: "PROBLEMA DELA",
+                proximaPagina: "paginafodasela"
+            }]
+    },
+        paginafodasela: {
+        texto: "Com Michelle e Adam decidindo deixar Isabella à própria sorte, ela se vê sozinha em sua luta contra a seita e suas ameaças. Isabella, desesperada para proteger a si e à integridade de Sandro, é forçada a tomar decisões difíceis e a manter um equilíbrio delicado entre proteger seu relacionamento e ajudar os chantagistas. Enquanto isso, as invasões paralelas continuam a criar distrações na cidade, desviando a atenção das atividades de chantagem e conspiração do grupo secreto. Figuras poderosas da cidade começam a ser alvo das chantagens, resultando em tensões crescentes e potenciais consequências devastadoras para a cidade",
+        opcoes: [{
+                texto: "MUDAR DE IDEIA E AJUDAR ISABELLA",
+                proximaPagina: "paginaideia"
+            },
+            {
+                texto: "ACEITAR AS CONSEQUÊNCIAS",
+                proximaPagina: "paginaconsequencias"
+            }]
+    },
+        paginajuda: {
+        texto: "Michelle, Adam e Isabella, formando uma equipe improvável, trabalham juntos para investigar, identificar os membros da seita e coletar evidências contra eles. Michelle, Adam e Isabella se reúnem, formando uma equipe improvável. Trabalham juntos, utilizando suas habilidades para investigar, identificar os membros da seita e coletar evidências contra elesEles conseguem desvendar os segredos da seita e expor suas atividades criminosas. Em uma confrontação final com os líderes da seita, onde Michelle, Adam e Isabella, apoiados por evidências irrefutáveis, conseguem expor a verdade, frustrar os planos conspiratórios e desmantelar a seita. A cidade é salva do caos instalado pelas chantagens e do controle da seita, e as figuras poderosas envolvidas podem ser responsabilizadas por seus crimes.",
+        opcoes: [{
+                texto: "E O CORNO ?",
+                proximaPagina: "paginacasamento"
+            },
+            {
+                texto: "E A MÁFIA DO ROMANO ?",
+                proximaPagina: "pagina404"
+            }]
+    },
+        paginacasamento: {
+        texto: "Quanto ao casamento marcado da filha de Don Vincenzo Romano... bem, este entrou em ruína, após Isabella se mandar para a Itália com seu amante Sandro. ",
+        opcoes: [{
+                texto: "VOLTAR",
+                proximaPagina: "paginajuda"
+            }]
+    },
+        pagina404: {
+        texto: "( 404 error: File not found ) Os scripts desta seção foram tragicamente perdidos quando Kalil se esbarrou nos cabos do computador no laboratório.",
+        opcoes: [{
+                texto: "RESET",
+                proximaPagina: "pagina0_0"
+            }]
+    },
+        paginaconsequencias: {
+        texto: "Michelle e Adam optam por não se envolverem mais na situação e continuar com suas vidas cotidianas, ignorando as crescentes tensões na cidade e as atividades da seita. Eles acreditam que não é responsabilidade deles lidar com a situação e tentam manter distância dos acontecimentos.",
+        opcoes: [{
+                texto: "SAIR DO JOGO",
+                proximaPagina: "pagina????"
+            },
+             ]
+    },
+        paginaideia: {
+        texto: "À medida que a situação na cidade fica insustentável, Michelle e Adam, consumidos pelo remorso e preocupados com o destino de Isabella e da cidade, decidem finalmente se envolver. Eles reconhecem que a seita representa uma ameaça significativa e que sua ajuda é crucial para impedir as chantagens e conspirações.",
+        opcoes: [{
+                texto: "AJUDAR ISABELLA",
+                proximaPagina: "paginajuda"
+            },
+            ]
+    },
 }
 
 
@@ -298,10 +451,10 @@ function mostrarPagina(pagina) {  // como diz o nome, esta função serve para  
     const paginaAtualObj = historia[pagina]
 
     ElementoTextoHistoria.textContent = paginaAtualObj.texto
-    
+
     // é necessário limpar as opções anteriores quando se escolhe a próxima
     ElementoOpcoes.innerHTML = ""; // a princípio, tentei implementar o código sem esta função, mas, na interface acontecia algo inesperado com os botões - ficavam se acumulano
-    
+
     // adiciona as novas opções usando recursão
     // função recursiva para criar botões para todas as opções
 function criarOpcoes(opcoes) {
@@ -324,11 +477,11 @@ function criarOpcoes(opcoes) {
     }
 }
 
-function escolherOpcao(proximaPagina) { 
+function escolherOpcao(proximaPagina) {
     if (historia[proximaPagina]) {
-    
+
          mostrarPagina(proximaPagina)
-         
+
     // reproduz o efeito sonoro ao clicar em uma opção
     const efeitoSonoro = document.getElementById("efeitoSonoro");
     efeitoSonoro.play()
