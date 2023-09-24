@@ -1,3 +1,4 @@
+
 <html> <!-- início do html -->
     <meta charset="UTF-8"> <!-- este comando serve para que os caracteres especiais apareçam em dispositivos diferentes, sem ele, por exemlpo, os textos ficavam estranhos no celular -->
 <title>projectX</title>
@@ -86,7 +87,12 @@ const historia = { // criando uma constante, chamada história para armazenar o 
     },
     pagina3_0: {
         texto: "Adam Lawrence, costumava se fechar completamente para as possibilidades do mundo alheias à sua rotina, entretanto, era domingo, e ele percebeu um rapaz saindo pela janela do apartamento de sua vizinha, Elena.",
-        opcoes: [{
+        opcoes: [
+            {
+                texto: "SEGUIR SUSPEITO",
+                proximaPagina: "pagina4_2"
+            },
+            {
                 texto: "ARREMESSAR UMA PEDRA",
                 proximaPagina: "pagina4_0"
             },
@@ -111,11 +117,19 @@ const historia = { // criando uma constante, chamada história para armazenar o 
             }]
     },
      pagina4_2: {
-        texto: "Despretensiosamente, ele resolve seguir o sujeito até um pub.",
+        texto: "Despretensiosamente, ele resolve seguir o sujeito até um pub. Chegando lá ele se depara com Michelle, sua colega do escritório.",
         opcoes: [{
-                texto: "PROSSEGUIR",
+                texto: "Falar com Michelle",
                 proximaPagina: "pagina7_0"
             },
+            {
+                texto: "Ignorar Michelle e beberricar um pouco",
+                proximaPagina: "pagina7_1"
+            },
+            {
+                texto: "Continuar seguindo o suspeito",
+                proximaPagina: "pagina7_2"
+            }
            ]
     },
      pagina4_1: {
@@ -142,7 +156,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
             }]
     },
     pagina4_0: {
-        texto: "Adam, se enfureceu ao ponto de atingir o suspeito com uma pedra. Estranhamente, Isabella, sua vizinha, correu para socorrer o suposto invasor que na verdade era um caso extraconjugal.",
+        texto: "Adam arremessou uma pedra na direção do suspeito, que se virou e o encarou com um olhar de desdém.",
         opcoes: [{
                 texto: "SE DESCULPAR",
                 proximaPagina: "pagina5_0"
@@ -152,10 +166,67 @@ const historia = { // criando uma constante, chamada história para armazenar o 
                 proximaPagina: "pagina0_0"
             },
             {
-                texto: "SAIR DO JOGO",
+                texto: "EU DESISTO",
                 proximaPagina: "?"
             }]
     },
+    pagina7_0: {
+        texto: "Conversando com Michelle, Adam percebe que ela está realmente interessada nos casos de invasões domiciliares. Ela relata o temor de que a cidade fique perigosa com a imigração. Adam comenta sobre o assunto e menciona o que acabou de ver na janela do apartamento de sua vizinha, Isabella. Michelle fica empolgada e sugere que eles explorem mais a situação, talvez conversando com Isabella ou investigando sua vizinhança para entender melhor os acontecimentos recentes.",
+        opcoes: [{
+                texto: "ACOMPANHAR MICHELLE",
+                proximaPagina: "pagina8_0"
+            },
+            {
+                texto: "SAIR DO PUB SOZINHO, SEM FALAR COM MICHELLE",
+                proximaPagina: "?"
+            }]
+    },
+    pagina7_2: {
+        texto: "Adam escolhe se aproximar para obter mais informações e, em um momento inesperado, acaba se envolvendo em um confronto com o invasor. As coisas podem ficar perigosas, e Adam terá que tomar decisões rápidas para lidar com a situação.",
+        opcoes: [{
+                texto: "PRENDER O SUSPEITO",
+                proximaPagina: "453544"
+            },
+            ,
+        {
+                texto: "FAZER ACORDO COM O SUSPEITO",
+                proximaPagina: "pagina5544"
+            },
+        {
+                texto: "DEIXAR ELE ESCAPAR",
+                proximaPagina: "pagina555555"
+            },
+        {
+                texto: "INTIMIDAR O SUSPEITO",
+                proximaPagina: "pagina555"
+            }]
+    },
+
+    pagina8_0: {
+        texto: "A dupla de detetives amadores, Michelle e Adam, decidem iniciar suas investigações, mergulhando no mistério que envolve o suspeito e o que está acontecendo com Isabella. Eles suspeitam que há segredos ocultos a serem descobertos e estão determinados a descobrir a verdade, mesmo que isso os leve a lugares obscuros e perigosos na cidade.",
+        opcoes: [{
+                texto: "Hmm, interessante...",
+                proximaPagina: "pagina8_1"
+            },
+            {
+                texto: "Ok",
+                proximaPagina: "pagina8_1"
+            }]
+    },
+         pagina8_1: {
+        texto: "Michelle e Adam decidem procurar Isabella para esclarecer a situação e obter mais informações. Ao se aproximarem dela com cautela, Isabella começa a revelar gradualmente os segredos que ela estava escondendo, levando-os a perceber que há um conflito oculto acontecendo nos bastidores, do qual ela é parte fundamental.",
+        opcoes: [{
+                texto: "",
+                proximaPagina: ""
+            },
+            {
+                texto: "",
+                proximaPagina: "pagina"
+            }]
+    },
+
+
+
 }
 
 // a seguir, optei por não currificar as funções, para que estas fiquem bem descritivas "function"
