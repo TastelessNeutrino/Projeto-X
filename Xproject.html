@@ -1,16 +1,15 @@
-
 <html> <!-- início do html -->
     <meta charset="UTF-8"> <!-- este comando serve para que os caracteres especiais apareçam em dispositivos diferentes, sem ele, por exemlpo, os textos ficavam estranhos no celular -->
 <title>projectX</title>
 
 <head> <!-- esta é a "cabeça" do html, nela serão inseridos artifícios de estilização em CSS-->
 <body> <!-- não ironicamente, aqui temos um "corpo" html, separado da cabeça... ele ficará com a "pança" do site, imagine que é a parte maior, como em um corpo mesmo-->
-    
+
 <div> <!-- aqui nada mais que uma divisão para definir elementos do jogo que serão utilizados mais à frente -->
     <div id="game-container"> <!-- ou seja, uma identidade unica "id" para cada elemento no conteúdo do jogo -->
         <p id="narrativa"> <!-- no caso, serão os textos da narrativa -->
         <div id="opcoes"> <!-- e aqui, para as opções que aparecerão nos quadradinhos dos botões clicáveis -->
-     
+
         </div> <!-- aqui outra divisão para marcar o final da seção -->
     </div>
 </body>
@@ -29,7 +28,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
             }
         ]
     },
-    pagina1_0: { // nessa página, 1_0, já haverá mais de uma opção 
+    pagina1_0: { // nessa página, 1_0, já haverá mais de uma opção
         texto: "Em derradeiro de setembro de 1923, na manhã daquele domingo nublado, depois de tomar um café na padaria da esquina e ler o seu jornal matinal, Adam estava caminhando para casa intrigado com a notícia dos arrombamentos rece",
         opcoes: [
             {
@@ -64,7 +63,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
             },
             {
                 texto: "TOMAR OUTRO CAFÉ",
-                proximaPagina: "pagina0_0"
+                proximaPagina: "pagina2_2cafe"
             },
             {
                 texto: "JOGO ENFADONHO",
@@ -85,6 +84,21 @@ const historia = { // criando uma constante, chamada história para armazenar o 
             }
         ]
     },
+    pagina3_0: {
+        texto: "Adam Lawrence, costumava se fechar completamente para as possibilidades do mundo alheias à sua rotina, entretanto, era domingo, e ele percebeu um rapaz saindo pela janela do apartamento de sua vizinha, Elena.",
+        opcoes: [{
+                texto: "ARREMESSAR UMA PEDRA",
+                proximaPagina: "pagina4_0"
+            },
+            {
+                texto: "IGNORAR O SUSPEITO E VOLTAR PARA CASA",
+                proximaPagina: "pagina4_1"
+            },
+            {
+                texto: "SEGUIR SUSPEITO",
+                proximaPagina: "pagina4_2"
+            }]
+    },
     pagina2_2cafe: {
         texto: "Testemunhas relataram às autoridades, o comportamento frenético e alucinado de Adam que enfartou ao ingerir quantidades inacreditáveis do líquido. R.I.P.",
         opcoes: [{
@@ -96,26 +110,39 @@ const historia = { // criando uma constante, chamada história para armazenar o 
                 proximaPagina: "pagina ?"
             }]
     },
-    pagina3_0: {
-        texto: "Adam Lawrence, costumava se fechar completamente para as possibilidades do mundo alheias à sua rotina, entretanto, era domingo, e ele percebeu um rapaz saindo pela janela do apartamento de sua vizinha, Elena.",
+     pagina4_2: {
+        texto: "Despretensiosamente, ele resolve seguir o sujeito até um pub.",
+        opcoes: [{
+                texto: "PROSSEGUIR",
+                proximaPagina: "pagina7_0"
+            },
+           ]
+    },
+     pagina4_1: {
+        texto: "Adam não se importou com o que viu e voltou para casa.",
+        opcoes: [{
+                texto: "SAIR DO JOGO",
+                proximaPagina: "?"
+            },
+            {
+                texto: "REINICIAR JORNADA",
+                proximaPagina: "pagina0_0"
+            }]
+    },
+    pagina5_0: {
+        texto: "Adam tentou se desculpar, mas as desculpas não foram aceitas e as autoridades foram acionadas. Trágico fim! Adam foi institucionalizado.",
         opcoes: [
             {
-                texto: "ARREMESSAR UMA PEDRA",
-                proximaPagina: "pagina4_0"
+                texto: "REINICIAR JORNADA",
+                proximaPagina: "pagina0_0"
             },
             {
-                texto: "IGNORAR O SUSPEITO E VOLTAR PARA CASA",
-                proximaPagina: "pagina4_1"
-            },
-            {
-                texto: "SEGUIR SUSPEITO",
-                proximaPagina: "pagina4_2"
-            }
-        ]
+                texto: "SAIR DO JOGO",
+                proximaPagina: "?"
+            }]
     },
-
-    pagina4_2: {
-        texto: "Despretensiosamente, ele resolve seguir o sujeito até um pub.",
+    pagina4_0: {
+        texto: "Adam arremessou uma pedra na direção do suspeito, que se virou e o encarou com um olhar de desdém.",
         opcoes: [{
                 texto: "SE DESCULPAR",
                 proximaPagina: "pagina5_0"
@@ -129,124 +156,23 @@ const historia = { // criando uma constante, chamada história para armazenar o 
                 proximaPagina: "?"
             }]
     },
-     pagina4_1: {
-        texto: "Adam não se importou com o que viu e voltou para casa.",
-        opcoes: [{
-                texto: "SAIR DO JOGO",
-                proximaPagina: "?"
-            },
-            {
-                texto: "REINICIAR JORNADA",
-                proximaPagina: "pagina0_0"
-            }]
-    },
-     pagina2_8: {
-        texto: "Lamúria\n" +
-            "substantivo feminino\n" +
-            "\n" +
-            "lamentação interminável, que importuna e que a nada leva; queixume, queixa.\n" +
-            "\n" +
-            "Semelhantes\n" +
-            "lamentação, lenga-lenga, queixume, alarida...\n",
-        opcoes: [{
-                texto: "SAIR DO JOGO",
-                proximaPagina: "?"
-            },
-            ]
-    },
-     paginaX_X: {
-        texto: "",
-        opcoes: [{
-                texto: "",
-                proximaPagina: ""
-            },
-            {
-                texto: "",
-                proximaPagina: "pagina"
-            }]
-    },
-     paginaX_X: {
-        texto: "",
-        opcoes: [{
-                texto: "",
-                proximaPagina: ""
-            },
-            {
-                texto: "",
-                proximaPagina: "pagina"
-            }]
-    },
-     paginaX_X: {
-        texto: "",
-        opcoes: [{
-                texto: "",
-                proximaPagina: ""
-            },
-            {
-                texto: "",
-                proximaPagina: "pagina"
-            }]
-    },
-     paginaX_X: {
-        texto: "",
-        opcoes: [{
-                texto: "",
-                proximaPagina: ""
-            },
-            {
-                texto: "",
-                proximaPagina: "pagina"
-            }]
-    },
-     paginaX_X: {
-        texto: "",
-        opcoes: [{
-                texto: "",
-                proximaPagina: ""
-            },
-            {
-                texto: "",
-                proximaPagina: "pagina"
-            }]
-    },
-     paginaX_X: {
-        texto: "",
-        opcoes: [{
-                texto: "",
-                proximaPagina: ""
-            },
-            {
-                texto: "",
-                proximaPagina: "pagina"
-            }]
-    },
-     paginaX_X: {
-        texto: "",
-        opcoes: [{
-                texto: "",
-                proximaPagina: ""
-            },
-            {
-                texto: "",
-                proximaPagina: "pagina"
-            }]
-    },
+}
 
 // a seguir, optei por não currificar as funções, para que estas fiquem bem descritivas "function"
 //cada função, sujestivamente "function", implementará algum mecanismo no jogo
-function mostrarPagina(pagina) {  //como diz o nome, esta função 
+function mostrarPagina(pagina) {  //como diz o nome, esta função
     const ElementoTextoHistoria = document.getElementById("narrativa")
     const ElementoOpcoes = document.getElementById("opcoes")
 
     const paginaAtualObj = historia[pagina]
 
     ElementoTextoHistoria.textContent = paginaAtualObj.texto
-    
+
     // é necessário limpar as opções anteriores quando se escolhe a próxima
     ElementoOpcoes.innerHTML = ""; // a princípio, tentei implementar o código sem esta função, mas, na interface acontecia algo inesperado com os botões - ficavam se acumulano
-    
+
     // adiciona as novas opções usando recursão
-    function criarOpcao(opcao) {  
+    function criarOpcao(opcao) {
         const button = document.createElement("button")
         button.textContent = opcao.texto
         button.addEventListener("click", () => escolherOpcao(opcao.proximaPagina))
@@ -261,15 +187,15 @@ function mostrarPagina(pagina) {  //como diz o nome, esta função
     }
 }
 
-function escolherOpcao(proximaPagina) { 
+function escolherOpcao(proximaPagina) {
     if (historia[proximaPagina]) {
         mostrarPagina(proximaPagina)
     } else {
         // Lida com o fim do jogo ou páginas inexistentes
         alert("Fim do jogo!")
     }
+}
 
 // Mostra a página inicial ao carregar o jogo
-
 mostrarPagina("pagina0_0")
 </script>
