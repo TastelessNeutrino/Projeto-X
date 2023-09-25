@@ -57,26 +57,37 @@
             background-repeat: no-repeat; 
             height: 100vh; 
         }
+
+        .pagina4_1{
+            margin-top: 0px;
+            background-image: url('https://coolwallpapers.me/th700/5766757-rolls-royce-silver-ghost-wallpapers.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+
      /* falta terminar a implementação dessas imagens de fundo! =( */
-     
+
     </style>
 
 </head>
 <body> <!-- não ironicamente, aqui temos um "corpo" HTML, separado da cabeça... ele ficará com a "pança" do site, imagine que é a parte maior, como em um corpo mesmo-->
-    
+
     <audio id="efeitoSonoro"> <!-- o efeito sonoro que será implementado mais a diante é específicado aqui -->
         <source src="efeitosonoro.mp3" type="audio/mpeg"> <!-- nessa parte especifica, o local do arquivo de áudio que o elemento carregará e reproduzirá -->
     </audio>
-    
-    <div> <!-- aqui nada mais que uma divisão para definir elementos do jogo que serão utilizados mais à frente -->       
+
+    <div> <!-- aqui nada mais que uma divisão para definir elementos do jogo que serão utilizados mais à frente -->
         <div id="game-container"> <!-- ou seja, uma identidade unica "id" para cada elemento no conteúdo do jogo -->
             <p id="narrativa"> </p> <!-- no caso, serão os textos da narrativa -->
             <div id="opcoes"> <!-- e aqui, para as opções que aparecerão nos quadradinhos dos botões clicáveis -->
-        </div> 
+        </div>
     </div>  <!-- aqui outra divisão para marcar o final da seção -->
-    
+
     <div class="pagina0_0" id="pagina0_0"></div>
     <div class="pagina1_0" id="pagina1_0"></div>
+    <div class="pagina4_1" id="pagina4_1"></div>
     <!-- falta terminar a implementação dessas imagens de fundo! -->
 
 
@@ -102,7 +113,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
             {
                 texto: "PROSSEGUIR",
                 proximaPagina: "pagina2_0"
-            }, // naturalmente as opções são separadas aqui com o uso de vírgulas "," 
+            }, // naturalmente as opções são separadas aqui com o uso de vírgulas ","
             {
                 texto: "VOLTAR PARA A PADARIA", // aqui, por exemplo, o texto traz uma possibilidade para o jogador curioso
                 proximaPagina: "pagina2_1"
@@ -110,7 +121,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
             {
                 texto: "JÁ ME ENCHEU O SACO", // nessa opção, por exemplo, o texto traz uma possibilidade de enredo imprevisível, para surpreender o jogador
                 proximaPagina: "pagina2_2"
-            } 
+            }
         ]
     },
     pagina2_0: {
@@ -135,12 +146,12 @@ const historia = { // criando uma constante, chamada história para armazenar o 
             },
             {
                 texto: "JOGO ENFADONHO",
-                proximaPagina: "pagina2_8"
+                proximaPagina: "pagina2_2"
             }
         ]
     },
     pagina2_2: {
-        texto: "Lamentamos o infortúnio! Vá descansar!",
+        texto: "LAMÚRIA: Substantivo feminino, lamentação interminável, que importuna e que a nada leva; queixume, queixa. Semelhantes: lamentação, lenga-lenga, queixume, alarida...",
         opcoes: [
             {
                 texto: "NOVA JORNADA",
@@ -217,7 +228,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
            ]
     },
      pagina4_1: {
-        texto: "Adam se apressou demais para seguir prosseguir o seu percuso e não percebeu quando um luxuoso Rolls-Royce Silver Ghost 1907 o acertou em cheio! R.I.P.",
+        texto: "Adam se apressou demais para prosseguir o seu percuso solitário e não percebeu quando um luxuoso Rolls-Royce Silver Ghost 1907 o acertou em cheio! R.I.P.",
         opcoes: [{
                 texto: "SAIR DO JOGO",
                 proximaPagina: "?"
@@ -289,12 +300,16 @@ const historia = { // criando uma constante, chamada história para armazenar o 
     pagina8_0: {
         texto: "A dupla de detetives amadores, Michelle e Adam, decidem iniciar suas investigações, mergulhando no mistério que envolve o suspeito e o que está acontecendo com Isabella. Eles suspeitam que há segredos ocultos a serem descobertos e estão determinados a descobrir a verdade, mesmo que isso os leve a lugares obscuros e perigosos na cidade.",
         opcoes: [{
-                texto: "HMM, INTERESSANTE...",
+                texto: "ACOMPANHAR MICHELLE",
                 proximaPagina: "pagina8_1"
             },
             {
-                texto: "OK",
-                proximaPagina: "pagina8_1"
+                texto: "FICAR NO PUB BEBENDO",
+                proximaPagina: "pagina2_2cafe"
+            },
+            {
+                texto: "SAIR DO PUB SOSINHO",
+                proximaPagina: "pagina4_1"
             }]
     },
     pagina8_1: {
@@ -386,9 +401,9 @@ const historia = { // criando uma constante, chamada história para armazenar o 
     },
 
         paginamibella: {
-        texto: "Enquanto investigam os vínculos do relacionamento de Isabella com Sandro, Michelle dobra a aposta e acaba descobrindo que Isabella é, na verdade, a filha de Don Vincenzo Romano, um mafioso poderoso na cidade. Isabella acaba confessando que está sendo ameaçada como parte dos planos de uma seita que busca influencia na máfia local e ganhar acesso às atividades criminosas de Don Vincenzo.",
+        texto: "Enquanto investigam os vínculos do relacionamento de Isabella com seu amante Sandro, Michelle dobra a aposta e acaba descobrindo que Isabella é, na verdade, a filha de Don Vincenzo Romano, um mafioso poderoso na cidade. Isabella acaba confessando que está sendo ameaçada como parte dos planos de uma seita que busca influencia na máfia local e ganhar acesso às atividades criminosas de Don Vincenzo.",
         opcoes: [{
-                texto: "SEGUIR",
+                texto: "DETALHES",
                 proximaPagina: "paginaquasefinal"
             },
             ]
@@ -400,7 +415,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
                 proximaPagina: "perdeuhihihihi"
             },
             {
-                texto: "MICHELLE X ISABELLA (canon)",
+                texto: "MICHELLE X ISABELLA",
                 proximaPagina: "paginamibella"
             }]
     },
@@ -427,7 +442,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
             }]
     },
         paginajuda: {
-        texto: "Michelle, Adam e Isabella, formando uma equipe improvável, trabalham juntos para investigar, identificar os membros da seita e coletar evidências contra eles. Michelle, Adam e Isabella se reúnem, formando uma equipe improvável. Trabalham juntos, utilizando suas habilidades para investigar, identificar os membros da seita e coletar evidências contra elesEles conseguem desvendar os segredos da seita e expor suas atividades criminosas. Em uma confrontação final com os líderes da seita, onde Michelle, Adam e Isabella, apoiados por evidências irrefutáveis, conseguem expor a verdade, frustrar os planos conspiratórios e desmantelar a seita. A cidade é salva do caos instalado pelas chantagens e do controle da seita, e as figuras poderosas envolvidas podem ser responsabilizadas por seus crimes.",
+        texto: "Michelle, Adam e Isabella, formando uma equipe improvável, trabalham juntos para investigar, identificar os membros da seita e coletar evidências contra eles. Michelle, Adam e Isabella se reúnem, formando uma equipe improvável. Trabalham juntos, utilizando suas habilidades para investigar, identificar os membros da seita e coletar evidências contra elesEles conseguem desvendar os segredos da seita e expor suas atividades criminosas. Em uma confrontação final com os líderes da seita, Michelle, Adam e Isabella, apoiados por evidências irrefutáveis, conseguem expor a verdade, frustrar os planos conspiratórios e desmantelar a seita. A cidade é salva do caos instalado pelas chantagens e do controle da seita, e as figuras poderosas envolvidas podem ser responsabilizadas por seus crimes.",
         opcoes: [{
                 texto: "E O CORNO ?",
                 proximaPagina: "paginacasamento"
@@ -447,7 +462,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
         pagina404: {
         texto: "( 404 error: File not found ) Os scripts desta seção foram tragicamente perdidos quando Kalil se esbarrou nos cabos do computador no laboratório.",
         opcoes: [{
-                texto: "RESET",
+                texto: "RESETAR",
                 proximaPagina: "pagina0_0"
             }]
     },
@@ -477,9 +492,9 @@ function mostrarPagina(pagina) {  // como diz o nome, esta função tem como arg
     const ElementoOpcoes = document.getElementById("opcoes") // já esta linha, buscará o referencial "Id" também identificado acima, para este caso, busca o elemento opções
     const paginaAtualObj = historia[pagina] // aqui, se obtém a seção que representa a página atual do jogo
     ElementoTextoHistoria.textContent = paginaAtualObj.texto // esta linha atualiza o conteúdo do elemento com o texto da página atual, ou seja,  com o "Id" narrativa
-    
-    // pendente: ElementoTextoHistoria.style.backgroundImage = `url('${paginaAtualObj.imagemFundo}')` // esta parte identifica a imagem de fundo que será exibida qo escolher nas opções a página que será   
-    
+
+    // pendente: ElementoTextoHistoria.style.backgroundImage = `url('${paginaAtualObj.imagemFundo}')` // esta parte identifica a imagem de fundo que será exibida qo escolher nas opções a página que será
+
     // é necessário limpar as opções anteriores quando se escolhe a próxima, para isso utiliza-se innerHTML
     ElementoOpcoes.innerHTML = "" // a princípio, tentei implementar o código o conhecimento desta propriedade, mas, na interface acontecia algo inesperado com os botões - ficavam se acumulando indiscriminadamente
 
@@ -502,14 +517,14 @@ function criarOpcoes(opcoes) { // função para adicionar botões para as opçõ
 }
 
 function escolherOpcao(proximaPagina) { // esta função é responsável por exibir, "mostrar" a póxima página
-    
-    if (historia[proximaPagina]) { // a condicional é haver uma próxima página da história a ser retornada pela opcao 
-        mostrarPagina(proximaPagina) // em caso afirmativo, ela retorna, "mostra" a próxima página   
-    } 
-    
+
+    if (historia[proximaPagina]) { // a condicional é haver uma próxima página da história a ser retornada pela opcao
+        mostrarPagina(proximaPagina) // em caso afirmativo, ela retorna, "mostra" a próxima página
+    }
+
     else { // caso contrário,
         alert("Fim do jogo!") // exibe uma mensagem para lidar com páginas inexistentes, considere como o fim do jogo
-    } 
+    }
 
     const efeitoSonoro = document.getElementById("efeitoSonoro") // ao escolher a opção, essa constante reproduz o efeito sonoro espcíficado acima ao clicar em uma opção
     efeitoSonoro.play() // como o nome diz, executará o arquivo de áudio específicado
