@@ -5,14 +5,18 @@
     <meta charset="UTF-8"> <!-- este comando serve para que os caracteres especiais apareçam em dispositivos diferentes, sem ele, por exemlpo, os textos ficavam estranhos no celular -->
     <title>projectX</title> <!-- este título aparecerá na aba do browser-->
 
-
 <style> /* aqui ficam as definições em CSS para estilizar a interface do jogo, como o próprio nome diz "<style>" */
-    
-    #opcoes {
-    text-align: center; /* centraliza os botões horizontalmente */
-    margin-top: 45px; /* adiciona espaço na parte superior do contêiner */
-}
+ 
+        #game-container {
 
+            font-size: 70px; color:white; padding: 1px;  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.74);
+            background: linear-gradient(rgba(255, 255, 255, 0));
+            background-size: cover; /* Para ajustar a imagem ao tamanho da tela */
+            background-repeat: no-repeat; /* Para evitar a repetição da imagem */
+            height: 100vh;
+        }
+
+     
         button { /* aqui, é uma tag para criar botões em HTML. define a cor dos quadradinhos dos botões */
 
             background-color: #500000; /* aqui a cor do quadradinho do botão */ 
@@ -22,7 +26,8 @@
             cursor: pointer; /* o comando define o cursor como uma mãozinha quando o mouse está sobre o botão clicavel */
             display: block; /* este sere para exibir os botões em uma nova linha, toma a linha inteira, ao invés de ser um ao lado do outro */
             margin: 0 auto; /* centraliza horizontalmente */
-            margin-bottom: 10px; /* define a margem inferior do elemento */
+            margin-bottom: 5px; /* define a margem inferior do elemento */
+            font-size: 20px /* define o tamanho da fonte do texto dentro do botão*/
 
         }
 
@@ -30,76 +35,38 @@
             background-color: #000000 /* define a cor do quadradinho quando o mouse está sobre o botão */
         }
         
-        #narrativa { /* comando para centralizar o texto da narrativa */
-            text-align: center;
+        #narrativa { 
+            text-align: center; /* comando para centralizar o texto da narrativa */
             margin-bottom: 20px; /* adiciona um espaço entre o texto e os botões */
-            margin-top: 200px; /* adiciona espaço na parte superior do contêiner */
+            margin-top: 220px; /* adiciona espaço na parte superior do contêiner */
             margin-left: 250px; /* adiciona espaço na parte superior do contêiner */
             margin-right: 250px; /* adiciona espaço na parte superior do contêiner */
-            font-size: 20px; /* tamanho da fonte do texto da historia */
-
+            font-size: 35px; /* tamanho da fonte do texto da historia */
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)); /* Gradiente preto para transparente */
+            padding: 20px; /* adiciona espaço interno para distanciar o texto das bordas do gradiente */
         }
-        
-       /* Estilos específicos para a página 0_0 */
-       
-        .pagina0_0 {
-            margin-top: 1px; /* a distância até o topo será o valor de pixels "px" definido */
-            background-image: url('https://wallpapers.com/images/high/detective-paraphernalia-high-definition-e02vnxp0clzrizfj.webp'); /* se refere ao local da imagem de fundo "background" */
-            background-size: cover; /* para ajustar o tamanho da imagem de fundo na tela, cujo valor é "cover", ou seja, cobrirá todo o espaço da tela no browser*/  
-            background-repeat: no-repeat; /* para evitar a repetição da imagem */
-            height: 100vh; /* para ocupar a altura total da tela */
-    
-        }
-        .pagina1_0{
-            margin-top: 1px; 
-            background-image: url('https://i.pinimg.com/736x/92/30/a8/9230a85c6ddd61a878663d5132347a0a.jpg'); 
-            background-size: cover; 
-            background-repeat: no-repeat; 
-            height: 100vh; 
-        }
-
-        .pagina4_1{
-            margin-top: 0px;
-            background-image: url('https://coolwallpapers.me/th700/5766757-rolls-royce-silver-ghost-wallpapers.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            height: 100vh;
-        }
-
-
-     /* falta terminar a implementação dessas imagens de fundo! =( */
-
     </style>
-
 </head>
-<body> <!-- não ironicamente, aqui temos um "corpo" HTML, separado da cabeça... ele ficará com a "pança" do site, imagine que é a parte maior, como em um corpo mesmo-->
-
-    <audio id="efeitoSonoro"> <!-- o efeito sonoro que será implementado mais a diante é específicado aqui -->
-        <source src="efeitosonoro.mp3" type="audio/mpeg"> <!-- nessa parte especifica, o local do arquivo de áudio que o elemento carregará e reproduzirá -->
+<body>
+    <audio id="efeitoSonoro">
+        <source src="efeitosonoro.mp3" type="audio/mpeg">
     </audio>
 
-    <div> <!-- aqui nada mais que uma divisão para definir elementos do jogo que serão utilizados mais à frente -->
-        <div id="game-container"> <!-- ou seja, uma identidade unica "id" para cada elemento no conteúdo do jogo -->
-            <p id="narrativa"> </p> <!-- no caso, serão os textos da narrativa -->
-            <div id="opcoes"> <!-- e aqui, para as opções que aparecerão nos quadradinhos dos botões clicáveis -->
+    <div>
+        <div id="game-container">
+            <p id="narrativa"> </p>
+            <div id="opcoes"></div>
         </div>
-    </div>  <!-- aqui outra divisão para marcar o final da seção -->
+    </div>
 
-    <div class="pagina0_0" id="pagina0_0"></div>
-    <div class="pagina1_0" id="pagina1_0"></div>
-    <div class="pagina4_1" id="pagina4_1"></div>
-    <!-- falta terminar a implementação dessas imagens de fundo! -->
-
-
-
-</html> <!-- até aqui, em HTML -->
-
-<script> // esta é a parte funcional, ou seja, o "script" em JavaScript, engraçado que até o coisinha de comentar já muda de "<-- -->" para "//"
-
-const historia = { // criando uma constante, chamada história para armazenar o conteúdo de cada "página" do GameBook
+</body>
+<script>
+     // esta é a parte funcional, ou seja, o "script" em JavaScript, engraçado que até o coisinha de comentar já muda de "<-- -->" para "//"
+     const historia = { // criando uma constante, chamada história para armazenar o conteúdo de cada "página" do GameBook
     pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" do jogo, no caso, "página 0_0" será a interface inicial.
     {          // note que "pagina 0_0" foi nomeada com _ poara não atrapalhar o reconhecimento pelo browser
         texto: '"Achamos que somos livres mas não somos, seguimos sempre o mesmo caminho."',
+        imagemFundo: "url('https://t3.ftcdn.net/jpg/03/72/04/98/360_F_372049835_ngbGE2vG3NFEab5Fw5qI0mVSTBIQXjdA.jpg')",
         opcoes: [ // lembra que "opcoes" já foi visto anteriormente no HTML? posteriormente veremos também a sua definição em JS
             {     // aqui, dentro das chaves, cada opção terá um texto, visível no quadradinho, e "página" referenete a ele
                 texto: "INICIAR JORNADA",    // eis aqui o texto do enunciado, que no caso, é a opção que será utilizada para iniciar a jogada, ou seja, levar para a interface
@@ -109,6 +76,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
     },
     pagina1_0: { // nessa página, 1_0, já haverá mais de uma opção
         texto: "Em derradeiro de setembro de 1923, na manhã daquele domingo nublado, depois de tomar um café na padaria da esquina e ler o seu jornal matinal, Adam estava caminhando para casa intrigado com a notícia dos arrombamentos recentes.",
+        imagemFundo: "url('https://wallpapercave.com/wp/wp7740516.jpg')",
         opcoes: [
             {
                 texto: "PROSSEGUIR",
@@ -126,6 +94,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
     },
     pagina2_0: {
         texto: "A movimentada cidade em que residia, onde normalmente ninguém se importaria com as singularidades de transeuntes aleatórios, era o cenário perfeito para quem deseja passar despercebido.",
+        imagemFundo: "url('https://i.pinimg.com/736x/92/30/a8/9230a85c6ddd61a878663d5132347a0a.jpg')",
         opcoes: [
             {
                 texto: "PROSSEGUIR",
@@ -135,6 +104,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
     },
     pagina2_1: {
         texto: "Você já tomou café! Não há mais nada interessante a se fazer por aqui!",
+        imagemFundo: "url('https://images.squarespace-cdn.com/content/v1/595bdfa4414fb51e2862f53c/1634922882167-B0CW1BPVT8TDLGVIBWMQ/The-Hyperreal-and-Simulated-Coffee-Shops.png')",
         opcoes: [
             {
                 texto: "SAIR DA PADARIA",
@@ -152,6 +122,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
     },
     pagina2_2: {
         texto: "LAMÚRIA: Substantivo feminino, lamentação interminável, que importuna e que a nada leva; queixume, queixa. Semelhantes: lamentação, lenga-lenga, queixume, alarida...",
+        imagemFundo: "url('https://www.pixelstalk.net/wp-content/uploads/2016/06/HD-Wallpapers-Sad-Free-Desktop.jpg')",
         opcoes: [
             {
                 texto: "NOVA JORNADA",
@@ -165,7 +136,9 @@ const historia = { // criando uma constante, chamada história para armazenar o 
     },
     pagina3_0: {
         texto: "Adam Lawrence, costumava se fechar completamente para as possibilidades do mundo alheias à sua rotina, entretanto, era domingo, e ele percebeu um rapaz saindo pela janela do apartamento de sua vizinha, Isabella.",
-        opcoes: [
+        imagemFundo: "url('https://i.imgur.com/TwuMJJp.jpeg')",
+        opcoes: 
+        [
             {
                 texto: "SEGUIR SUSPEITO",
                 proximaPagina: "pagina4_2"
@@ -182,6 +155,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
     },
     pagina2_2cafe: {
         texto: "Testemunhas relataram às autoridades, o comportamento frenético e alucinado de Adam que enfartou ao ingerir quantidades inacreditáveis do líquido. R.I.P.",
+        imagemFundo: "url('https://i.ytimg.com/vi/dQwu8hRgbn0/maxresdefault.jpg')",
         opcoes: [{
                 texto: "NOVA JORNADA",
                 proximaPagina: "pagina0_0"
@@ -191,8 +165,19 @@ const historia = { // criando uma constante, chamada história para armazenar o 
                 proximaPagina: "pagina ?"
             }]
     },
-     pagina4_2: {
-        texto: "Despretensiosamente, ele resolve seguir o sujeito até um pub. Chegando lá ele se depara com Michelle, sua colega do escritório.",
+    
+    pagina4_2: {
+    texto: "Despretensiosamente, Adam resolve seguir o sujeito até um pub.",
+    imagemFundo: "url('https://wallpapercave.com/wp/wp7480174.jpg')",
+    opcoes: [{
+                texto: "PROSSEGUIR",
+                proximaPagina: "pagina4_2_0"
+            }]
+    },
+    
+    pagina4_2_0: {    
+        texto: "Ao chegar no pub da esquina, Adam se depara com uma surpreendente coincidência: Michelle, sua colega do escritório, também estava lá.",
+        imagemFundo: "url('https://media.istockphoto.com/id/925619134/photo/celebration-retro-pub-old-fashioned-group-of-senior-men-and-young-woman-drinking-beer-party.jpg?s=612x612&w=0&k=20&c=cYDjTxC7L5pg8yh3KPJLggt5DwTZbvNAfA3giNjNOQA=')",
         opcoes: [{
                 texto: "FALAR COM MICHELLE",
                 proximaPagina: "pagina7_0"
@@ -208,7 +193,8 @@ const historia = { // criando uma constante, chamada história para armazenar o 
            ]
     },
     pagina4_2_1: {
-        texto: "Não há nada mais a fazer aqui !",
+        texto: "Não há nada mais a se fazer aqui !",
+        imagemFundo: "url('https://i.pinimg.com/originals/5e/da/7c/5eda7cdaa0048723006df11cb8faa3ed.jpg')",
         opcoes: [{
                 texto: "HÁ SIM! FICAR NO PUB BEBENDO",
                 proximaPagina: "pagina2_2cafe"
@@ -229,6 +215,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
     },
      pagina4_1: {
         texto: "Adam se apressou demais para prosseguir o seu percuso solitário e não percebeu quando um luxuoso Rolls-Royce Silver Ghost 1907 o acertou em cheio! R.I.P.",
+        imagemFundo: "url('https://thumbs.dreamstime.com/b/classic-luxury-car-past-rolls-royce-glides-effortlessly-cityscape-turning-heads-its-timeless-277245740.jpg')",
         opcoes: [{
                 texto: "SAIR DO JOGO",
                 proximaPagina: "?"
@@ -240,6 +227,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
     },
     pagina5_0: {
         texto: "Adam tentou se desculpar, mas as desculpas não foram aceitas e as autoridades foram acionadas. Trágico fim! Adam foi institucionalizado.",
+        imagemFundo: "url('https://1.bp.blogspot.com/-we7nAO8C3C4/XBHAQndu1aI/AAAAAAAAJYw/SdL-FOI4_9s3SNNuT2x_O2slKgMIYvG6gCLcBGAs/s1600/Rear%2BWindow%2B18.jpg')",
         opcoes: [
             {
                 texto: "NOVA JORNADA",
@@ -252,6 +240,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
     },
     pagina4_0: {
         texto: "Adam, se enfureceu ao ponto de atingir o suspeito com uma pedra. Estranhamente, Isabella, sua vizinha, correu para socorrer o suposto invasor que na verdade era um caso extraconjugal.",
+        imagemFundo: "url('https://alfredhitchblog.files.wordpress.com/2017/09/courtyardjpg.jpg')",
         opcoes: [{
                 texto: "SE DESCULPAR",
                 proximaPagina: "pagina5_0"
@@ -267,6 +256,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
     },
     pagina7_0: {
         texto: "Conversando com Michelle, Adam percebe que ela está realmente interessada nos casos de invasões domiciliares. Ela relata o temor de que a cidade fique perigosa com a imigração. Adam comenta sobre o assunto e menciona o que acabou de ver na janela do apartamento de sua vizinha, Isabella. Michelle fica empolgada e sugere que eles explorem mais a situação, talvez conversando com Isabella ou investigando sua vizinhança para entender melhor os acontecimentos recentes.",
+        imagemFundo: "url('')",
         opcoes: [{
                 texto: "ACOMPANHAR MICHELLE",
                 proximaPagina: "pagina8_0"
@@ -359,6 +349,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
     },
         pagina88_4: {
         texto: "As ações de Adam têm consequências. Ele pode enfrentar acusações de perturbação da ordem pública e briga de bar. Sua imagem e reputação podem ser afetadas",
+        imagemFundo: "url('https://i.guim.co.uk/img/static/sys-images/Lifeandhealth/Pix/pictures/2014/10/2/1412244566088/John-Shelby-in-Peaky-Blin-010.jpg?width=620&quality=85&auto=format&fit=max&s=4ccdcea932893b6730eda5ca15f7543e')",
         opcoes: [{
                 texto: "ESPANCAR O SUSPEITO",
                 proximaPagina: "paginaespancar"
@@ -382,7 +373,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
             ]
     },
         paginaescape: {
-        texto: "Você desiste da investigação e procura por entretenimento em uma livraria local. Decide ler um gamebook que lhe pega a atenção. Ao ler um pouco, você percebe que o jogo é sobre um detetive que faz exatamente as mesmas escolhas que você fez ou cogitou fazer, porém com um nome diferente. Você se sente um pouco melhor depois de perceber o fato, mas ainda assim, não é mais o mesmo.",
+        texto: "Adam desiste da investigação e procura por entretenimento em uma livraria local. Decide ler um gamebook que lhe pega a atenção. Ao ler um pouco, Adam percebe que o jogo é sobre um detetive que faz exatamente as mesmas escolhas que ele fez ou cogitou fazer, porém com um nome diferente. Sente-se um pouco melhor depois de perceber o fato, mas ainda assim, não é mais o mesmo.",
         opcoes: [{
                 texto: "SAIR DA MATRIX",
                 proximaPagina: "paginamatrix"
@@ -406,6 +397,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
 
         paginamibella: {
         texto: "Enquanto investigam os vínculos do relacionamento de Isabella com seu amante Sandro, Michelle dobra a aposta e acaba descobrindo que Isabella é, na verdade, a filha de Don Vincenzo Romano, um mafioso poderoso na cidade. Isabella acaba confessando que está sendo ameaçada como parte dos planos de uma seita que busca influencia na máfia local e ganhar acesso às atividades criminosas de Don Vincenzo.",
+        imagemFundo: "url('https://img.freepik.com/fotos-premium/um-homem-esta-sentado-em-uma-mesa-em-um-quarto-escuro-com-uma-lampada-que-diz-o-homem-esta-sentado-em-uma-mesa_862489-492.jpg?w=740')",
         opcoes: [{
                 texto: "DETALHES",
                 proximaPagina: "paginaquasefinal"
@@ -425,6 +417,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
     },
         paginaquasefinal: {
         texto: "Os invasores roubam documentos confidenciais, registros financeiros e informações pessoais que podem ser usados como alavancagem contra figuras poderosas da cidade. Invasões paralelas foram planejadas para criar distrações e desviar a atenção das atividades de chantagem e conspiração do grupo.",
+        imagemFundo:"url('https://wallpapercrafter.com/th8004/1243846-boardwalk-crime-drama-empire-hbo-history-mafia.jpg')",
         opcoes: [{
                 texto: "AJUDAR ISABELLA",
                 proximaPagina: "paginajuda"
@@ -447,6 +440,7 @@ const historia = { // criando uma constante, chamada história para armazenar o 
     },
         paginajuda: {
         texto: "Michelle, Adam e Isabella, formando uma equipe improvável, trabalham juntos para investigar, identificar os membros da seita e coletar evidências contra eles. Michelle, Adam e Isabella se reúnem, formando uma equipe improvável. Trabalham juntos, utilizando suas habilidades para investigar, identificar os membros da seita e coletar evidências contra elesEles conseguem desvendar os segredos da seita e expor suas atividades criminosas. Em uma confrontação final com os líderes da seita, Michelle, Adam e Isabella, apoiados por evidências irrefutáveis, conseguem expor a verdade, frustrar os planos conspiratórios e desmantelar a seita. A cidade é salva do caos instalado pelas chantagens e do controle da seita, e as figuras poderosas envolvidas podem ser responsabilizadas por seus crimes.",
+        imagemFundo: "url('https://www.wallmur.com/media/catalog/product/cache/9b371a0c2f7befd54013ca6ce932047f/b/r/brooklyn-bridge-wallpaper-european-vintage-cars-wall-mural-nosta_ghiizqnjzqr1_0.jpg')",
         opcoes: [{
                 texto: "E O CORNO ?",
                 proximaPagina: "paginacasamento"
@@ -454,6 +448,18 @@ const historia = { // criando uma constante, chamada história para armazenar o 
             {
                 texto: "E A MÁFIA DO ROMANO ?",
                 proximaPagina: "pagina404"
+            },
+            {
+                texto: "BIFURCAÇÕES",
+                prócimaPagina: "paginabifurcacoes"
+            },
+            {
+                texto: "RESET",
+                proximaPagina: "pagina0_0"
+            },
+            {
+                texto: "SAIR DO JOGO",
+                proximaPagina: "?"
             }]
     },
         paginacasamento: {
@@ -465,13 +471,15 @@ const historia = { // criando uma constante, chamada história para armazenar o 
     },
         pagina404: {
         texto: "( 404 error: File not found ) Os scripts desta seção foram tragicamente perdidos quando Kalil se esbarrou nos cabos do computador no laboratório.",
+        imagemFundo: "url('https://i.pinimg.com/1200x/e9/1d/64/e91d644760b495a829a062ffcfd73edb.jpg')",
         opcoes: [{
-                texto: "RESET",
-                proximaPagina: "pagina0_0"
+                texto: "VOLTAR",
+                proximaPagina: "paginajuda"
             }]
     },
         paginaconsequencias: {
         texto: "Michelle e Adam optam por não se envolverem mais na situação e continuar com suas vidas cotidianas, ignorando as crescentes tensões na cidade e as atividades da seita. Eles acreditam que não é responsabilidade deles lidar com a situação e tentam manter distância dos acontecimentos.",
+        imagemFundo: "url('https://wallpapercrafter.com/th8004/1243841-boardwalk-crime-drama-empire-hbo-history-mafia.jpg')",
         opcoes: [{
                 texto: "SAIR DO JOGO",
                 proximaPagina: "pagina????"
@@ -480,13 +488,22 @@ const historia = { // criando uma constante, chamada história para armazenar o 
     },
         paginaideia: {
         texto: "À medida que a situação na cidade fica insustentável, Michelle e Adam, consumidos pelo remorso e preocupados com o destino de Isabella e da cidade, decidem finalmente se envolver. Eles reconhecem que a seita representa uma ameaça significativa e que sua ajuda é crucial para impedir as chantagens e conspirações.",
+        imagemFundo: "url('https://i0.wp.com/www.screenspy.com/wp-content/uploads/2021/12/peaky-blinders-s1-e6-7.png?ssl=1')",
         opcoes: [{
                 texto: "AJUDAR ISABELLA",
                 proximaPagina: "paginajuda"
             },
             ]
     },
+        paginabifurcacoes: {
+        imagemFundo: "",
+        opcoes: [{   
+                texto: "VOLTAR",
+                proximaPagina: "paginajuda"
+            }]   
+    
 }
+     }
 
 // a seguir, optei por não currificar as funções, para que estas fiquem bem descritivas "function"
 // cada função, sujestivamente "function", implementará algum mecanismo no jogo
@@ -496,11 +513,10 @@ function mostrarPagina(pagina) {  // como diz o nome, esta função tem como arg
     const ElementoOpcoes = document.getElementById("opcoes") // já esta linha, buscará o referencial "Id" também identificado acima, para este caso, busca o elemento opções
     const paginaAtualObj = historia[pagina] // aqui, se obtém a seção que representa a página atual do jogo
     ElementoTextoHistoria.textContent = paginaAtualObj.texto // esta linha atualiza o conteúdo do elemento com o texto da página atual, ou seja,  com o "Id" narrativa
-
-    // pendente: ElementoTextoHistoria.style.backgroundImage = `url('${paginaAtualObj.imagemFundo}')` // esta parte identifica a imagem de fundo que será exibida qo escolher nas opções a página que será
+    document.getElementById("game-container").style.backgroundImage = paginaAtualObj.imagemFundo || 'none'; // define a imagem de fundo 
 
     // é necessário limpar as opções anteriores quando se escolhe a próxima, para isso utiliza-se innerHTML
-    ElementoOpcoes.innerHTML = "" // a princípio, tentei implementar o código o conhecimento desta propriedade, mas, na interface acontecia algo inesperado com os botões - ficavam se acumulando indiscriminadamente
+    ElementoOpcoes.innerHTML = "" // a princípio, tentei implementar o código  sem o conhecimento desta propriedade, mas, na interface acontecia algo inesperado com os botões - ficavam se acumulando indiscriminadamente
 
 function criarOpcoes(opcoes) { // função para adicionar botões para as opções usando recursividade
         if (opcoes.length === 0) { // traduzindo, quando o tamanho (length que serve como um medidor) for igual a 0, ou seja, quando não houver,
