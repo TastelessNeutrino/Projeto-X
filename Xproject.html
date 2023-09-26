@@ -7,13 +7,14 @@
 
 <style> /* aqui ficam as definições em CSS para estilizar a interface do jogo, como o próprio nome diz "<style>" */
  
-        #game-container {
+        #jogo-container {
 
             font-size: 70px; color:white; padding: 1px;  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.74);
             background: linear-gradient(rgba(255, 255, 255, 0));
-            background-size: cover; /* Para ajustar a imagem ao tamanho da tela */
-            background-repeat: no-repeat; /* Para evitar a repetição da imagem */
+            background-size: cover; /* para ajustar a imagem ao tamanho da tela */
+            background-repeat: no-repeat; /* para evitar a repetição da imagem */
             height: 100vh;
+            overflow: auto; /* permite a rolagem quando a imagem for maior que o contêiner */
         }
 
      
@@ -49,11 +50,11 @@
 </head>
 <body>
     <audio id="efeitoSonoro">
-        <source src="efeitosonoro.mp3" type="audio/mpeg">
+        <source src="https://drive.google.com/uc?id=1Z_UxtJckkCpghSluHY1CKq3c6pQDzl2s" type="audio/mpeg">
     </audio>
 
     <div>
-        <div id="game-container">
+        <div id="jogo-container">
             <p id="narrativa"> </p>
             <div id="opcoes"></div>
         </div>
@@ -65,8 +66,8 @@
      const historia = { // criando uma constante, chamada história para armazenar o conteúdo de cada "página" do GameBook
     pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" do jogo, no caso, "página 0_0" será a interface inicial.
     {          // note que "pagina 0_0" foi nomeada com _ poara não atrapalhar o reconhecimento pelo browser
-        texto: '"Achamos que somos livres mas não somos, seguimos sempre o mesmo caminho."',
-        imagemFundo: "url('https://t3.ftcdn.net/jpg/03/72/04/98/360_F_372049835_ngbGE2vG3NFEab5Fw5qI0mVSTBIQXjdA.jpg')",
+        texto: '"Achamos que somos livres, mas não somos, seguimos sempre o mesmo caminho."',
+        imagemFundo: "url('https://drive.google.com/uc?id=1wqIjtRUgE1m3K2Il1I4-SfAScZWMgLK5')",
         opcoes: [ // lembra que "opcoes" já foi visto anteriormente no HTML? posteriormente veremos também a sua definição em JS
             {     // aqui, dentro das chaves, cada opção terá um texto, visível no quadradinho, e "página" referenete a ele
                 texto: "INICIAR JORNADA",    // eis aqui o texto do enunciado, que no caso, é a opção que será utilizada para iniciar a jogada, ou seja, levar para a interface
@@ -450,8 +451,8 @@
                 proximaPagina: "pagina404"
             },
             {
-                texto: "BIFURCAÇÕES",
-                prócimaPagina: "paginabifurcacoes"
+                texto: "SEGREDOS DO JOGO",
+                proximaPagina: "paginabifurcacoes"
             },
             {
                 texto: "RESET",
@@ -483,8 +484,7 @@
         opcoes: [{
                 texto: "SAIR DO JOGO",
                 proximaPagina: "pagina????"
-            },
-             ]
+            }]
     },
         paginaideia: {
         texto: "À medida que a situação na cidade fica insustentável, Michelle e Adam, consumidos pelo remorso e preocupados com o destino de Isabella e da cidade, decidem finalmente se envolver. Eles reconhecem que a seita representa uma ameaça significativa e que sua ajuda é crucial para impedir as chantagens e conspirações.",
@@ -492,18 +492,16 @@
         opcoes: [{
                 texto: "AJUDAR ISABELLA",
                 proximaPagina: "paginajuda"
-            },
-            ]
+            }]
     },
         paginabifurcacoes: {
-        imagemFundo: "",
+        imagemFundo: "url('https://drive.google.com/uc?id=1aiFO2jPusrhDzf0-DnhZHd_HOt1Qn2RI')",
         opcoes: [{   
                 texto: "VOLTAR",
                 proximaPagina: "paginajuda"
             }]   
-    
+    }
 }
-     }
 
 // a seguir, optei por não currificar as funções, para que estas fiquem bem descritivas "function"
 // cada função, sujestivamente "function", implementará algum mecanismo no jogo
@@ -513,7 +511,7 @@ function mostrarPagina(pagina) {  // como diz o nome, esta função tem como arg
     const ElementoOpcoes = document.getElementById("opcoes") // já esta linha, buscará o referencial "Id" também identificado acima, para este caso, busca o elemento opções
     const paginaAtualObj = historia[pagina] // aqui, se obtém a seção que representa a página atual do jogo
     ElementoTextoHistoria.textContent = paginaAtualObj.texto // esta linha atualiza o conteúdo do elemento com o texto da página atual, ou seja,  com o "Id" narrativa
-    document.getElementById("game-container").style.backgroundImage = paginaAtualObj.imagemFundo || 'none'; // define a imagem de fundo 
+    document.getElementById("jogo-container").style.backgroundImage = paginaAtualObj.imagemFundo || 'none'; // define a imagem de fundo 
 
     // é necessário limpar as opções anteriores quando se escolhe a próxima, para isso utiliza-se innerHTML
     ElementoOpcoes.innerHTML = "" // a princípio, tentei implementar o código  sem o conhecimento desta propriedade, mas, na interface acontecia algo inesperado com os botões - ficavam se acumulando indiscriminadamente
