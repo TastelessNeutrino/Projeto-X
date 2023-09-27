@@ -16,8 +16,7 @@
             height: 100vh;
             overflow: auto; /* permite a rolagem quando a imagem for maior que o contêiner */
         }
-
-     
+    
         button { /* aqui, é uma tag para criar botões em HTML. define a cor dos quadradinhos dos botões */
 
             background-color: #500000; /* aqui a cor do quadradinho do botão */ 
@@ -29,13 +28,12 @@
             margin: 0 auto; /* centraliza horizontalmente */
             margin-bottom: 5px; /* define a margem inferior do elemento */
             font-size: 20px /* define o tamanho da fonte do texto dentro do botão*/
-
         }
 
         button:hover { /* hover significa flutuar, aqui se refere a "flutuar a setinha sobre o botão (button) o software não reconhece em português */
             background-color: #000000 /* define a cor do quadradinho quando o mouse está sobre o botão */
         }
-        
+
         #narrativa { 
             text-align: center; /* comando para centralizar o texto da narrativa */
             margin-bottom: 20px; /* adiciona um espaço entre o texto e os botões */
@@ -43,9 +41,14 @@
             margin-left: 250px; /* adiciona espaço na parte superior do contêiner */
             margin-right: 250px; /* adiciona espaço na parte superior do contêiner */
             font-size: 35px; /* tamanho da fonte do texto da historia */
-            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)); /* Gradiente preto para transparente */
-            padding: 20px; /* adiciona espaço interno para distanciar o texto das bordas do gradiente */
+            background-color: rgba(0, 0, 0, 0.5); /* adicione a cor de fundo com transparência aqui */
+            padding: 20px; /* adiciona espaço interno para distanciar o texto das bordas do gradiente */   
         }
+        
+        #narrativa:empty { /* este comando esconde a narrativa nas páginas sem texto, sem isso, o gradiente vazio definido acima continuará aparecendo mesmo se não houver texto na página */
+        display: none;
+        }
+        
     </style>
 </head>
 <body>
@@ -66,13 +69,24 @@
      const historia = { // criando uma constante, chamada história para armazenar o conteúdo de cada "página" do GameBook
     pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" do jogo, no caso, "página 0_0" será a interface inicial.
     {          // note que "pagina 0_0" foi nomeada com _ poara não atrapalhar o reconhecimento pelo browser
-        texto: '"Achamos que somos livres, mas não somos, seguimos sempre o mesmo caminho."',
+        texto: "",
         imagemFundo: "url('https://drive.google.com/uc?id=1wqIjtRUgE1m3K2Il1I4-SfAScZWMgLK5')",
         opcoes: [ // lembra que "opcoes" já foi visto anteriormente no HTML? posteriormente veremos também a sua definição em JS
             {     // aqui, dentro das chaves, cada opção terá um texto, visível no quadradinho, e "página" referenete a ele
-                texto: "INICIAR JORNADA",    // eis aqui o texto do enunciado, que no caso, é a opção que será utilizada para iniciar a jogada, ou seja, levar para a interface
-                proximaPagina: "pagina1_0"   // e aqui, a página que ele buscará
+                texto: "START",    // eis aqui o texto do enunciado, que no caso, é a opção que será utilizada para iniciar a jogada, ou seja, levar para a interface
+                proximaPagina: "pagina0_01"   // e aqui, a página que ele buscará
             }
+        ]
+    },
+    pagina0_01:
+    {
+        texto: '"Achamos que somos livres, mas não somos, seguimos sempre o mesmo caminho."',
+        imagemFundo: "url('https://t3.ftcdn.net/jpg/03/72/04/98/360_F_372049835_ngbGE2vG3NFEab5Fw5qI0mVSTBIQXjdA.jpg')",
+        opcoes: [
+        {
+            texto: "INICIAR JORNADA",
+            proximaPagina: "pagina1_0"
+            }        
         ]
     },
     pagina1_0: { // nessa página, 1_0, já haverá mais de uma opção
@@ -84,7 +98,7 @@
                 proximaPagina: "pagina2_0"
             }, // naturalmente as opções são separadas aqui com o uso de vírgulas ","
             {
-                texto: "VOLTAR PARA A PADARIA", // aqui, por exemplo, o texto traz uma possibilidade para o jogador curioso
+                texto: "VOLTAR À PADARIA", // aqui, por exemplo, o texto traz uma possibilidade para o jogador curioso
                 proximaPagina: "pagina2_1"
             },
             {
@@ -122,7 +136,7 @@
         ]
     },
     pagina2_2: {
-        texto: "LAMÚRIA: Substantivo feminino, lamentação interminável, que importuna e que a nada leva; queixume, queixa. Semelhantes: lamentação, lenga-lenga, queixume, alarida...",
+        texto: "LAMÚRIA: Substantivo feminino, lamentação interminável, que importuna e que a nada leva; queixume, queixa. Semelhantes: lamentação, lenga-lenga, alarida...",
         imagemFundo: "url('https://www.pixelstalk.net/wp-content/uploads/2016/06/HD-Wallpapers-Sad-Free-Desktop.jpg')",
         opcoes: [
             {
@@ -130,8 +144,8 @@
                 proximaPagina: "pagina0_0"
             },
             {
-                texto: "VOLTAR PARA O JOGO",
-                proximaPagina: "pagina2_1"
+                texto: "VOLTAR AO JOGO",
+                proximaPagina: "pagina1_0"
             }
         ]
     },
@@ -392,7 +406,7 @@
             },
             {
                 texto: "SAIR DO JOGO",
-                proximaPagina: "pagina???"
+                proximaPagina: "?"
             }]
     },
 
@@ -409,16 +423,27 @@
         texto: "Isabella mostrou uma notável resistência em compartilhar informações com Adam. Cada vez que ele tentava se aproximar do cerne do mistério, ela parecia habilmente desviar suas perguntas ou fornecer respostas evasivas. Ela mantinha uma muralha de segredos em torno de sua vida e dos perigos que enfrentava, fazendo com que Adam se sentisse constantemente em desvantagem.",
         opcoes: [{
                 texto: "BLÁ-BLÁ-BLÁ ENCHEU O SACO",
-                proximaPagina: "perdeuhihihihi"
+                proximaPagina: "paginacavalo"
             },
             {
                 texto: "MICHELLE X ISABELLA",
                 proximaPagina: "paginamibella"
             }]
     },
+    paginacavalo: {
+        imagemFundo: "url('https://c.wallhere.com/photos/14/82/horse_corral_dust_shadow-1026404.jpg!d')",
+        opcoes: [{
+                texto: "MARCHAR PARA TRÁS",
+                proximaPagina: "paginadella"
+            },
+            {
+                texto: "MARCHAR EM RETIRADA",
+                proximaPagina: "pagina0_0"
+            }]
+    },
         paginaquasefinal: {
         texto: "Os invasores roubam documentos confidenciais, registros financeiros e informações pessoais que podem ser usados como alavancagem contra figuras poderosas da cidade. Invasões paralelas foram planejadas para criar distrações e desviar a atenção das atividades de chantagem e conspiração do grupo.",
-        imagemFundo:"url('https://wallpapercrafter.com/th8004/1243846-boardwalk-crime-drama-empire-hbo-history-mafia.jpg')",
+        imagemFundo:"url('https://www.wallpaperflare.com/static/281/173/77/cillian-murphy-peaky-blinders-thomas-shelby-arthur-shelby-wallpaper.jpg')",
         opcoes: [{
                 texto: "AJUDAR ISABELLA",
                 proximaPagina: "paginajuda"
@@ -441,7 +466,7 @@
     },
         paginajuda: {
         texto: "Michelle, Adam e Isabella, formando uma equipe improvável, trabalham juntos para investigar, identificar os membros da seita e coletar evidências contra eles. Michelle, Adam e Isabella se reúnem, formando uma equipe improvável. Trabalham juntos, utilizando suas habilidades para investigar, identificar os membros da seita e coletar evidências contra elesEles conseguem desvendar os segredos da seita e expor suas atividades criminosas. Em uma confrontação final com os líderes da seita, Michelle, Adam e Isabella, apoiados por evidências irrefutáveis, conseguem expor a verdade, frustrar os planos conspiratórios e desmantelar a seita. A cidade é salva do caos instalado pelas chantagens e do controle da seita, e as figuras poderosas envolvidas podem ser responsabilizadas por seus crimes.",
-        imagemFundo: "url('https://www.wallmur.com/media/catalog/product/cache/9b371a0c2f7befd54013ca6ce932047f/b/r/brooklyn-bridge-wallpaper-european-vintage-cars-wall-mural-nosta_ghiizqnjzqr1_0.jpg')",
+        imagemFundo: "url('https://i0.wp.com/blog.son-video.com/wp-content/uploads/2022/12/Peaky-Blinders-Canal-Tous-droits-reserves-BBC.jpg?resize=696%2C392&ssl=1')",
         opcoes: [{
                 texto: "E O CORNO ?",
                 proximaPagina: "paginacasamento"
