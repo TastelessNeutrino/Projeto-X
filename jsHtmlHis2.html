@@ -1,193 +1,212 @@
 
 
 
-
-
-
-
 <!DOCTYPE html>  <!-- Aqui, temos a tag "DOCTYPE", ela é responsável por definir qual o tipo e 
-    versão do HTML usado no documento. -->
+  versão do HTML usado no documento. -->
 <html><!--  Inicio do elemento "html". É a partir daqui que se inicia o codigo em HTML. Todos os outros elementos do codigo serao 
-    descendentes desse elelmento.-->
+  descendentes desse elelmento.-->
 <head><!-- Inicio do elemento "head". Esse elemento será responsável por conter as informações gerais do documento,
-    como os metadados e o titulo. -->
-  <meta charset="UTF-8"><!-- Essa tag é utilizada para informar ao navegador que a codificação de caracteres dessa
-    página seguira o padrao UTF-8. Esse padão é muito utilizado por ser capaz de representar uma ampla variedade
-     de caracteres de diferentes idiomas e simbolos especiais. -->
-  <title>Labirinto Infinito</title><!--Aqui definimos qual sera o título do nosso documento. Ele sera mostrado
-    na barra de título de um navegador ou na aba da página.-->>
+  como os metadados e o titulo. -->
+<meta charset="UTF-8"><!-- Essa tag é utilizada para informar ao navegador que a codificação de caracteres dessa
+  página seguira o padrao UTF-8. Esse padão é muito utilizado por ser capaz de representar uma ampla variedade
+   de caracteres de diferentes idiomas e simbolos especiais. -->
+<title>Labirinto Infinito</title><!--Aqui definimos qual sera o título do nosso documento. Ele sera mostrado
+  na barra de título de um navegador ou na aba da página.-->
 </head> <!--Fim do elemento "head".-->
 <body><!--Inicio do elemento "body". Como seu nome sugere, ele representa o corpo principal de uma página web.
-    Todo o conteúdo visível da página é colocado dentro desse elemento. -->
-  <div> <!--Inicio do elmento "div. Ela é usada como um conteiner genérico para agrupar e organizar elementos HTML,
-    permitindo a estruturação e estilização do conteudo."-->
-    <p id="enredo"></p><!-- A tag <p> cria um parágrafo de texto. O atributo id="enredo" 
-        é um identificador para referência que sera usado futuramente.-->
-    <div id="escolhas"></div><!--Tem a funcao analoga a anterior.-->
+  Todo o conteúdo visível da página é colocado dentro desse elemento. -->
+<div> <!--Inicio do elmento "div. Ela é usada como um conteiner genérico para agrupar e organizar elementos HTML,
+  permitindo a estruturação e estilização do conteudo."-->
+  <p id="narrativa"></p><!-- A tag <p> cria um parágrafo de texto. O atributo id="enredo" 
+      é um identificador para referência que sera usado futuramente.-->
+  <div id="opcoes"></div><!--Tem a funcao analoga a anterior.-->
 </div> <!--Fim do elemento "div"-->
 
 
 
-  <script> //Inicio do elemento "script", que é reponsavel por indicar onde se inicia o codigo em JavaScript.
- 
+
+
+
+
+<script> //Inicio do elemento "script", que é reponsavel por indicar onde se inicia o codigo em JavaScript.
+
 
 /*definindo o objeto jogo, que representa a estrutura e conteudo do jogo, 
 que inclui o enredo e as escolhas que o jodaor pode fazer */
-    const objetoJogo = {
-      'pagina-a0': {
-        texto: 'Você acabou de acordar no chão de uma sala pouco iluminada...',
-        escolhas: [
-          { texto: 'tentarei sair.', pagina: 'pagina-b0' },
-          { texto: 'Fingirei que não acordei e me esconderei em um armário.', pagina: 'paginaopcao-a02' }
-        ]
-      },
+  const objetoJogo = {
+    'pagina_000': {
 
-      'paginaopcao-a02': {
-        texto: 'Você decide fingir que não acordou e se esconde em um armário...',
-        escolhas: [
-          { texto: 'Reiniciar Jogo', pagina: 'pagina-a0' }
-        ]
-      },
-      'pagina-b0': {
-        texto: 'Ao acordar, você está muito sonolento e amarrado a uma maca...',
-        escolhas: [
-          { texto: 'Verifica a cicatriz.', pagina: 'pagina-c0' },
-          { texto: 'Ignora o acontecimento e continua procurando uma saída.', pagina: 'paginaopcao-b02' }
-        ]
-      },
-      'paginaopcao-b02': {
-        texto: 'Texto-b02. O jogo foi reiniciado.',
-        escolhas: [
-          { texto: 'Reiniciar Jogo', pagina: 'pagina-a0' }
-        ]
-      },
-      'pagina-c0': {
-        texto: 'Texto-c0. Escolha uma opção:',
-        escolhas: [
-          { texto: 'Opção-c01', pagina: 'pagina-d0' },
-          { texto: 'Opção-c02', pagina: 'paginaopcao-c02' }
-        ]
-      },
-      'paginaopcao-c02': {
-        texto: 'Texto-c02. O jogo foi reiniciado.',
-        escolhas: [
-          { texto: 'Reiniciar Jogo', pagina: 'pagina-a0' }
-        ]
-      },
-      'pagina-d0': {
-        texto: 'Texto-d0. Escolha uma opção:',
-        escolhas: [
-          { texto: 'Opção-d01', pagina: 'pagina-d01' },
-          { texto: 'Opção-d02', pagina: 'pagina-d02' }
-        ]
-      },
-      'pagina-d02': {
-        texto: 'Texto-d02. O jogo foi reiniciado.',
-        escolhas: [
-          { texto: 'Reiniciar Jogo', pagina: 'pagina-a0' }
-        ]
-      },
-      'pagina-d01': {
-        texto: 'Texto-d01. Escolha uma opção:',
-        escolhas: [
-          { texto: 'Opção-d0101', pagina: 'pagina-e0' },
-          { texto: 'Opção-d0202', pagina: 'paginaopcao-d0202' }
-        ]
-      },
-      'paginaopcao-d0202': {
-        texto: 'Texto-d0202. O jogo foi reiniciado.',
-        escolhas: [
-          { texto: 'Reiniciar Jogo', pagina: 'pagina-a0' }
-        ]
-      },
-      'pagina-e0': {
-        texto: 'Texto-e0. Escolha uma opção:',
-        escolhas: [
-          { texto: 'Opção-e01', pagina: 'pagina-f0' },
-          { texto: 'Opção-e02', pagina: 'paginaopcao-e02' }
-        ]
-      },
-      'pagina-f0': {
-        texto: 'Texto-f0. O jogo foi reiniciado.',
-        escolhas: [
-          { texto: 'Reiniciar Jogo', pagina: 'pagina-a0' }
-        ]
-      },
-      'paginaopcao-e02': {
-        texto: 'Texto-e02. O jogo foi reiniciado.',
-        escolhas: [
-          { texto: 'Reiniciar Jogo', pagina: 'pagina-a0' }
-        ]
-      }
-    };
+    texto: 'Escolha um gênero para a historia:',
+    opcoes: [
+      
+        { texto: ' Mistério', pagina: 'pagina-a0' },
+        { texto: ' Terror', pagina: 'pagina-a0' },
+    ]
+  },
+    'pagina-a0': {
+      texto: 'Você acabou de acordar no chão de uma sala pouco iluminada...',
+      opcoes: [
+      
+        { texto: 'Fingirei que não acordei e me esconderei em um armário.', pagina: 'paginaopcao-a02' },
+        { texto: 'tentarei sair.', pagina: 'pagina-b0' },
+        { texto: 'Sair do jogo', pagina: 'pagina_000' }
+      ]
+    },
 
-        /* buscando elementos HTML (que foram referenciados la atras, na div, com os IDs
-         "enredo" e "escolhas") e armazenando-os nas variáveis "enredoElement"
-         e "escolhasElement". são nesses elementos onde o texto
-          do enredo do jogo e as escolhas do jogador serão exibidos.*/
-        const enredoElement = document.getElementById('enredo');
-    const escolhasElement = document.getElementById('escolhas');
+    'paginaopcao-a02': {
+      texto: 'Você decide fingir que não acordou e se esconde em um armário...',
+      opcoes: [
+        { texto: 'Reiniciar Jogo', pagina: 'pagina-a0' },
+        { texto: 'Sair do jogo', pagina: 'pagina_000' }
+      ]
+    },
+    'pagina-b0': {
+      texto: 'Ao acordar, você está muito sonolento e amarrado a uma maca...',
+      opcoes: [
+        { texto: 'Verifica a cicatriz.', pagina: 'pagina-c0' },
+        { texto: 'Ignora o acontecimento e continua procurando uma saída.', pagina: 'paginaopcao-b02' },
+        { texto: 'Sair do jogo', pagina: 'pagina_000' }
+      ]
+    },
+    'paginaopcao-b02': {
+      texto: 'Texto-b02. O jogo foi reiniciado.',
+      opcoes: [
+        { texto: 'Reiniciar Jogo', pagina: 'pagina-a0' },
+        { texto: 'Sair do jogo', pagina: 'pagina_000' }
+      ]
+    },
+    'pagina-c0': {
+      texto: 'Texto-c0. Escolha uma opção:',
+      opcoes: [
+        { texto: 'Opção-c02', pagina: 'paginaopcao-c02' },
+        { texto: 'Opção-c01', pagina: 'pagina-d0' },
+        { texto: 'Sair do jogo', pagina: 'pagina_000' }
+      ]
+    },
+    'paginaopcao-c02': {
+      texto: 'Texto-c02. O jogo foi reiniciado.',
+      opcoes: [
+        { texto: 'Reiniciar Jogo', pagina: 'pagina-a0' },
+        { texto: 'Sair do jogo', pagina: 'pagina_000' }
+      ]
+    },
+    'pagina-d0': {
+      texto: 'Texto-d0. Escolha uma opção:',
+      opcoes: [
+        { texto: 'Opção-d01', pagina: 'pagina-d01' },
+        { texto: 'Opção-d02', pagina: 'pagina-d02' },
+        { texto: 'Sair do jogo', pagina: 'pagina_000' }
+      ]
+    },
+    'pagina-d02': {
+      texto: 'Texto-d02. O jogo foi reiniciado.',
+      opcoes: [
+        { texto: 'Reiniciar Jogo', pagina: 'pagina-a0' },
+        { texto: 'Sair do jogo', pagina: 'pagina_000' }
+      ]
+    },
+    'pagina-d01': {
+      texto: 'Texto-d01. Escolha uma opção:',
+      opcoes: [
+        { texto: 'Opção-d0101', pagina: 'pagina-e0' },
+        { texto: 'Opção-d0202', pagina: 'paginaopcao-d0202' },
+        { texto: 'Sair do jogo', pagina: 'pagina_000' }
+      ]
+    },
+    'paginaopcao-d0202': {
+      texto: 'Texto-d0202. O jogo foi reiniciado.',
+      opcoes: [
+        { texto: 'Reiniciar Jogo', pagina: 'pagina-a0' },
+        { texto: 'Sair do jogo', pagina: 'pagina_000' }
+      ]
+    },
+    'pagina-e0': {
+      texto: 'Texto-e0. Escolha uma opção:',
+      opcoes: [
+        { texto: 'Opção-e02', pagina: 'paginaopcao-e02' },
+        { texto: 'Opção-e01', pagina: 'pagina-f0' },
+        { texto: 'Sair do jogo', pagina: 'pagina_000' }
+      ]
+    },
+    'pagina-f0': {
+      texto: 'Texto-f0. O jogo foi reiniciado.',
+      opcoes: [
+        { texto: 'Reiniciar Jogo', pagina: 'pagina-a0' },
+        { texto: 'Sair do jogo', pagina: 'pagina_000' }
+      ]
+    },
+    'paginaopcao-e02': {
+      texto: 'Texto-e02. O jogo foi reiniciado.',
+      opcoes: [
+        { texto: 'Reiniciar Jogo', pagina: 'pagina-a0' },
+        { texto: 'Sair do jogo', pagina: 'pagina_000' }
+      ]
+    },
+    
+  };
 
-    /* declarando uma função chamada "mostrarPagina" que aceita um argumento 
-    chamado "pagina". essa função será usada para atualizar a página do jogo
-     com base na página fornecida (vou detalhar melhor mais adiante).*/
-    function mostrarPagina(pagina) {
+      /* buscando os lementos "opcoes" e "narrativa" para armazená-los nas variáveis "enredoElement"
+       e "escolhasElement". são nesses elementos onde o texto
+        do enredo do jogo e as escolhas do jogador serão exibidos.*/
+      const enredoElement = document.getElementById("narrativa");
+  const escolhasElement = document.getElementById("opcoes");
 
-      /* acessando o objeto "jogo" com a chave "pagina" para conseguir os detalhes da 
-      pagina atual do jogo. isso fornece o texto do enredo e as escolhas para
-       a pagina atual. */
-      const paginaAtual = objetoJogo[pagina];
+  /* declarando uma função chamada "mostrarPagina" que aceita um argumento 
+  chamado "pagina". essa função será usada para atualizar a página do jogo
+   com base na página fornecida (vou detalhar melhor mais adiante).*/
+  function mostrarPagina(pagina) {
 
-      /* uma função de alta ordem que aceita um argumento "pagina" e retorna a função
-      "mostrarPagina" que será usada como um manipulador de evento para os botões
-       das escolhas do jogador. resumindo, quando um botão for clicado,
-       essa função chama mostrarPagina(pagina), permitindo ao jogador
-        avançar na história.*/
-      const botaoClickHandler = (pagina) => () => mostrarPagina(pagina);
+    /* acessando o "objetoJogo" com a chave "pagina" para conseguir os detalhes da 
+    pagina atual do jogo. isso fornece o texto do enredo e as escolhas para
+     a pagina atual. */
+    const paginaAtual = objetoJogo[pagina];
 
-      /* usando a funcao "map" para percorrer as escolhas disponíveis na página atual
-       ("paginaAtual.escolhas") onde, para cada escolha, é criado um novo elemento HTML
-        chamado "button", definindo seu texto com base na escolha e adicionando um evento de
-         clique usando o "botaoClickHandler". Esses botões são armazenados em um 
-         array chamado "botoes".*/ 
-      const botoes = paginaAtual.escolhas.map((escolha) => {
-        
-        // Criando um novo botao
-        const botao = document.createElement('button');
+    /* uma função de alta ordem que aceita um argumento "pagina" e retorna a função
+    "mostrarPagina" que será usada como um manipulador de evento para os botões
+     das escolhas do jogador. resumindo, quando um botão for clicado,
+     essa função chama mostrarPagina(pagina), permitindo ao jogador
+      avançar na história.*/
+    const botaoClickHandler = (pagina) => () => mostrarPagina(pagina);
 
-        // Definindo o texto do botao com base na escolha
-        botao.textContent = escolha.texto;
+    /* usando a funcao "map" para percorrer as escolhas disponíveis na página atual
+     ("paginaAtual.opcoes") onde, para cada escolha, é criado um novo elemento HTML
+      chamado "button", definindo seu texto com base na escolha e adicionando um evento de
+       clique usando o "botaoClickHandler". Esses botões são armazenados em um 
+       array chamado "botoes".*/ 
+    const botoes = paginaAtual.opcoes.map((opcoes) => {
+      
+      // Criando um novo botao
+      const botao = document.createElement('button');
 
-        // Adicionando um manipulador de evento para o clique do botao
-        botao.addEventListener('click', botaoClickHandler(escolha.pagina));
-        return botao;
-      });
+      // Definindo o texto do botao com base na escolha
+      botao.textContent = opcoes.texto;
 
-      // atualizando o texto do enredo na interface do usuário
-      enredoElement.textContent = paginaAtual.texto;
+      // Adicionando um manipulador de evento para o clique do botao
+      botao.addEventListener('click', botaoClickHandler(opcoes.pagina));
+      return botao;
+    });
 
-      /* limpando  o conteúdo do elemento "escolhasElement" 
-      (a div onde as escolhas do jogador são exibidas). Isso
-       faz com que as escolhas anteriores sejam removidas antes
-       que novas escolhas escolhas sejam adicionadas.*/
-      escolhasElement.innerHTML = '';
+    // atualizando o texto do enredo na interface do usuário
+    enredoElement.textContent = paginaAtual.texto;
 
-      /* aplicando o operador spread (...) para adicionar todos os 
-      botões criados ao elemento "escolhasElement". Isso adiciona 
-       os botões à interface do usuário, permitindo ao jogador faser as escolhas. */
-      escolhasElement.append(...botoes);
-    }
+    /* limpando  o conteúdo do elemento "escolhasElement" 
+    (a div onde as escolhas do jogador são exibidas). Isso
+     faz com que as escolhas anteriores sejam removidas antes
+     que novas escolhas escolhas sejam adicionadas.*/
+    escolhasElement.innerHTML = '';
 
-    /*chamando a função "mostrarPagina" com o argumento "pagina-a0"
-     para iniciar o jogo na página inicial (que nesse caso é a pagina-a0).*/
-    mostrarPagina('pagina-a0');
+    /* aplicando o operador spread (...) para adicionar todos os 
+    botões criados ao elemento "escolhasElement". Isso adiciona 
+     os botões à interface do usuário, permitindo ao jogador faser as escolhas. */
+    escolhasElement.append(...botoes);
+  }
 
-  </script> <!--Fim do elemento "script".-->
+  /*chamando a função "mostrarPagina" com o argumento "pagina-a0"
+   para iniciar o jogo na página inicial (que nesse caso é a pagina-a0).*/
+  mostrarPagina('pagina_000');
 
-
-<!-- *estou cansado, quero dormir...* -->>
+</script> <!--Fim do elemento "script".-->
 
 
 </body>  <!--Fim do elemento "body".-->
 </html>  <!--Fim do elemento "html".-->
-
