@@ -118,7 +118,7 @@
             },
             {
                 texto: "SAIR DO JOGO",
-                proximaPagina: "pagina ?"
+                proximaPagina: "paginainicial"
             }]
     },
 
@@ -164,7 +164,7 @@
                 proximaPagina: "pagina0_0"
             },
             { texto: "SAIR DO JOGO",
-            proximaPagina: "?"
+            proximaPagina: "paginainicial"
 
             }
            ]
@@ -174,7 +174,7 @@
         imagemFundo: "url('https://thumbs.dreamstime.com/b/classic-luxury-car-past-rolls-royce-glides-effortlessly-cityscape-turning-heads-its-timeless-277245740.jpg')",
         opcoes: [{
                 texto: "SAIR DO JOGO",
-                proximaPagina: "?"
+                proximaPagina: "paginainicial"
             },
             {
                 texto: "NOVA JORNADA",
@@ -191,7 +191,7 @@
             },
             {
                 texto: "SAIR DO JOGO",
-                proximaPagina: "?"
+                proximaPagina: "paginainicial"
             }]
     },
     pagina4_0: {
@@ -207,7 +207,7 @@
             },
             {
                 texto: "EU DESISTO",
-                proximaPagina: "?"
+                proximaPagina: "paginainicial"
             }]
     },
     pagina7_0: {
@@ -277,7 +277,7 @@
         },
             {
                 texto: " SAIR DO JOGO   ",
-                proximaPagina: "paginanothing"
+                proximaPagina: "paginainicial"
             }]
     },
         pagina88_2: {
@@ -300,7 +300,7 @@
             },
             {
                 texto: "PERDER DO JOGO",
-                proximaPagina: "pagina?"
+                proximaPagina: "paginainicial"
             }]
     },
         pagina88_4: {
@@ -312,7 +312,7 @@
             },
             {
                 texto: "DEIXAR O SUSPEITO ESCAPAR",
-                proximaPagina: "pagina???"
+                proximaPagina: "paginainicial"
             },
             {
                 texto: "FORÇÁ-LO A ENTREGAR INFORMAÇÕES",
@@ -347,7 +347,7 @@
             },
             {
                 texto: "SAIR DO JOGO",
-                proximaPagina: "?"
+                proximaPagina: "paginainicial"
             }]
     },
 
@@ -426,7 +426,7 @@
             },
             {
                 texto: "SAIR DO JOGO",
-                proximaPagina: "?"
+                proximaPagina: "paginainicial"
             }]
     },
         paginacasamento: {
@@ -449,7 +449,7 @@
         imagemFundo: "url('https://wallpapercrafter.com/th8004/1243841-boardwalk-crime-drama-empire-hbo-history-mafia.jpg')",
         opcoes: [{
                 texto: "SAIR DO JOGO",
-                proximaPagina: "pagina????"
+                proximaPagina: "paginainicial"
             }]
     },
         paginaideia: {
