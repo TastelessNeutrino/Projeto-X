@@ -630,7 +630,7 @@
       }
   
       else { // caso contrário,
-          alert("Fim do jogo!") // exibe uma mensagem para lidar com páginas inexistentes, considere como o fim do jogo
+           mostrarPagina("paginainicial")// Retorna ao menu inicial
       }
   
       const efeitoSonoro = document.getElementById("efeitoSonoro") // ao escolher a opção, essa constante reproduz o efeito sonoro espcíficado acima ao clicar em uma opção
