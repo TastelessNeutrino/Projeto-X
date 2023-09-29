@@ -1,13 +1,13 @@
-    // esta é a parte funcional, ou seja, o "script" em JavaScript, engraçado que até o coisinha de comentar já muda de "<-- -->" para "//"
+// esta é a parte funcional, ou seja, o "script" em JavaScript, engraçado que até o coisinha de comentar já muda de "<-- -->" para "//"
     const armazemdehistorias={// criando uma constante, chamada armazemdehistorias para armazenar o conteúdo de cada "página" do GameBook
         paginainicial:{
           texto:"Escolha uma história para se aventurar",
           imagemFundo:"url()",
-          opcoes:[{texto:"O mistério do pub", proximaPagina: "pagina0_0"},
-                  {texto:"História2", proximaPagina:"pagina-a0"}]
+          opcoes:[{texto:"1923 • O MISTÉRIO DO PUB", proximaPagina: "pagina0_0"},
+                  {texto:"LABIRINTO • ZUMBI", proximaPagina:"pagina-a0"}]
         },
 
-    // historia I 
+    // história I - a seguir as páginas da primeira história - o mistério do pub
 
         pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" do jogo, no caso, "página 0_0" será a interface inicial.
         {          // note que "pagina 0_0" foi nomeada com _ poara não atrapalhar o reconhecimento pelo browser
@@ -17,7 +17,11 @@
                 {     // aqui, dentro das chaves, cada opção terá um texto, visível no quadradinho, e "página" referenete a ele
                     texto: "START",    // eis aqui o texto do enunciado, que no caso, é a opção que será utilizada para iniciar a jogada, ou seja, levar para a interface
                     proximaPagina: "pagina0_01"   // e aqui, a página que ele buscará
-                }
+                },
+                {
+                    texto: "MENU",
+                proximaPagina: "paginainicial"
+                }       
             ]
         },
         pagina0_01:
@@ -45,10 +49,23 @@
                 },
                 {
                     texto: "JÁ ME ENCHEU O SACO", // nessa opção, por exemplo, o texto traz uma possibilidade de enredo imprevisível, para surpreender o jogador
-                    proximaPagina: "pagina2_2"
+                    proximaPagina: "paginachorar"
                 }
             ]
         },
+
+        paginachorar: {
+            imagemFundo: "url('https://drive.google.com/uc?id=1bmoDrWIOuJT0kgRUZDkvg6ELR-gpJ-9_')",
+            opcoes: [{
+                    texto: "ENXUGAR LÁGRIMAS",
+                    proximaPagina: "pagina1_0"
+                },
+                {
+                    texto: "IR CHORAR DE COCORAS NO BANHEIRO",
+                    proximaPagina: "paginaperdedor"
+                }]
+        },
+        
         pagina2_0: {
             texto: "A movimentada cidade em que residia, onde normalmente ninguém se importaria com as singularidades de transeuntes aleatórios, era o cenário perfeito para quem deseja passar despercebido.",
             imagemFundo: "url('https://drive.google.com/uc?id=1amorZlD7DGbZv68vZEtT5AIg7DedmzXw')",
@@ -119,7 +136,7 @@
                 },
                 {
                     texto: "SAIR DO JOGO",
-                    proximaPagina: "pagina ?"
+                    proximaPagina: "paginainicial"
                 }]
         },
         
@@ -164,7 +181,7 @@
                     proximaPagina: "pagina0_0"
                 },
                 { texto: "SAIR DO JOGO",
-                proximaPagina: "?"
+                proximaPagina: "paginainicial"
     
                 }
                ]
@@ -174,7 +191,7 @@
             imagemFundo: "url('https://drive.google.com/uc?id=1bEXpAyViy9wvebFJ5MWa2q_oimM2Y-KL')",
             opcoes: [{
                     texto: "SAIR DO JOGO",
-                    proximaPagina: "?"
+                    proximaPagina: "paginainicial"
                 },
                 {
                     texto: "NOVA JORNADA",
@@ -191,7 +208,7 @@
                 },
                 {
                     texto: "SAIR DO JOGO",
-                    proximaPagina: "?"
+                    proximaPagina: "paginainicial"
                 }]
         },
         pagina4_0: {
@@ -277,7 +294,7 @@
             },
                 {
                     texto: " SAIR DO JOGO   ",
-                    proximaPagina: "paginanothing"
+                    proximaPagina: "paginainicial"
                 }]
         },
             pagina88_2: {
@@ -299,13 +316,24 @@
                     proximaPagina: "paginaescape"
                 },
                 {
-                    texto: "PERDER DO JOGO",
-                    proximaPagina: "pagina?"
+                    texto: "PERDER",
+                    proximaPagina: "paginaperdedor"
+                }]
+        },
+        paginaperdedor: {
+            imagemFundo: "url('https://drive.google.com/uc?id=1blmYe84oVpdmaJiIPjrwGUul0D-Mzrz3')",
+            opcoes: [{
+                    texto: "REINICIAR JORNADA",
+                    proximaPagina: "pagina0_0"
+                },
+                {
+                    texto: "CONTINUAR SENDO PERDEDOR",
+                    proximaPagina: "paginainicial"
                 }]
         },
             pagina88_4: {
             texto: "As ações de Adam têm consequências. Ele pode enfrentar acusações de perturbação da ordem pública e briga de bar. Sua imagem e reputação podem ser afetadas",
-            imagemFundo: "url('https://i.guim.co.uk/img/static/sys-images/Lifeandhealth/Pix/pictures/2014/10/2/1412244566088/John-Shelby-in-Peaky-Blin-010.jpg?width=620&quality=85&auto=format&fit=max&s=4ccdcea932893b6730eda5ca15f7543e')",
+            imagemFundo: "url('')",
             opcoes: [{
                     texto: "ESPANCAR O SUSPEITO",
                     proximaPagina: "paginaespancar"
@@ -332,7 +360,7 @@
             texto: "Adam desiste da investigação e procura por entretenimento em uma livraria local. Decide ler um gamebook que lhe pega a atenção. Ao ler um pouco, Adam percebe que o jogo é sobre um detetive que faz exatamente as mesmas escolhas que ele fez ou cogitou fazer, porém com um nome diferente. Sente-se um pouco melhor depois de perceber o fato, mas ainda assim, não é mais o mesmo.",
             opcoes: [{
                     texto: "SAIR DA MATRIX",
-                    proximaPagina: "paginamatrix"
+                    proximaPagina: "paginainicial"
                 },
                 {
                     texto: "NOVA JORNADA",
@@ -347,7 +375,7 @@
                 },
                 {
                     texto: "SAIR DO JOGO",
-                    proximaPagina: "?"
+                    proximaPagina: "paginainicial"
                 }]
         },
     
@@ -426,7 +454,7 @@
                 },
                 {
                     texto: "SAIR DO JOGO",
-                    proximaPagina: "?"
+                    proximaPagina: "paginainicial"
                 }]
         },
             paginacasamento: {
@@ -450,7 +478,7 @@
             imagemFundo: "url('https://drive.google.com/uc?id=1anuMm7epxsc4xTIggSQWsY6aCujc8UUr')",
             opcoes: [{
                     texto: "SAIR DO JOGO",
-                    proximaPagina: "pagina????"
+                    proximaPagina: "paginainicial"
                 },
                 {
                 texto: "NOVA JORNADA",
@@ -474,7 +502,7 @@
         },
 
     
-  // História II começa a partir da págima abaixo
+  // História II começa a partir da página abaixo
 
       'pagina-a0': {
         texto: 'Você acabou de acordar no chão de uma sala pouco iluminada...',
