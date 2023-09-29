@@ -1,5 +1,13 @@
 // esta é a parte funcional, ou seja, o "script" em JavaScript, engraçado que até o coisinha de comentar já muda de "<-- -->" para "//"
-     const historia = { // criando uma constante, chamada história para armazenar o conteúdo de cada "página" do GameBook
+     const armazemdehistorias={// armazena as  duas histórias que podem ser escolihidas pelo jogador
+  paginainicial:{
+    texto:"Escola uma história para se aventurar",
+    imagemFundo:"url()",
+    opcoes:[{texto:"O mistério do pub", proximaPagina: "pagina0_0"},
+            {texto:"História2", proximaPagina:"pagina-a0"}]
+  },
+
+
     pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" do jogo, no caso, "página 0_0" será a interface inicial.
     {          // note que "pagina 0_0" foi nomeada com _ poara não atrapalhar o reconhecimento pelo browser
         texto: "",
@@ -458,8 +466,124 @@
                 texto: "VOLTAR",
                 proximaPagina: "paginajuda"
             }]
-    }
-}
+    },
+  
+// História 2 começa a partir da págima abaixo
+    'pagina-a0': {
+      texto: 'Você acabou de acordar no chão de uma sala pouco iluminada...',
+      imagemFundo: "url()",
+      opcoes: [
+      
+        { texto: 'Fingirei que não acordei e me esconderei em um armário.', proximaPagina: 'paginaopcao-a02' },
+        { texto: 'tentarei sair.', proximaPagina: 'pagina-b0' },
+        { texto: 'Sair do jogo', proximaPagina: 'paginainicial' }
+      ]
+    },
+
+    'paginaopcao-a02': {
+      texto: 'Você decide fingir que não acordou e se esconde em um armário...',
+      imagemFundo: "url()",
+      opcoes: [
+        { texto: 'Reiniciar Jogo', proximaPagina: 'pagina-a0' },
+        { texto: 'Sair do jogo', proximaPagina: 'paginainicial' }
+      ]
+    },
+    'pagina-b0': {
+      texto: 'Ao acordar, você está muito sonolento e amarrado a uma maca...',
+      imagemFundo: "url()",
+      opcoes: [
+        { texto: 'Verifica a cicatriz.', proximaPagina: 'pagina-c0' },
+        { texto: 'Ignora o acontecimento e continua procurando uma saída.', proximaPagina: 'paginaopcao-b02' },
+        { texto: 'Sair do jogo', proximaPagina: 'paginainicial' }
+      ]
+    },
+    'paginaopcao-b02': {
+      texto: 'Texto-b02. O jogo foi reiniciado.',
+      imagemFundo: "url()",
+      opcoes: [
+        { texto: 'Reiniciar Jogo', proximaPagina: 'pagina-a0' },
+        { texto: 'Sair do jogo', proximaPagina: 'paginainicial' }
+      ]
+    },
+    'pagina-c0': {
+      texto: 'Texto-c0. Escolha uma opção:',
+      imagemFundo: "url()",
+      opcoes: [
+        { texto: 'Opção-c02', proximaPagina: 'paginaopcao-c02' },
+        { texto: 'Opção-c01', proximaPagina: 'pagina-d0' },
+        { texto: 'Sair do jogo', proximaPagina: 'paginainicial' }
+      ]
+    },
+    'paginaopcao-c02': {
+      texto: 'Texto-c02. O jogo foi reiniciado.',
+      imagemFundo: "url()",
+      opcoes: [
+        { texto: 'Reiniciar Jogo', proximaPagina: 'pagina-a0' },
+        { texto: 'Sair do jogo', proximaPagina: 'paginainicial' }
+      ]
+    },
+    'pagina-d0': {
+      texto: 'Texto-d0. Escolha uma opção:',
+      imagemFundo: "url()",
+      opcoes: [
+        { texto: 'Opção-d01', proximaPagina: 'pagina-d01' },
+        { texto: 'Opção-d02', proximaPagina: 'pagina-d02' },
+        { texto: 'Sair do jogo', proximaPagina: 'paginainicial' }
+      ]
+    },
+    'pagina-d02': {
+      texto: 'Texto-d02. O jogo foi reiniciado.',
+      imagemFundo: "url()",
+      opcoes: [
+        { texto: 'Reiniciar Jogo', proximaPagina: 'pagina-a0' },
+        { texto: 'Sair do jogo', proximaPagina: 'paginainicial' }
+      ]
+    },
+    'pagina-d01': {
+      texto: 'Texto-d01. Escolha uma opção:',
+      imagemFundo: "url()",
+      opcoes: [
+        { texto: 'Opção-d0101', proximaPagina: 'pagina-e0' },
+        { texto: 'Opção-d0202', proximaPagina: 'paginaopcao-d0202' },
+        { texto: 'Sair do jogo', proximaPagina: 'paginainicial' }
+      ]
+    },
+    'paginaopcao-d0202': {
+      texto: 'Texto-d0202. O jogo foi reiniciado.',
+      imagemFundo: "url()",
+      opcoes: [
+        { texto: 'Reiniciar Jogo', proximaPagina: 'pagina-a0' },
+        { texto: 'Sair do jogo', proximaPagina: 'paginainicial' }
+      ]
+    },
+    'pagina-e0': {
+      texto: 'Texto-e0. Escolha uma opção:',
+      imagemFundo: "url()",
+      opcoes: [
+        { texto: 'Opção-e02', proximaPagina: 'paginaopcao-e02' },
+        { texto: 'Opção-e01', proximaPagina: 'pagina-f0' },
+        { texto: 'Sair do jogo', proximaPagina: 'paginainicial' }
+      ]
+    },
+    'pagina-f0': {
+      texto: 'Texto-f0. O jogo foi reiniciado.',
+      imagemFundo: "url()",
+      opcoes: [
+        { texto: 'Reiniciar Jogo', proximaPagina: 'pagina-a0' },
+        { texto: 'Sair do jogo', proximaPagina: 'paginainicial' }
+      ]
+    },
+    'paginaopcao-e02': {
+      texto: 'Texto-e02. O jogo foi reiniciado.',
+      imagemFundo: "url()",
+      opcoes: [
+        { texto: 'Reiniciar Jogo', proximaPagina: 'pagina-a0' },
+        { texto: 'Sair do jogo', proximaPagina: 'paginainicial' }
+      ]
+    },
+    
+  };
+
 
 // a seguir, optei por não currificar as funções, para que estas fiquem bem descritivas "function"
 // cada função, sujestivamente "function", implementará algum mecanismo no jogo
@@ -467,7 +591,7 @@
 function mostrarPagina(pagina) {  // como diz o nome, esta função tem como argumento "(página)" serve para  exibir a página, ou seja,  atualiza a interface do jogo com o texto da página atual e opções disponíveis na página.
     const ElementoTextoHistoria = document.getElementById("narrativa") // esta linha buscará o referencial "Id" identificado acima, para este caso, busca o elemento narrativa
     const ElementoOpcoes = document.getElementById("opcoes") // já esta linha, buscará o referencial "Id" também identificado acima, para este caso, busca o elemento opções
-    const paginaAtualObj = historia[pagina] // aqui, se obtém a seção que representa a página atual do jogo
+    const paginaAtualObj = armazemdehistorias[pagina] // aqui, se obtém a seção que representa a página atual do jogo
     ElementoTextoHistoria.textContent = paginaAtualObj.texto // esta linha atualiza o conteúdo do elemento com o texto da página atual, ou seja,  com o "Id" narrativa
     document.getElementById("jogo-container").style.backgroundImage = paginaAtualObj.imagemFundo || 'none'; // define a imagem de fundo
 
@@ -494,7 +618,7 @@ function criarOpcoes(opcoes) { // função para adicionar botões para as opçõ
 
 function escolherOpcao(proximaPagina) { // esta função é responsável por exibir, "mostrar" a póxima página
 
-    if (historia[proximaPagina]) { // a condicional é haver uma próxima página da história a ser retornada pela opcao
+    if (armazemdehistorias[proximaPagina]) { // a condicional é haver uma próxima página da história a ser retornada pela opcao
         mostrarPagina(proximaPagina) // em caso afirmativo, ela retorna, "mostra" a próxima página
     }
 
@@ -506,4 +630,7 @@ function escolherOpcao(proximaPagina) { // esta função é responsável por exi
     efeitoSonoro.play() // como o nome diz, executará o arquivo de áudio específicado
 }
 
-mostrarPagina("pagina0_0") // para mostrar a página inicial ao carregar o jogo
+mostrarPagina("paginainicial") 
+
+
+
