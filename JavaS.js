@@ -424,11 +424,11 @@
         },
     
         paginamibella: {
-            texto: "Enquanto investigam os vínculos do relacionamento de Isabella com seu amante Sandro, Michelle dobra a aposta e acaba descobrindo que Isabella é, na verdade, a filha de Don Vincenzo Romano, um mafioso poderoso na cidade. Isabella acaba confessando que está sendo ameaçada como parte dos planos de uma seita que busca influencia na máfia local e ganhar acesso às atividades criminosas de Don Vincenzo.",
-            imagemFundo: "url('https://drive.google.com/uc?id=1aNZdrLj4Ihjio-VAjIzjM1bxljq3CjFD')",
+            texto: "Enquanto investiga os vínculos do relacionamento de Isabella com seu amante Sandro, Michelle dobra a aposta e acaba ganhando a confiança de Isabella",
+            imagemFundo: "url('')",
             opcoes: [{
-                    texto: "DETALHES",
-                    proximaPagina: "paginaquasefinal"
+                    texto: "OUVIR A CONFISSÃO DE ISABELLA",
+                    proximaPagina: "paginainform"
                 },
                 ]
         },
@@ -548,7 +548,14 @@
                     proximaPagina: "paginajuda"
                 }]
         },
-        
+        paginainform: {
+            texto: "Isabella é, na verdade, a filha de Don Vincenzo Romano, um mafioso poderoso na cidade. Isabella acaba confessando que está sendo ameaçada como parte dos planos de uma seita que busca influencia na máfia local e ganhar acesso às atividades criminosas de Don Vincenzo.",
+            imagemFundo: "url('https://drive.google.com/uc?id=1aNZdrLj4Ihjio-VAjIzjM1bxljq3CjFD')",
+            opcoes: [{
+                    texto: "DETALHES",
+                    proximaPagina: "paginaquasefinal"
+                }]
+        },
         paginabifurcacoes: {
             imagemFundo: "url('https://drive.google.com/uc?id=1aiFO2jPusrhDzf0-DnhZHd_HOt1Qn2RI')",
             opcoes: [{   
