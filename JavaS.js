@@ -135,6 +135,18 @@
         
         pagina2_2cafe: {
             texto: "Testemunhas relataram às autoridades, o comportamento frenético e alucinado de Adam que enfartou ao ingerir quantidades inacreditáveis do líquido. R.I.P.",
+            imagemFundo: "url('')",
+            opcoes: [{
+                    texto: "NOVA JORNADA",
+                    proximaPagina: "pagina0_0"
+                },
+                {
+                    texto: "SAIR DO JOGO",
+                    proximaPagina: "paginainicial"
+                }]
+        },
+        pagina2_2drunkerbr: {
+            texto: "Testemunhas relataram às autoridades, o comportamento frenético e alucinado de Adam que enfartou ao ingerir quantidades inacreditáveis do líquido. R.I.P.",
             imagemFundo: "url('https://drive.google.com/uc?id=1amYIQG6v-fMcR_r3oJPZMKqlRZKsjPpo')",
             opcoes: [{
                     texto: "NOVA JORNADA",
@@ -145,7 +157,7 @@
                     proximaPagina: "paginainicial"
                 }]
         },
-        
+
         pagina4_2: {
             texto: "Despretensiosamente, Adam resolve seguir o sujeito até um pub.",
             imagemFundo: "url('https://drive.google.com/uc?id=1aZZlZq0oZ5fqRyX9KSrUY3tqGUQOy8MK')",
@@ -177,7 +189,7 @@
             imagemFundo: "url('https://drive.google.com/uc?id=1aWmxrlCXbhJJSuxqHKhRNBEGnS8jJtcp')",
             opcoes: [{
                     texto: "HÁ SIM! FICAR NO PUB BEBENDO",
-                    proximaPagina: "pagina2_2cafe"
+                    proximaPagina: "pagina2_2drunkerbr"
                 },
                 {
                     texto: "IR PARA CASA",
@@ -282,7 +294,7 @@
                 },
                 {
                     texto: "FICAR NO PUB BEBENDO",
-                    proximaPagina: "pagina2_2cafe"
+                    proximaPagina: "pagina2_2drunkerbr"
                 },
                 {
                     texto: "SAIR DO PUB SOZINHO",
@@ -373,7 +385,7 @@
         },
         
         paginafuienganado: {
-            texto: " As informações fornecidas pelo suspeito eram falsas, e os criminosos aproveitaram a confiança de Adam para encobrir suas atividades. Os culpados escapam impunes, a conspiração se aprofunda e a cidade continua a ser assolada pelos arrombamentos. Adam enfrenta a devastação de ter confiado nas informações erradas, e a verdadeira figura por trás dos crimes permanece oculta.",
+            texto: " As informações fornecidas pelo suspeito eram falsas, e os criminosos aproveitaram a confiança de Adam para encobrir suas atividades. Os culpados escapam impunes, a conspiração se aprofunda e a cidade continua a ser assolada pelos arrombamentos. Adam enfrenta a devastação de ter confiado nas informações erradas ao descobrir o erro pelas noticias, e a verdadeira figura por trás dos crimes permanece oculta.",
             imagemFundo: "url('')",
             opcoes: [{
                     texto: "NOVA JORNADA",
