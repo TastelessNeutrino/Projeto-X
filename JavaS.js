@@ -253,6 +253,7 @@
         
         pagina7_2: {
             texto: "Adam escolhe se aproximar para obter mais informações e, em um momento inesperado, acaba se envolvendo em um confronto com o invasor. As coisas podem ficar perigosas, e Adam terá que tomar decisões rápidas para lidar com a situação.",
+            imagemFundo: "url('')",
             opcoes: [{
                     texto: "PRENDER O SUSPEITO",
                     proximaPagina: "pagina88_1"
@@ -274,6 +275,7 @@
     
         pagina8_0: {
             texto: "A dupla de detetives amadores, Michelle e Adam, decidem iniciar suas investigações, mergulhando no mistério que envolve o suspeito e o que está acontecendo com Isabella. Eles suspeitam que há segredos ocultos a serem descobertos e estão determinados a descobrir a verdade, mesmo que isso os leve a lugares obscuros e perigosos na cidade.",
+            imagemFundo: "url('')",
             opcoes: [{
                     texto: "CONTINUAR ACOMPANHANDO MICHELLE",
                     proximaPagina: "pagina8_1"
@@ -290,6 +292,7 @@
         
         pagina8_1: {
             texto: "Michelle e Adam decidem procurar Isabella para esclarecer a situação e obter mais informações. Ao se aproximarem dela com cautela, Isabella começa a revelar gradualmente os segredos que ela estava escondendo, levando-os a perceber que há um conflito oculto acontecendo nos bastidores, do qual ela é parte fundamental.",
+            imagemFundo: "url('')",
             opcoes: [{
                     texto: "ADAM X ISABELLA",
                     proximaPagina: "paginadella"
@@ -302,6 +305,7 @@
         
         pagina88_1: {
             texto: "Adam, após o confronto, decide chamar a polícia e entregar o suspeito às autoridades. O invasor é preso preventivamente, mas Adam continua ignorante sobre sua verdadeira identidade. A polícia agradece a colaboração de Adam e promete investigar o caso com seriedade.",
+            imagemFundo: "url('')",
             opcoes: [{
                 texto: "NOVA JORNADA",
                 proximaPagina: "pagina0_0"
@@ -314,6 +318,7 @@
         
         pagina88_2: {
             texto: "Em vez de entregá-lo à polícia, Adam decide fazer um acordo com o suspeito, negociando informações em troca de sua liberdade. O suspeito concorda em revelar detalhes sobre sua relação extraconjugal com Isabella e suas atividades suspeitas.",
+            imagemFundo: "url('')",
             opcoes: [{
                     texto: "CAIR NO PAPINHO",
                     proximaPagina: "paginafuienganado"
@@ -326,6 +331,7 @@
     
         pagina88_3: {
             texto: "Adam, em um momento de dúvida, permite que o suspeito fuja do confronto. O suspeito desaparece na escuridão, deixando Adam com mais perguntas do que respostas.",
+            imagemFundo: "url('')",
             opcoes: [{
                     texto: "DESISTIR DA INVESTIGAÇÃO",
                     proximaPagina: "paginaperdedor"
@@ -368,6 +374,7 @@
         
         paginafuienganado: {
             texto: " As informações fornecidas pelo suspeito eram falsas, e os criminosos aproveitaram a confiança de Adam para encobrir suas atividades. Os culpados escapam impunes, a conspiração se aprofunda e a cidade continua a ser assolada pelos arrombamentos. Adam enfrenta a devastação de ter confiado nas informações erradas, e a verdadeira figura por trás dos crimes permanece oculta.",
+            imagemFundo: "url('')",
             opcoes: [{
                     texto: "NOVA JORNADA",
                     proximaPagina: "pagina0_0"
@@ -377,6 +384,7 @@
         
         paginaescape: {
             texto: "Adam desiste da investigação e procura por entretenimento em uma livraria local.",
+            imagemFundo: "url('')",
             opcoes:
             [{
                     texto: "CAIR FORA DA ESPELUNCA",
@@ -404,6 +412,7 @@
         
         paginaespancar: {
             texto: "Após a escalada das hostilidades, o caos se instala no pub. Adam, em sua tentativa de obter informações do invasor, se vê preso na confusão e acaba sendo detido junto com o suspeito pela polícia.",
+            imagemFundo: "url('')",
             opcoes: [{
                     texto: "NOVA JORNADA",
                     proximaPagina: "pagina0_0"
@@ -426,6 +435,7 @@
         
         paginadella: {
             texto: "Isabella mostrou uma notável resistência em compartilhar informações com Adam. Cada vez que ele tentava se aproximar do cerne do mistério, ela parecia habilmente desviar suas perguntas ou fornecer respostas evasivas. Ela mantinha uma muralha de segredos em torno de sua vida e dos perigos que enfrentava, fazendo com que Adam se sentisse constantemente em desvantagem.",
+            imagemFundo: "url('')",
             opcoes: [{
                     texto: "BLÁ-BLÁ-BLÁ ENCHEU O SACO",
                     proximaPagina: "paginacavalo"
@@ -463,6 +473,7 @@
         
         paginafodasela: {
             texto: "Com Michelle e Adam decidindo deixar Isabella à própria sorte, ela se vê sozinha em sua luta contra a seita e suas ameaças. Isabella, desesperada para proteger a si e à integridade de Sandro, é forçada a tomar decisões difíceis e a manter um equilíbrio delicado entre proteger seu relacionamento e ajudar os chantagistas. Enquanto isso, as invasões paralelas continuam a criar distrações na cidade, desviando a atenção das atividades de chantagem e conspiração do grupo secreto. Figuras poderosas da cidade começam a ser alvo das chantagens, resultando em tensões crescentes e potenciais consequências devastadoras para a cidade",
+            imagemFundo: "url('')",
             opcoes: [{
                     texto: "MUDAR DE IDEIA E AJUDAR ISABELLA",
                     proximaPagina: "paginaideia"
