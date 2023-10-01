@@ -24,6 +24,7 @@
                 }       
             ]
         },
+        
         pagina0_01:
         {
             texto: '"Achamos que somos livres, mas não somos, seguimos sempre o mesmo caminho."',
@@ -35,6 +36,7 @@
                 }        
             ]
         },
+        
         pagina1_0: { // nessa página, 1_0, já haverá mais de uma opção
             texto: "Em derradeiro de setembro de 1923, na manhã daquele domingo nublado, depois de tomar um café na padaria da esquina e ler o seu jornal matinal, Adam estava caminhando para casa intrigado com a notícia dos arrombamentos recentes.",
             imagemFundo: "url('https://drive.google.com/uc?id=1b4mIcYeernwOi1lwppVmUrz68aj0oFBH')",
@@ -61,7 +63,7 @@
                     proximaPagina: "pagina1_0"
                 },
                 {
-                    texto: "IR CHORAR DE COCORAS NO BANHEIRO",
+                    texto: "IR CHORAR DE CÓCORAS NO BANHEIRO",
                     proximaPagina: "paginaperdedor"
                 }]
         },
@@ -76,6 +78,7 @@
                 },
             ]
         },
+        
         pagina2_1: {
             texto: "Você já tomou café! Não há mais nada interessante a se fazer por aqui!",
             imagemFundo: "url('https://drive.google.com/uc?id=1av_8IrSbmQkvQMgJo7C50bK0YDc5KL-e')",
@@ -94,6 +97,7 @@
                 }
             ]
         },
+        
         pagina2_2: {
             texto: "LAMÚRIA: Substantivo feminino, lamentação interminável, que importuna e que a nada leva; queixume, queixa. Semelhantes: lamentação, lenga-lenga, alarida...",
             imagemFundo: "url('https://drive.google.com/uc?id=1aCCB9_GOlKdmXdqJUsmMk4c5RC5SFjui')",
@@ -108,6 +112,7 @@
                 }
             ]
         },
+        
         pagina3_0: {
             texto: "Adam Lawrence, costumava se fechar completamente para as possibilidades do mundo alheias à sua rotina, entretanto, era domingo, e ele percebeu um rapaz saindo pela janela do apartamento de sua vizinha, Isabella.",
             imagemFundo: "url('https://drive.google.com/uc?id=1alo3PVqA_d2msMy0OhH_N2KDotCM0mFr')",
@@ -127,6 +132,7 @@
                 },
             ]
         },
+        
         pagina2_2cafe: {
             texto: "Testemunhas relataram às autoridades, o comportamento frenético e alucinado de Adam que enfartou ao ingerir quantidades inacreditáveis do líquido. R.I.P.",
             imagemFundo: "url('https://drive.google.com/uc?id=1amYIQG6v-fMcR_r3oJPZMKqlRZKsjPpo')",
@@ -141,9 +147,9 @@
         },
         
         pagina4_2: {
-        texto: "Despretensiosamente, Adam resolve seguir o sujeito até um pub.",
-        imagemFundo: "url('https://drive.google.com/uc?id=1aZZlZq0oZ5fqRyX9KSrUY3tqGUQOy8MK')",
-        opcoes: [{
+            texto: "Despretensiosamente, Adam resolve seguir o sujeito até um pub.",
+            imagemFundo: "url('https://drive.google.com/uc?id=1aZZlZq0oZ5fqRyX9KSrUY3tqGUQOy8MK')",
+            opcoes: [{
                     texto: "PROSSEGUIR",
                     proximaPagina: "pagina4_2_0"
                 }]
@@ -165,6 +171,7 @@
                     proximaPagina: "pagina4_2_1"
                 }]
         },
+        
         pagina4_2_1: {
             texto: "Não há nada mais a se fazer por aqui !",
             imagemFundo: "url('https://drive.google.com/uc?id=1aWmxrlCXbhJJSuxqHKhRNBEGnS8jJtcp')",
@@ -186,18 +193,20 @@
                 }
                ]
         },
-         pagina4_1: {
+        
+        pagina4_1: {
             texto: "Adam se apressou demais para prosseguir o seu percuso solitário e não percebeu quando um luxuoso Rolls-Royce Silver Ghost 1907 o acertou em cheio! R.I.P.",
             imagemFundo: "url('https://drive.google.com/uc?id=1bEXpAyViy9wvebFJ5MWa2q_oimM2Y-KL')",
             opcoes: [{
-                    texto: "SAIR DO JOGO",
-                    proximaPagina: "paginainicial"
-                },
-                {
                     texto: "NOVA JORNADA",
                     proximaPagina: "pagina0_0"
+                },
+                {
+                    texto: "SAIR DO JOGO",
+                    proximaPagina: "paginainicial"
                 }]
         },
+        
         pagina5_0: {
             texto: "Adam tentou se desculpar, mas as desculpas não foram aceitas e as autoridades foram acionadas. Trágico fim! Adam foi institucionalizado.",
             imagemFundo: "url('https://drive.google.com/uc?id=1amB8kNumgWyzbKnReFzZj5Y9GnVTzTZV')",
@@ -211,6 +220,7 @@
                     proximaPagina: "paginainicial"
                 }]
         },
+        
         pagina4_0: {
             texto: "Adam, se enfureceu ao ponto de atingir o suspeito com uma pedra. Estranhamente, Isabella, sua vizinha, correu para socorrer o suposto invasor que na verdade era um caso extraconjugal.",
             imagemFundo: "url('https://drive.google.com/uc?id=1atDbKainjlV_xhge2ll0A2Qsu6OA-ZTI')",
@@ -227,6 +237,7 @@
                     proximaPagina: "?"
                 }]
         },
+        
         pagina7_0: {
             texto: "Conversando com Michelle, Adam percebe que ela está realmente interessada nos casos de invasões domiciliares. Ela relata o temor de que a cidade fique perigosa com a imigração. Adam comenta sobre o assunto e menciona o que acabou de ver na janela do apartamento de sua vizinha, Isabella. Michelle fica empolgada e sugere que eles explorem mais a situação, talvez conversando com Isabella ou investigando sua vizinhança para entender melhor os acontecimentos recentes.",
             imagemFundo: "url('')",
@@ -239,6 +250,7 @@
                     proximaPagina: "pagina4_1"
                 }]
         },
+        
         pagina7_2: {
             texto: "Adam escolhe se aproximar para obter mais informações e, em um momento inesperado, acaba se envolvendo em um confronto com o invasor. As coisas podem ficar perigosas, e Adam terá que tomar decisões rápidas para lidar com a situação.",
             opcoes: [{
@@ -251,7 +263,7 @@
                     proximaPagina: "pagina88_2"
                 },
             {
-                    texto: "DEIXAR ELE ESCAPAR",
+                    texto: "DEIXAR O SUSPEITO ESCAPAR",
                     proximaPagina: "pagina88_3"
                 },
             {
@@ -275,6 +287,7 @@
                     proximaPagina: "pagina4_1"
                 }]
         },
+        
         pagina8_1: {
             texto: "Michelle e Adam decidem procurar Isabella para esclarecer a situação e obter mais informações. Ao se aproximarem dela com cautela, Isabella começa a revelar gradualmente os segredos que ela estava escondendo, levando-os a perceber que há um conflito oculto acontecendo nos bastidores, do qual ela é parte fundamental.",
             opcoes: [{
@@ -286,6 +299,7 @@
                     proximaPagina: "paginamibella"
                 }]
         },
+        
         pagina88_1: {
             texto: "Adam, após o confronto, decide chamar a polícia e entregar o suspeito às autoridades. O invasor é preso preventivamente, mas Adam continua ignorante sobre sua verdadeira identidade. A polícia agradece a colaboração de Adam e promete investigar o caso com seriedade.",
             opcoes: [{
@@ -297,7 +311,8 @@
                     proximaPagina: "paginainicial"
                 }]
         },
-            pagina88_2: {
+        
+        pagina88_2: {
             texto: "Em vez de entregá-lo à polícia, Adam decide fazer um acordo com o suspeito, negociando informações em troca de sua liberdade. O suspeito concorda em revelar detalhes sobre sua relação extraconjugal com Isabella e suas atividades suspeitas.",
             opcoes: [{
                     texto: "CAIR NO PAPINHO",
@@ -309,17 +324,18 @@
                 }]
         },
     
-            pagina88_3: {
+        pagina88_3: {
             texto: "Adam, em um momento de dúvida, permite que o suspeito fuja do confronto. O suspeito desaparece na escuridão, deixando Adam com mais perguntas do que respostas.",
             opcoes: [{
-                    texto: "DESISTIR DA INVESTIGAÇÃO E FAZER ALGO MAIS INTERESSANTE",
-                    proximaPagina: "paginaescape"
+                    texto: "DESISTIR DA INVESTIGAÇÃO",
+                    proximaPagina: "paginaperdedor"
                 },
                 {
-                    texto: "PERDER",
-                    proximaPagina: "paginaperdedor"
+                    texto: "FAZER ALGO MAIS INTERESSANTE",
+                    proximaPagina: "paginaescape"
                 }]
         },
+        
         paginaperdedor: {
             imagemFundo: "url('https://drive.google.com/uc?id=1blmYe84oVpdmaJiIPjrwGUul0D-Mzrz3')",
             opcoes: [{
@@ -331,7 +347,8 @@
                     proximaPagina: "paginainicial"
                 }]
         },
-            pagina88_4: {
+        
+        pagina88_4: {
             texto: "As ações de Adam têm consequências. Ele pode enfrentar acusações de perturbação da ordem pública e briga de bar. Sua imagem e reputação podem ser afetadas",
             imagemFundo: "url('')",
             opcoes: [{
@@ -348,7 +365,8 @@
     
                 }]
         },
-            paginafuienganado: {
+        
+        paginafuienganado: {
             texto: " As informações fornecidas pelo suspeito eram falsas, e os criminosos aproveitaram a confiança de Adam para encobrir suas atividades. Os culpados escapam impunes, a conspiração se aprofunda e a cidade continua a ser assolada pelos arrombamentos. Adam enfrenta a devastação de ter confiado nas informações erradas, e a verdadeira figura por trás dos crimes permanece oculta.",
             opcoes: [{
                     texto: "NOVA JORNADA",
@@ -356,9 +374,25 @@
                 },
                 ]
         },
-            paginaescape: {
-            texto: "Adam desiste da investigação e procura por entretenimento em uma livraria local. Decide ler um gamebook que lhe pega a atenção. Ao ler um pouco, Adam percebe que o jogo é sobre um detetive que faz exatamente as mesmas escolhas que ele fez ou cogitou fazer, porém com um nome diferente. Sente-se um pouco melhor depois de perceber o fato, mas ainda assim, não é mais o mesmo.",
-            opcoes: [{
+        
+        paginaescape: {
+            texto: "Adam desiste da investigação e procura por entretenimento em uma livraria local.",
+            opcoes:
+            [{
+                    texto: "CAIR FORA DA ESPELUNCA",
+                    proximaPagina: "pagina4_1"
+                },
+                {
+                    texto: "JOGO-LIVRO INTERATIVO",
+                    proximaPagina: "paginalivreto"
+                }]
+        },
+        
+        paginalivreto: {
+            texto: "No final da visita à livraria, Adam se depara com um livro-jogo interativo que captura completamente a sua atenção. À medida que avança na leitura, uma sensação peculiar o envolve: a história do jogo descreve um detetive que toma as mesmas decisões que ele, até mesmo as que ele só cogitou fazer. Essa descoberta o deixa intrigado, e ele começa a suspeitar que há uma conspiração muito mais profunda e sinistra em jogo na sua vida.",
+            imagemFundo: "url('https://drive.google.com/uc?id=1Rnj-x2KTftWBtC568BIPaxrOHzlvnw2e')",
+            opcoes:
+            [{
                     texto: "SAIR DA MATRIX",
                     proximaPagina: "paginainicial"
                 },
@@ -367,8 +401,9 @@
                     proximaPagina: "pagina0_0"
                 }]
         },
-            paginaespancar: {
-            texto: "Após a escalada das hostilidades, o caos se instala no pub. Adam, em sua tentativa de obter informações do suspeito, se vê preso na confusão e acaba sendo detido junto com o suspeito pela polícia.",
+        
+        paginaespancar: {
+            texto: "Após a escalada das hostilidades, o caos se instala no pub. Adam, em sua tentativa de obter informações do invasor, se vê preso na confusão e acaba sendo detido junto com o suspeito pela polícia.",
             opcoes: [{
                     texto: "NOVA JORNADA",
                     proximaPagina: "pagina0_0"
@@ -379,7 +414,7 @@
                 }]
         },
     
-            paginamibella: {
+        paginamibella: {
             texto: "Enquanto investigam os vínculos do relacionamento de Isabella com seu amante Sandro, Michelle dobra a aposta e acaba descobrindo que Isabella é, na verdade, a filha de Don Vincenzo Romano, um mafioso poderoso na cidade. Isabella acaba confessando que está sendo ameaçada como parte dos planos de uma seita que busca influencia na máfia local e ganhar acesso às atividades criminosas de Don Vincenzo.",
             imagemFundo: "url('https://drive.google.com/uc?id=1aNZdrLj4Ihjio-VAjIzjM1bxljq3CjFD')",
             opcoes: [{
@@ -388,7 +423,8 @@
                 },
                 ]
         },
-            paginadella: {
+        
+        paginadella: {
             texto: "Isabella mostrou uma notável resistência em compartilhar informações com Adam. Cada vez que ele tentava se aproximar do cerne do mistério, ela parecia habilmente desviar suas perguntas ou fornecer respostas evasivas. Ela mantinha uma muralha de segredos em torno de sua vida e dos perigos que enfrentava, fazendo com que Adam se sentisse constantemente em desvantagem.",
             opcoes: [{
                     texto: "BLÁ-BLÁ-BLÁ ENCHEU O SACO",
@@ -399,6 +435,7 @@
                     proximaPagina: "paginamibella"
                 }]
         },
+        
         paginacavalo: {
             imagemFundo: "url('https://drive.google.com/uc?id=1aQY8BEuqM7CwhFU8Y1ix8_-6CA-M93z3')",
             opcoes: [{
@@ -410,7 +447,8 @@
                     proximaPagina: "pagina0_0"
                 }]
         },
-            paginaquasefinal: {
+        
+        paginaquasefinal: {
             texto: "Os invasores roubam documentos confidenciais, registros financeiros e informações pessoais que podem ser usados como alavancagem contra figuras poderosas da cidade. Invasões paralelas foram planejadas para criar distrações e desviar a atenção das atividades de chantagem e conspiração do grupo.",
             imagemFundo:"url('https://drive.google.com/uc?id=1aHH61BfDUhMLFNfWHx1pE9gN_dDkHpmu')",
             opcoes: [{
@@ -422,7 +460,8 @@
                     proximaPagina: "paginafodasela"
                 }]
         },
-            paginafodasela: {
+        
+        paginafodasela: {
             texto: "Com Michelle e Adam decidindo deixar Isabella à própria sorte, ela se vê sozinha em sua luta contra a seita e suas ameaças. Isabella, desesperada para proteger a si e à integridade de Sandro, é forçada a tomar decisões difíceis e a manter um equilíbrio delicado entre proteger seu relacionamento e ajudar os chantagistas. Enquanto isso, as invasões paralelas continuam a criar distrações na cidade, desviando a atenção das atividades de chantagem e conspiração do grupo secreto. Figuras poderosas da cidade começam a ser alvo das chantagens, resultando em tensões crescentes e potenciais consequências devastadoras para a cidade",
             opcoes: [{
                     texto: "MUDAR DE IDEIA E AJUDAR ISABELLA",
@@ -433,7 +472,8 @@
                     proximaPagina: "paginaconsequencias"
                 }]
         },
-            paginajuda: {
+        
+        paginajuda: {
             texto: "Michelle, Adam e Isabella, formando uma equipe improvável, trabalham juntos para investigar, identificar os membros da seita e coletar evidências contra eles. Michelle, Adam e Isabella se reúnem, formando uma equipe improvável. Trabalham juntos, utilizando suas habilidades para investigar, identificar os membros da seita e coletar evidências contra elesEles conseguem desvendar os segredos da seita e expor suas atividades criminosas. Em uma confrontação final com os líderes da seita, Michelle, Adam e Isabella, apoiados por evidências irrefutáveis, conseguem expor a verdade, frustrar os planos conspiratórios e desmantelar a seita. A cidade é salva do caos instalado pelas chantagens e do controle da seita, e as figuras poderosas envolvidas podem ser responsabilizadas por seus crimes.",
             imagemFundo: "url('https://drive.google.com/uc?id=1bcl-Gmio6XXEajMGJF7Qq4e_cdAiwqaO')",
             opcoes: [{
@@ -457,7 +497,8 @@
                     proximaPagina: "paginainicial"
                 }]
         },
-            paginacasamento: {
+        
+        paginacasamento: {
             texto: "Quanto ao casamento marcado da filha de Don Vincenzo Romano... bem, este entrou em ruína, após Isabella se mandar para a Itália com seu amante Sandro. ",
             imagemFundo: "url('https://drive.google.com/uc?id=1b6Mxr7jg8vbi_AmILrG6_KNYbzPMZTC6')",
             opcoes: [{
@@ -465,7 +506,8 @@
                     proximaPagina: "paginajuda"
                 }]
         },
-            pagina404: {
+        
+        pagina404: {
             texto: "( 404 error: File not found ) Os scripts desta seção foram tragicamente perdidos quando Kalil se esbarrou nos cabos do computador no laboratório.",
             imagemFundo: "url('https://drive.google.com/uc?id=1bapzFwXyZrJgNxJ2iQ-EhJjaWZ4qyl_I')",
             opcoes: [{
@@ -473,7 +515,8 @@
                     proximaPagina: "paginajuda"
                 }]
         },
-            paginaconsequencias: {
+        
+        paginaconsequencias: {
             texto: "Adam e Michelle  optam por não se envolverem mais na situação e continuar com suas vidas cotidianas, ignorando as crescentes tensões na cidade e as atividades da seita. Eles acreditam que não é responsabilidade deles lidar com a situação e tentam manter distância dos acontecimentos.",
             imagemFundo: "url('https://drive.google.com/uc?id=1anuMm7epxsc4xTIggSQWsY6aCujc8UUr')",
             opcoes: [{
@@ -485,7 +528,8 @@
                     proximaPagina: "pagina0_0"
                 }]
         },
-            paginaideia: {
+        
+        paginaideia: {
             texto: "À medida que a situação na cidade fica insustentável, Michelle e Adam, consumidos pelo remorso e preocupados com o destino de Isabella e da cidade, decidem finalmente se envolver. Eles reconhecem que a seita representa uma ameaça significativa e que sua ajuda é crucial para impedir as chantagens e conspirações.",
             imagemFundo: "url('https://drive.google.com/uc?id=1aw8L4BJyb-zOeAU8U-NbRHNKZ0U2zX9T')",
             opcoes: [{
@@ -493,14 +537,14 @@
                     proximaPagina: "paginajuda"
                 }]
         },
-            paginabifurcacoes: {
+        
+        paginabifurcacoes: {
             imagemFundo: "url('https://drive.google.com/uc?id=1aiFO2jPusrhDzf0-DnhZHd_HOt1Qn2RI')",
             opcoes: [{   
                     texto: "VOLTAR",
                     proximaPagina: "paginajuda"
                 }]   
         },
-
     
   // História II começa a partir da página abaixo
 
