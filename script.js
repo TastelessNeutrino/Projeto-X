@@ -1131,7 +1131,19 @@ const imagensParaPreCarregar = [
   'https://drive.google.com/uc?id=1fr4LG1n24OqB4_DaYiBmdtx_-YqjsbYs',
   'https://drive.google.com/uc?id=1amYIQG6v-fMcR_r3oJPZMKqlRZKsjPpo',
   'https://drive.google.com/uc?id=1aZZlZq0oZ5fqRyX9KSrUY3tqGUQOy8MK',
-  'https://drive.google.com/uc?id=1aunwCtSW4XKDmBRdc5VkgclA13nK6Hgg',
+  'https://drive.google.com/uc?id=1aunwCtSW4XKDmBRdc5VkgclA13nK6Hgg'
+
+
+  // Adicione mais URLs de imagens aqui
+];
+
+preCarregarLoteDeImagens(imagensParaPreCarregar).then(() => {
+  // Todas as imagens estão pré-carregadas, você pode iniciar seu jogo ou mostrar a primeira página agora
+  mostrarPagina("paginainicial"); //nesse caso você capenas conseguirá abrir o jogo inicial quandotodo o lote de imagens iniciais estiver pré-carregado, devido ao await e promise
+});
+
+// Esse 'batch' ou lote de imagens será pré-carregado enquanto o jogador progredir no jogo (ainda não utilizado)
+const proximasPaginasParaPreCarregar1 = [
   'https://drive.google.com/uc?id=1aWmxrlCXbhJJSuxqHKhRNBEGnS8jJtcp',
   'https://drive.google.com/uc?id=1bEXpAyViy9wvebFJ5MWa2q_oimM2Y-KL',
   'https://drive.google.com/uc?id=1amB8kNumgWyzbKnReFzZj5Y9GnVTzTZV',
@@ -1142,6 +1154,9 @@ const imagensParaPreCarregar = [
   'https://drive.google.com/uc?id=1jlJovcYyzQ9Ci_dzQkHpylHpDZuUXfv8',
   'https://drive.google.com/uc?id=1kOWYZ8XdDkeHxT-iMeTt5RlXRxUC7KEP',
   'https://drive.google.com/uc?id=1kQVCbzYqiTRqIm0q7sTHlRLmnIHscp0b',
+
+];//essa daqui precisa ser integrada na logica do jogo mas pelo tamanho do mesmo provavelmente não será necessária
+const proximasPaginasParaPreCarregar2 = [
   'https://drive.google.com/uc?id=1blmYe84oVpdmaJiIPjrwGUul0D-Mzrz3',
   'https://drive.google.com/uc?id=1kn6ZQp8VQ-cxG1aI9bhNUOJ9m-dEJESy',
   'https://drive.google.com/uc?id=1bmoDrWIOuJT0kgRUZDkvg6ELR-gpJ-9_',
@@ -1152,6 +1167,9 @@ const imagensParaPreCarregar = [
   'https://drive.google.com/uc?id=1aNZdrLj4Ihjio-VAjIzjM1bxljq3CjFD',
   'https://drive.google.com/uc?id=1hCtAOu0tjNBBJaF3fOat3aI-FababGGK',
   'https://drive.google.com/uc?id=1jhw2IeyZBocefj4ay5WCfYDQHarSvXIX',
+
+];
+const proximasPaginasParaPreCarregar3 = [
   'https://drive.google.com/uc?id=1jh_8_09wt1RNSO3brx0EHJSHHYM9OejR',
   'https://drive.google.com/uc?id=1aQY8BEuqM7CwhFU8Y1ix8_-6CA-M93z3',
   'https://drive.google.com/uc?id=1aHH61BfDUhMLFNfWHx1pE9gN_dDkHpmu',
@@ -1161,26 +1179,24 @@ const imagensParaPreCarregar = [
   'https://drive.google.com/uc?id=1bapzFwXyZrJgNxJ2iQ-EhJjaWZ4qyl_I',
   'https://drive.google.com/uc?id=1anuMm7epxsc4xTIggSQWsY6aCujc8UUr',
   'https://drive.google.com/uc?id=1aw8L4BJyb-zOeAU8U-NbRHNKZ0U2zX9T',
-  'https://drive.google.com/uc?id=1aiFO2jPusrhDzf0-DnhZHd_HOt1Qn2RI'
+  'https://drive.google.com/uc?id=1aiFO2jPusrhD',
 
+];
+const proximasPaginasParaPreCarregar4 = [
 
-  // Adicione mais URLs de imagens aqui
 ];
 
-preCarregarLoteDeImagens(imagensParaPreCarregar).then(() => {
-  // Todas as imagens estão pré-carregadas, você pode iniciar seu jogo ou mostrar a primeira página agora
-  mostrarPagina("paginainicial"); //nesse caso você capenas conseguirá abrir o jogo inicial quando todo o lote de imagens iniciais estiver pré-carregado, devido ao await e promise
-});
-
-// Esse 'batch' ou lote de imagens será pré-carregado enquanto o jogador progredir no jogo (ainda não utilizado)
-const proximasPaginasParaPreCarregar = [
-
-];//essa daqui precisa ser integrada na logica do jogo mas pelo tamanho do mesmo provavelmente não será necessária
-
-preCarregarLoteDeImagens(proximasPaginasParaPreCarregar).then(() => {
+preCarregarLoteDeImagens(proximasPaginasParaPreCarregar1).then(() => {
   // As imagens para as próximas páginas estão pré-carregadas
+ mostrarPagina("paginainicial"); // Você pode continuar a lógica do jogo ou mostrar essas páginas quando necessário
+});
+preCarregarLoteDeImagens(proximasPaginasParaPreCarregar2).then(() => {
+  mostrarPagina("paginainicial")
+  // Você pode continuar a lógica do jogo ou mostrar essas páginas quando necessário
+});
+preCarregarLoteDeImagens(proximasPaginasParaPreCarregar3).then(() => {
+  mostrarPagina("paginainicial")
   // Você pode continuar a lógica do jogo ou mostrar essas páginas quando necessário
 });
 
-  
-  mostrarPagina("paginainicial") 
+mostrarPagina(paginainicial)
