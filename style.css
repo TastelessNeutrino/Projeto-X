@@ -74,7 +74,7 @@ button {  /* Estilização dos botões: */
     margin-bottom: 2vw; /* Faz com que os botões tenham uma margem de distância entre eles,
     sem isso, eles ficariam "colados". */
 
-    font-size: 1,2vw; /* Define qual será o tamanho da fonte do texto dos botões. */
+    font-size: 1.2vw; /* Define qual será o tamanho da fonte do texto dos botões. */
 
     border-radius: 3vw; /* Novamente, Ele: o comando que deixa tudo mais bonito (arredonda a borda dos botões). */
 }
