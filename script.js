@@ -645,7 +645,7 @@
             texto: 'Poucos segundos depois, um alarme com sirenes e luzes vermelhas é acionado. O que você vai fazer?',
             imagemFundo: "url()",
             opcoes: [{texto: 'Tentar sair. ', proximaPagina: 'paginaopcao_b00'},
-                {texto: 'Fingir que não acordei e me esconder em um armário. ', proximaPagina: 'paginaopcao-a04'},
+                {texto: 'Fingir que não acordei e me esconder em um armário. ', proximaPagina: 'paginaopcao_a04'},
                 {texto: 'Sair do jogo', proximaPagina: 'paginainicial'}]
         },
 
@@ -941,7 +941,7 @@
                 {texto: 'Sair do jogo', proximaPagina: 'paginainicial'}]
         },
 
-        paginaopcao_f0: {
+        paginaopcao_f07: {
             texto: 'O ponto parece estar próximo... Caminhando por cerca de duas horas, você está chegando perto. Vai dar certo, você pensa. Porém, a poucos minutos do destino, as luzes começam a piscar, e as sirenes são acionadas: você sabe o que acontecerá depois.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_f08'},
