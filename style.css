@@ -1,20 +1,23 @@
 
 
 
+
+
+
 <style> /* Este é o início da seção de estilos CSS, que é responável por definir como os elementos HTML serão estilizados. */
 
 
 body {  /*Aqui é onde serão definindos os estilos para alguns dos elementos do <body>, que é o elemento principal da página HTML. */
 
-    font-family: 'Trebuchet MS', sans-serif; /*Esse é o comando que define qual será o estilo da fonte para a página. 
+    font-family: 'Trebuchet MS', sans-serif; /*Esse é o comando que define qual será o estilo da fonte para a página.
     Nesse caso, a fonte escolhida foi a 'Trebuchet MS', que não possui serifa, 'sans-serif'. */
 
     background-color: #242222; /*Define qual será a cor das bordas que ficam ao redor da caixa que contém o texto,
     a imagem e as opções. Aqui, a cor escolhida foi cinza escuro, que é representada pelo código '#242222'*/
 
-    margin: 2vw; /* Cria uma margem de 2.5vw ao redor da caixa principal, deixando uma margem entre 
+    margin: 2vw; /* Cria uma margem de 2.5vw ao redor da caixa principal, deixando uma margem entre
     a imagem do fundo e a borda da tela. O 'vw' (viewport width) é uma unidade de medida que representa a largura
-    da janela de visualização. O valor de 1vw é igual a 1% da largura da janela de visualização. 
+    da janela de visualização. O valor de 1vw é igual a 1% da largura da janela de visualização.
     Ele tem a capacidade de ajustar o tamanho do elemento de acordo com o tamanho da tela,
     o que deixa o jogo mais responsivo.*/
 }
@@ -24,22 +27,22 @@ body {  /*Aqui é onde serão definindos os estilos para alguns dos elementos do
 #jogo-container {  /* Este seletor é responsável por definir os estilos para o elemento HTML com o atributo 'id''jogo-container'. */
 
     color: #ffffff;  /* Define a cor do texto como branca ('#fffff'). */
-    
+
     padding: 0.1vw;   /*Define uma quantidade de espaço padão entre a imagem e a borda da caixa, nesse caso, 0.1vw. */
 
     text-shadow: 0.2vw 0.2vw 0.4vw rgba(0, 0, 0, 0.74);  /*  Cria uma sombra ao redor do texto para dar um pequeno destaque entre
-    o texto e a caixa de texto. Essa sombra tem um deslocamento horizontal e vertical de 0.2vw, um raio de 0.4vw e 
+    o texto e a caixa de texto. Essa sombra tem um deslocamento horizontal e vertical de 0.2vw, um raio de 0.4vw e
     é semitransparente (rgba(0, 0, 0, 0.74)). */
 
-    background-size: cover; /* Define o tamanho para a imagem de fundo, nesse caso, está configurado para 
+    background-size: cover; /* Define o tamanho para a imagem de fundo, nesse caso, está configurado para
     que a imagem ocupe todo o espaço da tela (cover). */
 
-    background-color: #000000;  /* Define qual será a cor do fundo da página quando nenhuma imagem está sendo exibida. 
+    background-color: #000000;  /* Define qual será a cor do fundo da página quando nenhuma imagem está sendo exibida.
     Aqui, a cor escolhida foi preto, que é representada pelo código '#000000' */
 
     background-repeat: no-repeat;  /* Faz com que a imagem de fundo não se repita. */
 
-    min-height: 100vh;  /* Faz com que a imagem ocupe toda a altura da tela (por isso o 100). O vh (Viewport Height) é muito semelhante ao 
+    min-height: 100vh;  /* Faz com que a imagem ocupe toda a altura da tela (por isso o 100). O vh (Viewport Height) é muito semelhante ao
     vw, a diferença é que um define a alutura e o outro, a largura.  */
 
     overflow: auto;  /* Faz com que seja possível fazer a rolagem da página para ver o restante do contéudo
@@ -52,7 +55,7 @@ body {  /*Aqui é onde serão definindos os estilos para alguns dos elementos do
 
 
 button {  /* Estilização dos botões: */
-  
+
     background-color: #242222; /* Define qual será a cor dos botões, nesse caso, cinza escuro ('#242222') */
 
     color: #ffffff; /* Define a cor do texto dos botões como branco. */
@@ -62,16 +65,16 @@ button {  /* Estilização dos botões: */
 
     border: none; /* Remove a borda dos botões, deixando-os mais cleans. */
 
-    cursor: pointer; /* Faz com que a seta do mouse se torne uma mão ao passar por cima dos botões. */ 
+    cursor: pointer; /* Faz com que a seta do mouse se torne uma mão ao passar por cima dos botões. */
 
-    display: block; /* Coloca os botões na coluna vertical. */ 
+    display: block; /* Coloca os botões na coluna vertical. */
 
     margin: auto; /* Centaliza os botões na página automaticamente, sem isso, os botões ficariam pelos cantos. */
 
     margin-bottom: 2vw; /* Faz com que os botões tenham uma margem de distância entre eles,
     sem isso, eles ficariam "colados". */
 
-    font-size: 1vw; /* Define qual será o tamanho da fonte do texto dos botões. */ 
+    font-size: 1vw; /* Define qual será o tamanho da fonte do texto dos botões. */
 
     border-radius: 3vw; /* Novamente, Ele: o comando que deixa tudo mais bonito (arredonda a borda dos botões). */
 }
@@ -98,21 +101,21 @@ button:hover {
 
     font-size: 2vw; /* Define o tamanho da fonte do texto. */
 
-    background-color: #242222c0; /* Define a cor da caixa de texto. */ 
+    background-color: #242222c0; /* Define a cor da caixa de texto. */
 
     padding: 4vw; /* Define uma margem entre o texto e as bordas da caixa de texto. */
 
     border-radius: 3vw;  /* Deixa a borda arredondada. */
 
-    display: flex; /* Define a caixa de texto como um container flexível, o que possibilita 
-    controlar a disposção do texto dentro dela de acordo com o tamanho da tela do navegador. */ 
+    display: flex; /* Define a caixa de texto como um container flexível, o que possibilita
+    controlar a disposção do texto dentro dela de acordo com o tamanho da tela do navegador. */
 
     justify-content: center; /* Centraliza o texto na horizontal dentro da caixa de texto. */
 }
 
 
 
-#narrativa:empty { 
+#narrativa:empty {
     display: none; /* Esconde a caixa de texto quando não existe um texto.*/
 }
 
@@ -120,11 +123,11 @@ button:hover {
 
 /* Essas são algumas regras para deixar o jogo responsivo em diferentes tamanhos de tela. */
 
-@media screen and (max-width: 768px) { /* Essas especificações são executadas quando a tela 
+@media screen and (max-width: 768px) { /* Essas especificações são executadas quando a tela
     tem no máximo 768px de largura. A escolha de 768 pixels de largura como ponto de quebra é uma convenção
     comum em designs responsivos para dispositos com telas menores, como tablets e celulares. */
 
-    
+
 
     button { /* Novo estilo dos botões: */
 
@@ -138,7 +141,7 @@ button:hover {
     }
 
 
-    
+
     #narrativa { /* Novo estilo para os elementos da narrativa: */
 
         margin-bottom: 5vh; /* Define a margem entre o texto e as opções. */
@@ -157,5 +160,4 @@ button:hover {
 
 
 </style> /*Fim do CSS.*/
-
 

@@ -1095,6 +1095,48 @@ function escolherOpcao(proximaPagina) { // esta função é responsável por exi
     const efeitoSonoro = document.getElementById("efeitoSonoro") // ao escolher a opção, essa constante reproduz o efeito sonoro espcíficado acima ao clicar em uma opção
     efeitoSonoro.play() // como o nome diz, executará o arquivo de áudio específicado
 }
+// Função que da pre-load nas imagens (necessita apenas carregar a url das imagens usadas anteriormente já que o html salva a imagem por url no cache, ou seja essa função não precisa interferir com outras partes do codigo nas quais a imagem possui indexações específicas )
+function preCarregarImagem(srcImagem) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = reject;
+    img.src = srcImagem;
+  });
+}
+
+// essa é uma função genérica para pré-carregar um lote de imagens
+async function preCarregarLoteDeImagens(arraySrcImagens) {
+  const promessas = arraySrcImagens.map(preCarregarImagem);
+  await Promise.all(promessas);
+}//o 'promise' somado com o 'await' é um comando que serve para ordenação, ou seja quando todos as promessas forem cumpridas ele excutara tal função
+
+// Aqui você pode pré-carregar imagens para as primeira páginas, para que elas estejam prontas quando o usuário começar a jogar
+const imagensParaPreCarregar = [
+  'https://drive.google.com/uc?id=1aw1FB7sZoZ9NjF05uQ0mIimxlonNLLMN',
+  'https://drive.google.com/uc?id=1amorZlD7DGbZv68vZEtT5AIg7DedmzXw',
+  'https://drive.google.com/uc?id=1av_8IrSbmQkvQMgJo7C50bK0YDc5KL-e',
+  'https://drive.google.com/uc?id=1b4mIcYeernwOi1lwppVmUrz68aj0oFBH',
+  'https://drive.google.com/uc?id=1bmoDrWIOuJT0kgRUZDkvg6ELR-gpJ-9_',
+  // Adicione mais URLs de imagens aqui
+];
+
+preCarregarLoteDeImagens(imagensParaPreCarregar).then(() => {
+  // Todas as imagens estão pré-carregadas, você pode iniciar seu jogo ou mostrar a primeira página agora
+  mostrarPagina("paginainicial"); //nesse caso você capenas conseguirá abrir o jogo inicial quando todo o lote de imagens iniciais estiver pré-carregado, devido ao await e promise
+});
+
+// Esse 'batch' ou lote de imagens será pré-carregado enquanto o jogador progredir no jogo (ainda não utilizado)
+const proximasPaginasParaPreCarregar = [
+  'https://drive.google.com/uc?id=1Rnj-x2KTftWBtC568BIPaxrOHzlvnw2e', // Pré-carregue imagens para as próximas páginas
+  'https://drive.google.com/uc?id=1jdBsBO_f2w9NW-NEJGTAIezMM0RVLTRG',
+  'https://drive.google.com/uc?id=1kn6ZQp8VQ-cxG1aI9bhNUOJ9m-dEJESy',
+];
+
+preCarregarLoteDeImagens(proximasPaginasParaPreCarregar).then(() => {
+  // As imagens para as próximas páginas estão pré-carregadas
+  // Você pode continuar a lógica do jogo ou mostrar essas páginas quando necessário
+});
 
   
   mostrarPagina("paginainicial") 
