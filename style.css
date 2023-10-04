@@ -60,7 +60,7 @@ button {  /* Estilização dos botões: */
 
     color: #ffffff; /* Define a cor do texto dos botões como branco. */
 
-    padding: 2vw 8vh; /* Define qual vai ser a distância entre o texto interno e a borda do botão, tanto
+    padding: 1vw 2vh; /* Define qual vai ser a distância entre o texto interno e a borda do botão, tanto
     na horizontal quanto na vertical. */
 
     border: none; /* Remove a borda dos botões, deixando-os mais cleans. */
@@ -74,7 +74,7 @@ button {  /* Estilização dos botões: */
     margin-bottom: 2vw; /* Faz com que os botões tenham uma margem de distância entre eles,
     sem isso, eles ficariam "colados". */
 
-    font-size: 1vw; /* Define qual será o tamanho da fonte do texto dos botões. */
+    font-size: 1,2vw; /* Define qual será o tamanho da fonte do texto dos botões. */
 
     border-radius: 3vw; /* Novamente, Ele: o comando que deixa tudo mais bonito (arredonda a borda dos botões). */
 }
@@ -91,6 +91,10 @@ button:hover {
 #narrativa { /* Seletor responsável por definir os estilos para o elemento HTML com o atributo
      'id''narrativa'. */
 
+    justify-content: center; /* Centraliza o texto na horizontal dentro da caixa de texto. */
+
+    text-align: center; /* Centraliza o texto na vertical dentro da caixa de texto.*/
+    
     margin-bottom: 5vh; /* Adiciona uma margem entre a caixa de texto e o primeiro botão abaixo dela. */
 
     margin-top: 2vw ;  /* Adiciona uma margem entre o topo da pagina e a caixa de texto.*/
@@ -103,14 +107,12 @@ button:hover {
 
     background-color: #242222c0; /* Define a cor da caixa de texto. */
 
-    padding: 4vw; /* Define uma margem entre o texto e as bordas da caixa de texto. */
+    padding: 2.5vw; /* Define uma margem entre o texto e as bordas da caixa de texto. */
 
     border-radius: 3vw;  /* Deixa a borda arredondada. */
 
     display: flex; /* Define a caixa de texto como um container flexível, o que possibilita
     controlar a disposção do texto dentro dela de acordo com o tamanho da tela do navegador. */
-
-    justify-content: center; /* Centraliza o texto na horizontal dentro da caixa de texto. */
 }
 
 
