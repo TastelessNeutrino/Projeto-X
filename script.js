@@ -1114,24 +1114,59 @@ async function preCarregarLoteDeImagens(arraySrcImagens) {
 // Aqui você pode pré-carregar imagens para as primeira páginas, para que elas estejam prontas quando o usuário começar a jogar
 const imagensParaPreCarregar = [
   'https://drive.google.com/uc?id=1aw1FB7sZoZ9NjF05uQ0mIimxlonNLLMN',
+  'https://drive.google.com/uc?id=1b4mIcYeernwOi1lwppVmUrz68aj0oFBH',
   'https://drive.google.com/uc?id=1amorZlD7DGbZv68vZEtT5AIg7DedmzXw',
   'https://drive.google.com/uc?id=1av_8IrSbmQkvQMgJo7C50bK0YDc5KL-e',
-  'https://drive.google.com/uc?id=1b4mIcYeernwOi1lwppVmUrz68aj0oFBH',
+  'https://drive.google.com/uc?id=1aCCB9_GOlKdmXdqJUsmMk4c5RC5SFjui',
+  'https://drive.google.com/uc?id=1alo3PVqA_d2msMy0OhH_N2KDotCM0mFr',
+  'https://drive.google.com/uc?id=1fr4LG1n24OqB4_DaYiBmdtx_-YqjsbYs',
+  'https://drive.google.com/uc?id=1amYIQG6v-fMcR_r3oJPZMKqlRZKsjPpo',
+  'https://drive.google.com/uc?id=1aZZlZq0oZ5fqRyX9KSrUY3tqGUQOy8MK',
+  'https://drive.google.com/uc?id=1aunwCtSW4XKDmBRdc5VkgclA13nK6Hgg',
+  'https://drive.google.com/uc?id=1aWmxrlCXbhJJSuxqHKhRNBEGnS8jJtcp',
+  'https://drive.google.com/uc?id=1bEXpAyViy9wvebFJ5MWa2q_oimM2Y-KL',
+  'https://drive.google.com/uc?id=1amB8kNumgWyzbKnReFzZj5Y9GnVTzTZV',
+  'https://drive.google.com/uc?id=1atDbKainjlV_xhge2ll0A2Qsu6OA-ZTI',
+  'https://drive.google.com/uc?id=1fA_qgTKfiKLwJC6AvSXZmuI8XEqHLtnL',
+  'https://drive.google.com/uc?id=1kLDPF33vRBilYOJiQ2dSJCWdgGf-vU4-',
+  'https://drive.google.com/uc?id=1jjH14vhU12TVLqHSdywsriKT6cTJszfU',
+  'https://drive.google.com/uc?id=1jlJovcYyzQ9Ci_dzQkHpylHpDZuUXfv8',
+  'https://drive.google.com/uc?id=1kOWYZ8XdDkeHxT-iMeTt5RlXRxUC7KEP',
+  'https://drive.google.com/uc?id=1kQVCbzYqiTRqIm0q7sTHlRLmnIHscp0b',
+  'https://drive.google.com/uc?id=1blmYe84oVpdmaJiIPjrwGUul0D-Mzrz3',
+  'https://drive.google.com/uc?id=1kn6ZQp8VQ-cxG1aI9bhNUOJ9m-dEJESy',
   'https://drive.google.com/uc?id=1bmoDrWIOuJT0kgRUZDkvg6ELR-gpJ-9_',
+  'https://drive.google.com/uc?id=1jPXXhCAiP1iWv0gKm4NoXs_Z-8KtJULI',
+  'https://drive.google.com/uc?id=1jdBsBO_f2w9NW-NEJGTAIezMM0RVLTRG',
+  'https://drive.google.com/uc?id=1Rnj-x2KTftWBtC568BIPaxrOHzlvnw2e',
+  'https://drive.google.com/uc?id=1jPSwG51F4ncgMz8pCMyKZEJS8qYz3u3V',
+  'https://drive.google.com/uc?id=1aNZdrLj4Ihjio-VAjIzjM1bxljq3CjFD',
+  'https://drive.google.com/uc?id=1hCtAOu0tjNBBJaF3fOat3aI-FababGGK',
+  'https://drive.google.com/uc?id=1jhw2IeyZBocefj4ay5WCfYDQHarSvXIX',
+  'https://drive.google.com/uc?id=1jh_8_09wt1RNSO3brx0EHJSHHYM9OejR',
+  'https://drive.google.com/uc?id=1aQY8BEuqM7CwhFU8Y1ix8_-6CA-M93z3',
+  'https://drive.google.com/uc?id=1aHH61BfDUhMLFNfWHx1pE9gN_dDkHpmu',
+  'https://drive.google.com/uc?id=1h8qNhRYIEPrgBBLbCCitkz19X0fNcelz',
+  'https://drive.google.com/uc?id=1bcl-Gmio6XXEajMGJF7Qq4e_cdAiwqaO',
+  'https://drive.google.com/uc?id=1b6Mxr7jg8vbi_AmILrG6_KNYbzPMZTC6',
+  'https://drive.google.com/uc?id=1bapzFwXyZrJgNxJ2iQ-EhJjaWZ4qyl_I',
+  'https://drive.google.com/uc?id=1anuMm7epxsc4xTIggSQWsY6aCujc8UUr',
+  'https://drive.google.com/uc?id=1aw8L4BJyb-zOeAU8U-NbRHNKZ0U2zX9T',
+  'https://drive.google.com/uc?id=1aiFO2jPusrhDzf0-DnhZHd_HOt1Qn2RI'
+
+
   // Adicione mais URLs de imagens aqui
 ];
 
 preCarregarLoteDeImagens(imagensParaPreCarregar).then(() => {
   // Todas as imagens estão pré-carregadas, você pode iniciar seu jogo ou mostrar a primeira página agora
-  mostrarPagina("paginainicial"); //nesse caso você capenas conseguirá abrir o jogo inicial quando todo o lote de imagens iniciais estiver pré-carregado, devido ao await e promise
+  mostrarPagina("pagina0_0"); //nesse caso você capenas conseguirá abrir o jogo inicial quando todo o lote de imagens iniciais estiver pré-carregado, devido ao await e promise
 });
 
 // Esse 'batch' ou lote de imagens será pré-carregado enquanto o jogador progredir no jogo (ainda não utilizado)
 const proximasPaginasParaPreCarregar = [
-  'https://drive.google.com/uc?id=1Rnj-x2KTftWBtC568BIPaxrOHzlvnw2e', // Pré-carregue imagens para as próximas páginas
-  'https://drive.google.com/uc?id=1jdBsBO_f2w9NW-NEJGTAIezMM0RVLTRG',
-  'https://drive.google.com/uc?id=1kn6ZQp8VQ-cxG1aI9bhNUOJ9m-dEJESy',
-];
+
+];//essa daqui precisa ser integrada na logica do jogo mas pelo tamanho do mesmo provavelmente não será necessária
 
 preCarregarLoteDeImagens(proximasPaginasParaPreCarregar).then(() => {
   // As imagens para as próximas páginas estão pré-carregadas
