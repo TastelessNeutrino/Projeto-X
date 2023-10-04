@@ -4,7 +4,7 @@
             texto: "Escolha uma história para se aventurar",
             imagemFundo: "url()",
             opcoes: [{texto: "1923 • O MISTÉRIO DO PUB", proximaPagina: "pagina0_0"},
-                {texto: "LABIRINTO • ZUMBI", proximaPagina: "pagina_intro"}]
+                {texto: "2087 • ALÉM CORREDOR", proximaPagina: "pagina_intro"}]
         },
 
         // história I - a seguir as páginas da primeira história - o mistério do pub
@@ -644,9 +644,11 @@
         pagina_a03: {
             texto: 'Poucos segundos depois, um alarme com sirenes e luzes vermelhas é acionado. O que você vai fazer?',
             imagemFundo: "url()",
-            opcoes: [{texto: 'Tentar sair. ', proximaPagina: 'paginaopcao_b00'},
+            opcoes: [
                 {texto: 'Fingir que não acordei e me esconder em um armário. ', proximaPagina: 'paginaopcao_a04'},
-                {texto: 'Sair do jogo', proximaPagina: 'paginainicial'}]
+                {texto: 'Tentar sair. ', proximaPagina: 'paginaopcao_b00'},
+                {texto: 'Sair do jogo', proximaPagina: 'paginainicial'}
+            ]
         },
 
         paginaopcao_a04: {
@@ -779,9 +781,11 @@
         paginaopcao_c04: {
             texto: 'Ao andar um pouco pelos corredores, as sirenes cessam e tudo fica em silêncio. Mas essa calmaria é rapidamente interrompida por um som agudo e enlouquecedor. Você percebe que tem algo estranho acontecendo com aqueles cadáveres. O que você vai fazer?',
             imagemFundo: "url()",
-            opcoes: [{texto: 'Se afastar das janelas e esperar.', proximaPagina: 'paginaopcao_d00'},
+            opcoes: [
                 {texto: 'Entrar em uma sala para ver mais de perto.', proximaPagina: 'paginaopcao_c05'},
-                {texto: 'Sair do jogo', proximaPagina: 'paginainicial'}]
+                {texto: 'Se afastar das janelas e esperar.', proximaPagina: 'paginaopcao_d00'},
+                {texto: 'Sair do jogo', proximaPagina: 'paginainicial'}
+            ]
         },
 
         paginaopcao_c05: {
@@ -857,9 +861,11 @@
         paginaopcao_d06: {
             texto: 'Você grita e pede ajuda desesperadamente. então, uma voz no rádio manda você calar a boca e ouvir o que ela tem a dizer, pois você só tem uma chance para responder. O que você vai fazer? ',
             imagemFundo: "url()",
-            opcoes: [{texto: 'Desistir de pedir ajuda e ouvir', proximaPagina: 'paginaopcao_e00'},
-                {texto: 'Pedir ajuda uma ultima vez', proximaPagina: 'paginaopcao_d07'},
-                {texto: 'Sair do jogo', proximaPagina: 'paginainicial'}]
+            opcoes: [
+                {texto: 'Pedir ajuda uma ultima vez.', proximaPagina: 'paginaopcao_d07'},
+                {texto: 'Desistir de pedir ajuda e ouvir.', proximaPagina: 'paginaopcao_e00'},
+                {texto: 'Sair do jogo', proximaPagina: 'paginainicial'}
+            ]
         },
 
         paginaopcao_d07: {
@@ -892,14 +898,14 @@
         },
 
         paginaopcao_f00: {
-            texto: 'Ok, agora não tem volta, diz a voz',
+            texto: 'Ok, agora não tem volta, diz a voz.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_f01'},
                 {texto: 'Sair do jogo', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_f01: {
-            texto: 'Você deverá escolher entre resgatar Kina ou um pacote. caso seja bem-sucedido, como recompensa, receberá um fragmento do mapa para "o além corredor".',
+            texto: 'Você deverá escolher entre resgatar o Kina ou o pacote. caso seja bem-sucedido, como recompensa, receberá um fragmento do mapa para O "Além Corredor".',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_f02'},
                 {texto: 'Sair do jogo', proximaPagina: 'paginainicial'}]
@@ -915,9 +921,11 @@
         paginaopcao_f03: {
             texto: 'Cheio de questionamentos internos, você tem que decidir o que fazer: ',
             imagemFundo: "url()",
-            opcoes: [{texto: 'Resgatar Kira', proximaPagina: 'paginaopcao_g00'},
-                {texto: 'Resgatar o pacote, é mais fácil', proximaPagina: 'paginaopcao_f04'},
-                {texto: 'Sair do jogo', proximaPagina: 'paginainicial'}]
+            opcoes: [
+                {texto: 'Resgatar o Kira.', proximaPagina: 'paginaopcao_g00'},
+                {texto: 'Resgatar o pacote.', proximaPagina: 'paginaopcao_f04'},
+                {texto: 'Sair do jogo', proximaPagina: 'paginainicial'}
+            ]
         },
 
         paginaopcao_f04: {
@@ -1050,7 +1058,8 @@
             texto: 'aka lpz! Parabéns, você sobreviveu até aqui! Espero que tenha gostado, porque fiquei uma madraguda inteira acordado criando essa história!',
             imagemFundo: "url()",
             opcoes: [{texto: 'Voltar ao menu', proximaPagina: 'paginainicial'}]
-        }}
+        }
+    };
 
         // a seguir, optei por não currificar as funções, para que estas fiquem bem descritivas "function"
         // cada função, sujestivamente "function", implementará algum mecanismo no jogo
