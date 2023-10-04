@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>  <!-- Aqui, temos a tag "DOCTYPE", ela é responsável por definir qual o tipo e 
+    versão do HTML usado no documento. -->
+
+  <html><!--  Inicio do elemento "html". É a partir daqui que se inicia o codigo em HTML. Todos os outros elementos do codigo serão 
+    descendentes desse elelmento.-->
+
+  <head><!-- Inicio do elemento "head". Esse elemento será responsável por conter as informações gerais do documento,
+    como os metadados e o titulo. -->
+
+    <meta charset="UTF-8"><!-- Essa tag é utilizada para informar ao navegador que a codificação de caracteres dessa
+    página seguira o padrao UTF-8. Esse padão é muito utilizado por ser capaz de representar uma ampla variedade
+     de caracteres de diferentes idiomas e simbolos especiais. -->
+
+    <title>Poject X</title><!--Aqui definimos qual sera o título do nosso documento. Ele sera mostrado
+    na barra de título de um navegador ou na aba da página.-->
+
+         <link rel="stylesheet" href="style.css"> <!-- este comando serve para linkar o arquivo CSS ao HTML, assim, o CSS pode ser usado para estilizar o HTML -->
+         
+         <script type="module" src="script.js"></script> <!-- este comando serve para linkar o arquivo JavaScript ao HTML, assim, o JavaScript pode ser usado para criar a lógica do jogo -->
+ 
+    </head> <!--Fim do elemento "head".-->
+
+  <body> <!--Inicio do elemento "body". Como seu nome sugere, ele representa o corpo principal de uma página web.
+    Todo o conteúdo visível da página é colocado dentro desse elemento. -->
+
+    <audio id="efeitoSonoro">
+        <source src="https://drive.google.com/uc?id=1Z_UxtJckkCpghSluHY1CKq3c6pQDzl2s" type="audio/mpeg">
+    </audio>
+
+    <div> <!--Inicio do elmento "div. Ela é usada como um conteiner genérico para agrupar e organizar elementos HTML,
+    permitindo a estruturação e estilização do conteudo."-->
+
+        <div id="jogo-container"> <!-- Contêiner principal do jogo. -->
+            <p id="narrativa"> </p> <!-- Contêiner principal do jogo. -->
+            <div id="opcoes"></div>   <!-- Div para as opções do jogo. -->
+        </div>
+
+    </div> <!--Fim do elemento "div".-->
+  
+  </body>  <!--Fim do elemento "body".-->
+
+  </html>  <!--Fim do elemento "html".-->
