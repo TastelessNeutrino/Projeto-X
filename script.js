@@ -615,7 +615,7 @@
         // História II começa a partir da página abaixo
 
         pagina_intro: {
-            texto: 'Pois bem, caro jogador, suas opções são poucas, escolha errado, e... morra! Divirta-se ',
+            texto: 'Pois bem, caro jogador, suas opções são poucas, escolha errado, e... morra! Divirta-se :) ',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'pagina_a00'}]
         },
@@ -1047,7 +1047,7 @@
         },
 
         paginaopcao_g09: {
-            texto: 'Parabéns, você sobreviveu ate aqui! #botaoreiniciarjogo.',
+            texto: 'aka lpz! Parabéns, você sobreviveu até aqui! Espero que tenha gostado, porque fiquei uma madraguda inteira acordado criando essa história!',
             imagemFundo: "url()",
             opcoes: [{texto: 'Voltar ao menu', proximaPagina: 'paginainicial'}]
         }}
@@ -1160,7 +1160,7 @@ const imagensParaPreCarregar = [
 
 preCarregarLoteDeImagens(imagensParaPreCarregar).then(() => {
   // Todas as imagens estão pré-carregadas, você pode iniciar seu jogo ou mostrar a primeira página agora
-  mostrarPagina("pagina0_0"); //nesse caso você capenas conseguirá abrir o jogo inicial quando todo o lote de imagens iniciais estiver pré-carregado, devido ao await e promise
+  mostrarPagina("paginainicial"); //nesse caso você capenas conseguirá abrir o jogo inicial quando todo o lote de imagens iniciais estiver pré-carregado, devido ao await e promise
 });
 
 // Esse 'batch' ou lote de imagens será pré-carregado enquanto o jogador progredir no jogo (ainda não utilizado)
