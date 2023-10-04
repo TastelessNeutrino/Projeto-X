@@ -616,13 +616,13 @@
      pagina_intro: {
         texto: 'Pois bem, caro jogador, suas opções são poucas, escolha errado, e... morra! Divirta-se ',
         imagemFundo: "url()",
-        opcoes: [ { texto: 'Continuar', proximaPagina: 'paginaopcao-a00' }]
+        opcoes: [ { texto: 'Continuar', proximaPagina: 'pagina_a00' }]
       },
         
  pagina_a00: {
         texto: 'Você acabou de acordar no chão de um lugar pouco iluminado, úmido e com um forte cheiro de corpos em decomposição. Sua cabeça e corpo doem muito, e você não se lembra de nada; parece que sua memória se perdeu.',
         imagemFundo: "url()",
-        opcoes: [ { texto: 'Continuar', proximaPagina: 'paginaopcao_a01' },
+        opcoes: [ { texto: 'Continuar', proximaPagina: 'pagina_a01' },
                   {texto: 'Sair do jogo', proximaPagina:'paginainicial'}]
       },
  
@@ -662,7 +662,7 @@
                   {texto: 'Sair do jogo', proximaPagina:'paginainicial'}]
       },
      
-      'paginaopcao_a06': {
+      paginaopcao_a06: {
         texto: 'Seu coração começa a palpitar e seu rosto se enche de suor. Os mortos-vivos começam a comer uns aos outros. Em instantes, a sala se tornou um caos infernal.',
         imagemFundo: "url()",
         opcoes: [ { texto: 'Continuar', proximaPagina: 'paginaopcao_a07' },
