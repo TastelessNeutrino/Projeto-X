@@ -1064,11 +1064,12 @@
         // a seguir, optei por não currificar as funções, para que estas fiquem bem descritivas "function"
         // cada função, sujestivamente "function", implementará algum mecanismo no jogo
 
-        function mostrarPagina(pagina) {  // como diz o nome, esta função tem como argumento "(página)" serve para  exibir a página, ou seja,  atualiza a interface do jogo com o texto da página atual e opções disponíveis na página.
-    const ElementoTextoHistoria = document.getElementById("narrativa"); // esta linha buscará o referencial "Id" identificado acima, para este caso, busca o elemento narrativa
-    const ElementoOpcoes = document.getElementById("opcoes"); // já esta linha, buscará o referencial "Id" também identificado acima, para este caso, busca o elemento opções
-    const paginaAtualObj = armazemdehistorias[pagina]; // aqui, se obtém a seção que representa a página atual do jogo
-    ElementoTextoHistoria.textContent = ""; //apagando o conteúdo de texto da "narrativa" para possibilitar a substituição do texto.
+        function mostrarPagina(pagina)
+{  // como diz o nome, esta função tem como argumento "(página)" serve para  exibir a página, ou seja,  atualiza a interface do jogo com o texto da página atual e opções disponíveis na página.
+    const ElementoTextoHistoria = document.getElementById("narrativa") // esta linha buscará o referencial "Id" identificado acima, para este caso, busca o elemento narrativa
+    const ElementoOpcoes = document.getElementById("opcoes") // já esta linha, buscará o referencial "Id" também identificado acima, para este caso, busca o elemento opções
+    const paginaAtualObj = armazemdehistorias[pagina] // aqui, se obtém a seção que representa a página atual do jogo
+    ElementoTextoHistoria.textContent = paginaAtualObj.texto // esta linha atualiza o conteúdo do elemento com o texto da página atual, ou seja,  com o "Id" narrativa
     document.getElementById("jogo-container").style.backgroundImage = paginaAtualObj.imagemFundo || 'none'; // define a imagem de fundo
 
     // é necessário limpar as opções anteriores quando se escolhe a próxima, para isso utiliza-se innerHTML
@@ -1090,28 +1091,7 @@
     if (paginaAtualObj.opcoes.length > 0) { // este é o momento exato em que o encerramento da recursividade é definido, quando o tamanho "length" (quantidade) de opcoes atuais seja igual a zero,
         criarOpcoes(paginaAtualObj.opcoes) // portanto, ela será executada enquanto o número de opções for maior que zero (>0)
     }
-
-            
-            // FUNÇÃO PARA FAZER O TEXTO APARECERR LETRA POR LETRA:
-            
-            /* OBSERVÇAO IMPORTAMNTE: Optei por usar esta função porque foi a melhor forma que encontrei
-            para dar o efeito de digitação no texto seguindo ao maximo o paradigma
-            funcional. Ela usa o 'requestAnimationFrame' para criar a animação a medida 
-            que o texto avança. Devido a isso, em alguns momentos, o texto pode aparecer 
-            embaralhado ao abrir o jogo. Eu reconheço que existem maneiras de evitar isso,
-            mas elas violariam o paradigma. Enfim, escolhi utilizar essa funçao para 
-            garantir que o projeto respeite ao maximo o paradigma.  */
-        letraPorLetra(paginaAtualObj.texto, ElementoTextoHistoria); // Chamando a funcao letraPorletra para exibir o texto letra por letra.
-        }
-        function letraPorLetra(texto, elemento, index = 0) { // definindo a funçao LetraPorLetra.
-            if (index < texto.length) { // Verificando se ainda existem letras para serem  exibidas no texto.
-                requestAnimationFrame(() => { // Usando 'requestAnimationFrame' para criar a animação.
-                    elemento.textContent += texto[index]; // Adicionando a letra atual ao texto.
-                    letraPorLetra(texto, elemento, index + 1); // Chamando a função de forma recursiva denovp para exibir a próxima letra.
-                });
-            }
-        } 
-
+}
 
 function escolherOpcao(proximaPagina) { // esta função é responsável por exibir, "mostrar" a póxima página
 
