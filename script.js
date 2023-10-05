@@ -4,7 +4,7 @@
             texto: "Escolha uma história para se aventurar",
             imagemFundo: "url()",
             opcoes: [{texto: "1923 • O MISTÉRIO DO PUB", proximaPagina: "pagina0_0"},
-                {texto: "2087 • ALÉM CORREDOR", proximaPagina: "pagina_intro"}]
+                {texto: "TUTORIAL", proximaPagina: "pagina_intro"}]
         },
 
         // história I - a seguir as páginas da primeira história - o mistério do pub
@@ -660,9 +660,11 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
         // História II começa a partir da página abaixo
 
         pagina_intro: {
-            texto: 'Pois bem, caro jogador, suas opções são poucas, escolha errado, e... morra! Divirta-se :) ',
+            texto: 'Um livro-jogo é uma história interativa onde você toma decisões que moldam a trama. Comece lendo a história e, quando apresentadas com escolhas, escolha o que seu personagem faria. Cada escolha leva a diferentes resultados e finais. Experimente várias vezes para explorar todas as possibilidades. É uma forma envolvente de entretenimento onde você é o protagonista. ',
             imagemFundo: "url()",
-            opcoes: [{texto: 'Continuar', proximaPagina: 'pagina_a00'}]
+            audioNarracao:"https://drive.google.com/file/d/19rBOPStJuIpg1bM7Gi84dPknBi1uWQ7R",
+            opcoes: [{texto: 'Jogar exemplo', proximaPagina: 'pagina_a00'},
+            {texto: 'Sair do jogo', proximaPagina: 'paginainicial'}]
         },
 
         pagina_a00: {
