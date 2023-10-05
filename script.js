@@ -9,42 +9,45 @@
 
         // história I - a seguir as páginas da primeira história - o mistério do pub
 
-        pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" do jogo, no caso, "página 0_0" será a interface inicial.
-            {          // note que "pagina 0_0" foi nomeada com _ poara não atrapalhar o reconhecimento pelo browser
-                imagemFundo: "url('https://drive.google.com/uc?id=1bV-GKLT8nSi6gnitaIgFB_g75DvQKeq2')",
-                opcoes: [ // lembra que "opcoes" já foi visto anteriormente no HTML? posteriormente veremos também a sua definição em JS
-                    {     // aqui, dentro das chaves, cada opção terá um texto, visível no quadradinho, e "página" referenete a ele
-                        texto: "START",    // eis aqui o texto do enunciado, que no caso, é a opção que será utilizada para iniciar a jogada, ou seja, levar para a interface
-                        proximaPagina: "pagina0_01"   // e aqui, a página que ele buscará
-                    },
-                    {
-                        texto: "MENU",
-                        proximaPagina: "paginainicial"
-                    }
-                ]
-            },
-        pagina0_01:
-            {
-                texto: '"Achamos que somos livres, mas não somos, seguimos sempre o mesmo caminho."',
-                imagemFundo: "url('https://drive.google.com/uc?id=1aw1FB7sZoZ9NjF05uQ0mIimxlonNLLMN')",
-                opcoes: [
-                    {
-                        texto: "INICIAR JORNADA",
-                        proximaPagina: "pagina1_0"
-                    }
-                ]
-            },
-        pagina1_0: { // nessa página, 1_0, já haverá mais de uma opção
+pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" do jogo, no caso, "página 0_0" será a interface inicial.
+        {          // note que "pagina 0_0" foi nomeada com _ para não comprometer o reconhecimento pelo editor
+            imagemFundo: "url('https://drive.google.com/uc?id=1bV-GKLT8nSi6gnitaIgFB_g75DvQKeq2')",
+            audioNarracao: "https://drive.google.com/uc?id=1vuLgF3ts0ad6LBeFSc_g9I7TAvDeQ_aO",
+            opcoes: [ // lembra que "opcoes" já foi visto anteriormente no HTML? posteriormente veremos também a sua definição em JS
+                {     // aqui, dentro das chaves, cada opção terá um texto, visível no quadradinho, e "página" referenete a ele
+                    texto: "START",    // eis aqui o texto do enunciado, que no caso, é a opção que será utilizada para iniciar a jogada, ou seja, levar para a interface
+                    proximaPagina: "paginacapa"   // e aqui, a página que ele buscará
+                },
+                {
+                    texto: "MENU",
+                    proximaPagina: "paginainicial"
+                }       
+            ]
+        },
+        paginacapa:
+        {
+            texto: '"Achamos que somos livres, mas não somos, seguimos sempre o mesmo caminho."',
+            imagemFundo: "url('https://drive.google.com/uc?id=1aw1FB7sZoZ9NjF05uQ0mIimxlonNLLMN')",
+            audioNarracao: "https://drive.google.com/uc?id=1IBuP3qrvArGylqPASH0-f9sn2YN65rFZ",
+            opcoes: [
+                {
+                    texto: "INICIAR JORNADA",
+                    proximaPagina: "paginaintroducao"
+                }
+            ]
+        },
+        paginaintroducao: { // nessa página, 1_0, já haverá mais de uma opção
             texto: "Em derradeiro de setembro de 1923, na manhã daquele domingo nublado, depois de tomar um café na padaria da esquina e ler o seu jornal matinal, Adam estava caminhando para casa intrigado com a notícia dos arrombamentos recentes.",
             imagemFundo: "url('https://drive.google.com/uc?id=1b4mIcYeernwOi1lwppVmUrz68aj0oFBH')",
+            audioNarracao: "https://drive.google.com/uc?id=1GFEmtZl5Sp2ohbPFUQN8R2uz0rWVMVEC",
             opcoes: [
                 {
                     texto: "PROSSEGUIR",
-                    proximaPagina: "pagina2_0"
+                    proximaPagina: "paginacidade"
                 }, // naturalmente as opções são separadas aqui com o uso de vírgulas ","
                 {
                     texto: "VOLTAR À PADARIA", // aqui, por exemplo, o texto traz uma possibilidade para o jogador curioso
-                    proximaPagina: "pagina2_1"
+                    proximaPagina: "paginapadaria"
                 },
                 {
                     texto: "JÁ ME ENCHEU O SACO", // nessa opção, por exemplo, o texto traz uma possibilidade de enredo imprevisível, para surpreender o jogador
@@ -54,10 +57,11 @@
         },
         paginachorar: {
             imagemFundo: "url('https://drive.google.com/uc?id=1bmoDrWIOuJT0kgRUZDkvg6ELR-gpJ-9_')",
+            audioNarracao: "https://drive.google.com/uc?id=1XVsQHD8u7NECskF-rC7jDifUzuhknk22",
             opcoes: [
                 {
                     texto: "ENXUGAR LÁGRIMAS",
-                    proximaPagina: "pagina1_0"
+                    proximaPagina: "paginaintroducao"
                 },
                 {
                     texto: "IR CHORAR DE CÓCORAS NO BANHEIRO",
@@ -65,37 +69,40 @@
                 }
             ]
         },
-        pagina2_0: {
+        paginacidade: {
             texto: "A movimentada cidade em que residia, onde normalmente ninguém se importaria com as singularidades de transeuntes aleatórios, era o cenário perfeito para quem deseja passar despercebido.",
             imagemFundo: "url('https://drive.google.com/uc?id=1amorZlD7DGbZv68vZEtT5AIg7DedmzXw')",
+            audioNarracao: "https://drive.google.com/uc?id=1gik7PDY_QyowWUyWj1VMPqJWqYpeLkDe",
             opcoes: [
                 {
                     texto: "PROSSEGUIR",
-                    proximaPagina: "pagina3_0"
+                    proximaPagina: "paginajanela"
                 }
             ]
         },
-        pagina2_1: {
+        paginapadaria: {
             texto: "Você já tomou café! Não há mais nada interessante a se fazer por aqui!",
             imagemFundo: "url('https://drive.google.com/uc?id=1av_8IrSbmQkvQMgJo7C50bK0YDc5KL-e')",
+            audioNarracao: "https://drive.google.com/uc?id=1AUCS2rEvg_YEgEPPKPM5r_K9zHuO7oPi",
             opcoes: [
                 {
                     texto: "SAIR DA PADARIA",
-                    proximaPagina: "pagina1_0"
+                    proximaPagina: "paginacidade"
                 },
                 {
                     texto: "TOMAR OUTRO CAFÉ",
-                    proximaPagina: "pagina2_2cafe"
+                    proximaPagina: "paginamortecafe"
                 },
                 {
                     texto: "JOGO ENFADONHO",
-                    proximaPagina: "pagina2_2"
+                    proximaPagina: "paginalamuria"
                 }
             ]
         },
-        pagina2_2: {
+        paginalamuria: {
             texto: "LAMÚRIA: Substantivo feminino, lamentação interminável, que importuna e que a nada leva; queixume, queixa. Semelhantes: lamentação, lenga-lenga, alarida...",
             imagemFundo: "url('https://drive.google.com/uc?id=1aCCB9_GOlKdmXdqJUsmMk4c5RC5SFjui')",
+            audioNarracao: "https://drive.google.com/uc?id=1voegEdvtBsoWk0N2stzhhAZXN3Tq1P-2",
             opcoes: [
                 {
                     texto: "NOVA JORNADA",
@@ -103,31 +110,33 @@
                 },
                 {
                     texto: "VOLTAR AO JOGO",
-                    proximaPagina: "pagina1_0"
+                    proximaPagina: "paginapadaria"
                 }
             ]
         },
-        pagina3_0: {
+        paginajanela: {
             texto: "Adam Lawrence, costumava se fechar completamente para as possibilidades do mundo alheias à sua rotina, entretanto, era domingo, e ele percebeu um rapaz saindo pela janela do apartamento de sua vizinha, Isabella.",
             imagemFundo: "url('https://drive.google.com/uc?id=1alo3PVqA_d2msMy0OhH_N2KDotCM0mFr')",
+            audioNarracao: "https://drive.google.com/uc?id=1XHurrLU9_htxlxCijoUOOd7XdrA-D1xb",
             opcoes: [
                 {
                     texto: "SEGUIR SUSPEITO",
-                    proximaPagina: "pagina4_2"
+                    proximaPagina: "paginaperseguir"
                 },
                 {
                     texto: "ARREMESSAR UMA PEDRA",
-                    proximaPagina: "pagina4_0"
+                    proximaPagina: "paginapedrada"
                 },
                 {
                     texto: "IGNORAR O SUSPEITO E VOLTAR PARA CASA",
-                    proximaPagina: "pagina4_1"
+                    proximaPagina: "paginarollsroyce"
                 }
             ]
-        },
-        pagina2_2cafe: {
+        },        
+        paginamortecafe: {
             texto: "Testemunhas relataram às autoridades, o comportamento frenético e alucinado de Adam que enfartou ao ingerir quantidades inacreditáveis do líquido preto. R.I.P.",
             imagemFundo: "url('https://drive.google.com/uc?id=1fr4LG1n24OqB4_DaYiBmdtx_-YqjsbYs')",
+            audioNarracao: "https://drive.google.com/uc?id=1p2G6FtMseJ1xw0ct5BxwmpldOFuuWjNX",
             opcoes: [
                 {
                     texto: "NOVA JORNADA",
@@ -139,9 +148,10 @@
                 }
             ]
         },
-        pagina2_2drunkerbr: {
+        paginalcoolatra: {
             texto: "Testemunhas relataram às autoridades, o comportamento frenético e alucinado de Adam que enfartou ao ingerir quantidades inacreditáveis de álcool. R.I.P.",
-            imagemFundo: "url('https://drive.google.com/uc?id=1amYIQG6v-fMcR_r3oJPZMKqlRZKsjPpo')",
+            imagemFundo: "url('https://drive.google.com/uc?id=1lG3VOjyPsOUIsv1tTl41UkLRK9_hpMsj')",
+            audioNarracao: "https://drive.google.com/uc?id=17Lp8c-Oap8FLidshpVML6anPo7ClXwJr",
             opcoes: [
                 {
                     texto: "NOVA JORNADA",
@@ -153,60 +163,63 @@
                 }
             ]
         },
-        pagina4_2: {
+        paginaperseguir: {
             texto: "Despretensiosamente, Adam resolve seguir o sujeito até um pub.",
             imagemFundo: "url('https://drive.google.com/uc?id=1aZZlZq0oZ5fqRyX9KSrUY3tqGUQOy8MK')",
+            audioNarracao: "https://drive.google.com/uc?id=1o23ZyOb4KsRrlbeiipE56Al75iY9hvFg",
             opcoes: [
                 {
                     texto: "PROSSEGUIR",
-                    proximaPagina: "pagina4_2_0"
+                    proximaPagina: "paginadecisaopub"
                 }
             ]
-        },
-        pagina4_2_0: {
+        },        
+        paginadecisaopub: {    
             texto: "Ao chegar no pub da esquina, Adam se depara com uma surpreendente coincidência: Michelle, sua colega do escritório, também estava lá.",
             imagemFundo: "url('https://drive.google.com/uc?id=1aunwCtSW4XKDmBRdc5VkgclA13nK6Hgg')",
+            audioNarracao: "https://drive.google.com/uc?id=1JQrDEJvecC7jiYOoAfm-QJ_iP2Djlve-",
             opcoes: [
                 {
                     texto: "CONTINUAR SEGUINDO O SUSPEITO",
-                    proximaPagina: "pagina7_2"
+                    proximaPagina: "paginaaproximacao"
                 },
                 {
                     texto: "FALAR COM MICHELLE",
-                    proximaPagina: "pagina7_0"
+                    proximaPagina: "paginaconversamichelle"
                 },
                 {
                     texto: "IGNORAR MICHELLE E O SUSPEITO",
-                    proximaPagina: "pagina4_2_1"
+                    proximaPagina: "paginaficarpub"
                 }
             ]
         },
-        pagina4_2_1: {
+        paginaficarpub: {
             texto: "Não há nada mais a se fazer por aqui !",
-            imagemFundo: "url('https://drive.google.com/uc?id=1aWmxrlCXbhJJSuxqHKhRNBEGnS8jJtcp')",
+            imagemFundo: "url('https://drive.google.com/uc?id=1amYIQG6v-fMcR_r3oJPZMKqlRZKsjPpo')",
+            audioNarracao: "https://drive.google.com/uc?id=1vLFRqImv1itgdLiDdJWPSj3Y9Ek8h-st",
             opcoes: [
                 {
                     texto: "HÁ SIM! FICAR NO PUB BEBENDO",
-                    proximaPagina: "pagina2_2drunkerbr"
+                    proximaPagina: "paginalcoolatra"
                 },
                 {
                     texto: "IR PARA CASA",
-                    proximaPagina: "pagina4_1"
+                    proximaPagina: "paginarollsroyce"
                 },
                 {
                     texto: "NOVA JORNADA",
                     proximaPagina: "pagina0_0"
                 },
-                {
-                    texto: "SAIR DO JOGO",
-                    proximaPagina: "paginainicial"
-
+                { texto: "SAIR DO JOGO",
+                proximaPagina: "paginainicial"
+    
                 }
             ]
         },
-        pagina4_1: {
+        paginarollsroyce: {
             texto: "Adam se apressou demais para prosseguir o seu percuso solitário e não percebeu quando um luxuoso Rolls-Royce Silver Ghost 1907 o acertou em cheio! R.I.P.",
             imagemFundo: "url('https://drive.google.com/uc?id=1bEXpAyViy9wvebFJ5MWa2q_oimM2Y-KL')",
+            audioNarracao: "https://drive.google.com/uc?id=1yV93djm623JcwO7Zjk5-XzqaGsxkqQCq",
             opcoes: [
                 {
                     texto: "NOVA JORNADA",
@@ -218,9 +231,10 @@
                 }
             ]
         },
-        pagina5_0: {
+        paginadesculpa: {
             texto: "Adam tentou se desculpar, mas as desculpas não foram aceitas e as autoridades foram acionadas. Trágico fim! Adam foi institucionalizado.",
             imagemFundo: "url('https://drive.google.com/uc?id=1amB8kNumgWyzbKnReFzZj5Y9GnVTzTZV')",
+            audioNarracao: "https://drive.google.com/uc?id=12bnps8v5BssumBju38RqbsCP5Cd7q0vD",
             opcoes: [
                 {
                     texto: "NOVA JORNADA",
@@ -232,13 +246,14 @@
                 }
             ]
         },
-        pagina4_0: {
+        paginapedrada: {
             texto: "Adam, se enfureceu ao ponto de atingir o suspeito com uma pedra. Estranhamente, Isabella, sua vizinha, correu para socorrer o suposto invasor que na verdade era um caso extraconjugal.",
             imagemFundo: "url('https://drive.google.com/uc?id=1atDbKainjlV_xhge2ll0A2Qsu6OA-ZTI')",
+            audioNarracao: "https://drive.google.com/uc?id=1eD1XvWf3rzYG_4X6Kt1FJ7-adK-EbSzL",
             opcoes: [
                 {
                     texto: "SE DESCULPAR",
-                    proximaPagina: "pagina5_0"
+                    proximaPagina: "paginadesculpa"
                 },
                 {
                     texto: "NOVA JORNADA",
@@ -250,63 +265,67 @@
                 }
             ]
         },
-        pagina7_0: {
+        paginaconversamichelle: {
             texto: "Conversando com Michelle, Adam percebe que ela está realmente interessada nos casos de invasões domiciliares. Ela relata o temor de que a cidade fique perigosa com a imigração. Adam comenta sobre o assunto e menciona o que acabou de ver na janela do apartamento de sua vizinha, Isabella. Michelle fica empolgada e sugere que eles explorem mais a situação, talvez conversando com Isabella ou investigando sua vizinhança para entender melhor os acontecimentos recentes.",
             imagemFundo: "url('https://drive.google.com/uc?id=1fA_qgTKfiKLwJC6AvSXZmuI8XEqHLtnL')",
+            audioNarracao: "https://drive.google.com/uc?id=10jICZ0Yuqdeg7x-L4EMe3BvA8XQ3vTbX",
             opcoes: [
                 {
                     texto: "ACOMPANHAR MICHELLE",
-                    proximaPagina: "pagina8_0"
+                    proximaPagina: "paginadetetives"
                 },
                 {
                     texto: "SAIR DO PUB SOZINHO, SEM MICHELLE",
-                    proximaPagina: "pagina4_1"
+                    proximaPagina: "paginarollsroyce"
                 }
             ]
         },
-        pagina7_2: {
+        paginaaproximacao: {
             texto: "Adam se aproxima para obter mais informações e, em um momento inesperado, acaba se envolvendo em um confronto com o invasor. As coisas podem ficar perigosas, e Adam terá que tomar decisões rápidas para lidar com a situação.",
             imagemFundo: "url('https://drive.google.com/uc?id=1kLDPF33vRBilYOJiQ2dSJCWdgGf-vU4-')",
+            audioNarracao: "https://drive.google.com/uc?id=1j9hXLqDExNmjDHTbDUzI0BTa9sRyJhU9",
             opcoes: [
                 {
                     texto: "PRENDER O SUSPEITO",
-                    proximaPagina: "pagina88_1"
+                    proximaPagina: "paginaprender"
                 },
                 {
                     texto: "FAZER ACORDO COM O SUSPEITO",
-                    proximaPagina: "pagina88_2"
+                    proximaPagina: "paginacordo"
                 },
                 {
                     texto: "DEIXAR O SUSPEITO ESCAPAR",
-                    proximaPagina: "pagina88_3"
+                    proximaPagina: "paginafuga"
                 },
                 {
                     texto: "INTIMIDAR O SUSPEITO",
-                    proximaPagina: "pagina88_4"
+                    proximaPagina: "paginareputacao"
                 }
             ]
-        },
-        pagina8_0: {
+        },   
+        paginadetetives: {
             texto: "A dupla de detetives amadores, Michelle e Adam, decidem iniciar suas investigações, mergulhando no mistério que envolve o suspeito e o que está acontecendo com Isabella. Eles suspeitam que há segredos ocultos a serem descobertos e estão determinados a descobrir a verdade, mesmo que isso os leve a lugares obscuros e perigosos na cidade.",
             imagemFundo: "url('https://drive.google.com/uc?id=1jjH14vhU12TVLqHSdywsriKT6cTJszfU')",
+            audioNarracao: "https://drive.google.com/uc?id=15LDawKUFARoKAJ-3bxxPBzuYKPqPmkXK",
             opcoes: [
                 {
                     texto: "PROSSEGUIR COM MICHELLE",
-                    proximaPagina: "pagina8_1"
+                    proximaPagina: "paginaisabella"
                 },
                 {
                     texto: "TOMAR CACHAÇA NO PUB",
-                    proximaPagina: "pagina2_2drunkerbr"
+                    proximaPagina: "paginalcoolatra"
                 },
                 {
                     texto: "SAIR POR AÍ",
-                    proximaPagina: "pagina4_1"
+                    proximaPagina: "paginarollsroyce"
                 }
             ]
         },
-        pagina8_1: {
+        paginaisabella: {
             texto: "Michelle e Adam decidem procurar Isabella para esclarecer a situação e obter mais informações. Ao se aproximarem dela com cautela, Isabella começa a revelar gradualmente os segredos que ela estava escondendo, levando-os a perceber que há um conflito oculto acontecendo nos bastidores, do qual ela é parte fundamental.",
-            imagemFundo: "url('')",
+            imagemFundo: "url('https://drive.google.com/uc?id=1lr_gs_2fXgc8R8m2gGO47ury5wvB0vvL')",
+            audioNarracao: "https://drive.google.com/uc?id=1x2RGGypIXhKRBM1Mp4eH9z5DrqR8rQP-",
             opcoes: [
                 {
                     texto: "ADAM X ISABELLA",
@@ -318,13 +337,14 @@
                 }
             ]
         },
-        pagina88_1: {
+        paginaprender: {
             texto: "Adam, após o confronto, decide entregar o suspeito às autoridades. O invasor é preso preventivamente, mas Adam continua ignorante sobre sua verdadeira identidade. A polícia agradece a colaboração de Adam e promete investigar o caso com seriedade.",
             imagemFundo: "url('https://drive.google.com/uc?id=1jlJovcYyzQ9Ci_dzQkHpylHpDZuUXfv8')",
+            audioNarracao: "https://drive.google.com/uc?id=1mw9GAym7HhapvC7Z-E8U0Z_1-8yfGGF-",
             opcoes: [
                 {
-                    texto: "NOVA JORNADA",
-                    proximaPagina: "pagina0_0"
+                texto: "NOVA JORNADA",
+                proximaPagina: "pagina0_0"
                 },
                 {
                     texto: " SAIR DO JOGO   ",
@@ -332,9 +352,10 @@
                 }
             ]
         },
-        pagina88_2: {
+        paginacordo: {
             texto: "Em vez de entregá-lo à polícia, Adam decide fazer um acordo com o suspeito, negociando informações em troca de sua liberdade. O suspeito concorda em revelar detalhes sobre sua relação extraconjugal com Isabella e suas atividades suspeitas.",
             imagemFundo: "url('https://drive.google.com/uc?id=1kOWYZ8XdDkeHxT-iMeTt5RlXRxUC7KEP')",
+            audioNarracao: "https://drive.google.com/uc?id=1HYYmcbiAj8qimqD0ISPGP3jtK0wVydKk",
             opcoes: [
                 {
                     texto: "CAIR NO PAPINHO",
@@ -346,9 +367,10 @@
                 }
             ]
         },
-        pagina88_3: {
+        paginafuga: {
             texto: "Adam, em um momento de dúvida, permite que o suspeito fuja do confronto. O suspeito desaparece na escuridão, deixando Adam com mais perguntas do que respostas.",
             imagemFundo: "url('https://drive.google.com/uc?id=1kQVCbzYqiTRqIm0q7sTHlRLmnIHscp0b')",
+            audioNarracao: "https://drive.google.com/uc?id=1_s2E2FRxSmmncp71mrW71rJsQEkamJhb",
             opcoes: [
                 {
                     texto: "DESISTIR DA INVESTIGAÇÃO",
@@ -362,6 +384,7 @@
         },
         paginaperdedor: {
             imagemFundo: "url('https://drive.google.com/uc?id=1blmYe84oVpdmaJiIPjrwGUul0D-Mzrz3')",
+            audioNarracao: "https://drive.google.com/uc?id=1F1gaBu8Xx5QX-3OpKNxDpcpA18wHcuG1",
             opcoes: [
                 {
                     texto: "REINICIAR JORNADA",
@@ -373,9 +396,10 @@
                 }
             ]
         },
-        pagina88_4: {
+        paginareputacao: {
             texto: "As ações de Adam têm consequências. Ele pode enfrentar acusações de perturbação da ordem pública e briga de bar. Sua imagem e reputação podem ser afetadas",
             imagemFundo: "url('https://drive.google.com/uc?id=1kn6ZQp8VQ-cxG1aI9bhNUOJ9m-dEJESy')",
+            audioNarracao: "https://drive.google.com/uc?id=1PaoUDA0lHU4_vQoerr_DkyHip1coxp4b",
             opcoes: [
                 {
                     texto: "ESPANCAR O SUSPEITO",
@@ -383,17 +407,18 @@
                 },
                 {
                     texto: "DEIXAR O SUSPEITO ESCAPAR",
-                    proximaPagina: "pagina88_3"
+                    proximaPagina: "paginafuga"
                 },
                 {
                     texto: "OBTER INFORMAÇÕES A PULSO",
-                    proximaPagina: "paginafuienganado"
+                    proximaPagina: "paginafuienganado"    
                 }
             ]
         },
         paginafuienganado: {
             texto: "As informações fornecidas pelo suspeito eram falsas, e os criminosos aproveitaram a confiança de Adam para encobrir suas atividades. Os culpados escapam impunes, a conspiração se aprofunda e a cidade continua a ser assolada pelos arrombamentos. Adam enfrenta a devastação de ter confiado nas informações erradas, e a verdadeira figura por trás dos crimes permanece oculta.",
             imagemFundo: "url('https://drive.google.com/uc?id=1jPXXhCAiP1iWv0gKm4NoXs_Z-8KtJULI')",
+            audioNarracao: "https://drive.google.com/uc?id=1Mb2gTKpWu9YDW4hmXlfEHukdacsbeLE9",
             opcoes: [
                 {
                     texto: "NOVA JORNADA",
@@ -404,34 +429,37 @@
         paginaescape: {
             texto: "Adam desiste da investigação e procura por entretenimento em uma livraria local.",
             imagemFundo: "url('https://drive.google.com/uc?id=1jdBsBO_f2w9NW-NEJGTAIezMM0RVLTRG')",
-            opcoes: [
+            audioNarracao: "https://drive.google.com/uc?id=1g498etUylGHHTcCZR1H-84yotnMn508T",
+            opcoes:[
                 {
                     texto: "CAIR FORA DA ESPELUNCA",
-                    proximaPagina: "pagina4_1"
+                    proximaPagina: "paginarollsroyce"
                 },
                 {
                     texto: "JOGO-LIVRO INTERATIVO",
                     proximaPagina: "paginalivreto"
                 }
             ]
-        },
+        },        
         paginalivreto: {
             texto: "No final da visita à livraria, Adam se depara com um livro-jogo interativo que captura completamente a sua atenção. À medida que avança na leitura, uma sensação peculiar o envolve: a história do jogo descreve um detetive que toma as mesmas decisões que ele, até mesmo as que ele só cogitou fazer. Essa descoberta o deixa intrigado, e ele começa a suspeitar que há uma conspiração muito mais profunda e sinistra em jogo na sua vida.",
             imagemFundo: "url('https://drive.google.com/uc?id=1Rnj-x2KTftWBtC568BIPaxrOHzlvnw2e')",
-            opcoes: [
-                {
-                    texto: "SAIR DA MATRIX",
-                    proximaPagina: "paginainicial"
-                },
+            audioNarracao: "https://drive.google.com/uc?id=1J6mqRJXfMKb4C5RmjBh9svh7l67F-aYH",
+            opcoes:[
                 {
                     texto: "NOVA JORNADA",
                     proximaPagina: "pagina0_0"
+                },
+                {
+                    texto: "SAIR DA MATRIX",
+                    proximaPagina: "paginainicial"
                 }
             ]
         },
         paginaespancar: {
             texto: "Após a escalada das hostilidades, o caos se instala no pub. Adam, em sua tentativa de obter informações do invasor, se vê preso na confusão e acaba detido pelas autoridades locais.",
             imagemFundo: "url('https://drive.google.com/uc?id=1jPSwG51F4ncgMz8pCMyKZEJS8qYz3u3V')",
+            audioNarracao: "https://drive.google.com/uc?id=1IkveaHLxa9yAYFT8iH6FPKCAttXyWzak",
             opcoes: [
                 {
                     texto: "NOVA JORNADA",
@@ -446,6 +474,7 @@
         paginamibella: {
             texto: "Enquanto investigam os vínculos do relacionamento de Isabella com seu amante, Sandro, Michelle dobra a aposta e acaba descobrindo que Isabella é, na verdade, a filha de Don Vincenzo Romano, um mafioso poderoso na cidade.",
             imagemFundo: "url('https://drive.google.com/uc?id=1aNZdrLj4Ihjio-VAjIzjM1bxljq3CjFD')",
+            audioNarracao: "https://drive.google.com/uc?id=19MElMusOYF_g0YPQdAFnPZNuyecdnC_h",
             opcoes: [
                 {
                     texto: "EXTRAIR CONFISSÃO",
@@ -456,6 +485,7 @@
         paginaconfissao: {
             texto: "Isabella acaba confessando que está sendo ameaçada como parte dos planos de uma seita que busca influência na máfia local e ganhar acesso às atividades criminosas de seu pai, Don Vincenzo.",
             imagemFundo: "url('https://drive.google.com/uc?id=1hCtAOu0tjNBBJaF3fOat3aI-FababGGK')",
+            audioNarracao: "https://drive.google.com/uc?id=1aeX1I5mZR8MRA6T-yI9YIZWdg4bqpC8W",
             opcoes: [
                 {
                     texto: "DETALHES",
@@ -466,6 +496,7 @@
         paginadella: {
             texto: "Isabella mostrou uma notável resistência em compartilhar informações com Adam. Cada vez que ele tentava se aproximar do cerne do mistério, ela parecia habilmente desviar suas perguntas ou fornecer respostas evasivas. Ela mantinha uma muralha de segredos em torno de sua vida e dos perigos que enfrentava, fazendo com que Adam se sentisse constantemente em desvantagem.",
             imagemFundo: "url('https://drive.google.com/uc?id=1jhw2IeyZBocefj4ay5WCfYDQHarSvXIX')",
+            audioNarracao: "https://drive.google.com/uc?id=1rczb-AntsXK-w-y_o_jLyswFke_mrGOM",
             opcoes: [
                 {
                     texto: "BLÁ-BLÁ-BLÁ ENCHEU O SACO",
@@ -480,6 +511,7 @@
         paginamichella: {
             texto: "Michelle sabia que a situação era delicada, e sua abordagem seria crucial para obter informações valiosas. Com cuidado e empatia, Michelle começou a dar as suas investidas em Isabella.",
             imagemFundo: "url('https://drive.google.com/uc?id=1jh_8_09wt1RNSO3brx0EHJSHHYM9OejR')",
+            audioNarracao: "https://drive.google.com/uc?id=1w-k3GyAthrsJ7hf5eg5XMIdu1GwIoi0I",
             opcoes: [
                 {
                     texto: "DOBRAR APOSTA",
@@ -488,11 +520,16 @@
                 {
                     texto: "ADAM X ISABELLA",
                     proximaPagina: "paginadella"
-                }
+                },
+                {
+                    texto: "MELHOR TOMAR GORÓ",
+                    proximaPagina: "paginalcoolatra"
+                },
             ]
         },
         paginacavalo: {
             imagemFundo: "url('https://drive.google.com/uc?id=1aQY8BEuqM7CwhFU8Y1ix8_-6CA-M93z3')",
+            audioNarracao: "https://drive.google.com/uc?id=11qfddPOTInDvyK7ArsiJhjs2O4IUN5BR",
             opcoes: [
                 {
                     texto: "MARCHAR PARA TRÁS",
@@ -506,7 +543,8 @@
         },
         paginaquasefinal: {
             texto: "Os invasores roubam documentos confidenciais, registros financeiros e informações pessoais que podem ser usados como alavancagem contra figuras poderosas da cidade. Invasões paralelas foram planejadas para criar distrações e desviar a atenção das atividades de chantagem e conspiração do grupo.",
-            imagemFundo: "url('https://drive.google.com/uc?id=1aHH61BfDUhMLFNfWHx1pE9gN_dDkHpmu')",
+            imagemFundo:"url('https://drive.google.com/uc?id=1aHH61BfDUhMLFNfWHx1pE9gN_dDkHpmu')",
+            audioNarracao: "https://drive.google.com/uc?id=1jPliW-crrS14CiiVIpTHDSKqP52Ga3ih",
             opcoes: [
                 {
                     texto: "AJUDAR ISABELLA",
@@ -521,6 +559,7 @@
         paginafodasela: {
             texto: "Com Michelle e Adam decidindo deixar Isabella à própria sorte, ela se vê sozinha em sua luta contra a seita e suas ameaças. Isabella, desesperada para proteger a si e à integridade de seu amante, Sandro, é forçada a tomar decisões difíceis e a manter um equilíbrio delicado entre proteger seu relacionamento e ajudar os chantagistas. Enquanto isso, as invasões paralelas continuam a criar distrações na cidade, desviando a atenção das atividades de chantagem e conspiração do grupo secreto. Figuras poderosas da cidade começam a ser alvo das chantagens, resultando em tensões crescentes e potenciais consequências devastadoras para a cidade",
             imagemFundo: "url('https://drive.google.com/uc?id=1h8qNhRYIEPrgBBLbCCitkz19X0fNcelz')",
+            audioNarracao: "https://drive.google.com/uc?id=1XFF2l5aAVis4mA1eoe9HxDpRNBwUMsLO",
             opcoes: [
                 {
                     texto: "MUDAR DE IDEIA E AJUDAR ISABELLA",
@@ -533,8 +572,9 @@
             ]
         },
         paginajuda: {
-            texto: "Michelle, Adam e Isabella, formando uma equipe improvável, trabalham juntos para investigar, identificar os membros da seita e coletar evidências contra eles. Michelle, Adam e Isabella se reúnem, formando uma equipe improvável. Trabalham juntos, utilizando suas habilidades para investigar, identificar os membros da seita e coletar evidências contra elesEles conseguem desvendar os segredos da seita e expor suas atividades criminosas. Em uma confrontação final com os líderes da seita, Michelle, Adam e Isabella, apoiados por evidências irrefutáveis, conseguem expor a verdade, frustrar os planos conspiratórios e desmantelar a seita. A cidade é salva do caos instalado pelas chantagens e do controle da seita, e as figuras poderosas envolvidas podem ser responsabilizadas por seus crimes.",
+            texto: "Michelle, Adam e Isabella se reúnem, formando uma equipe improvável, trabalham juntos, para investigar e identificar os membros da seita e coletar evidências contra eles, conseguindo desvendar os segredos da seita e expor suas atividades criminosas. Em uma confrontação final com os líderes da máfia, Michelle, Adam e Isabella, apoiados por evidências irrefutáveis, conseguem expor a verdade, frustrando os planos conspiratórios e desmantelando a organização criminosa. A cidade é salva do caos instalado pelas chantagens e do controle da seita, e as figuras poderosas envolvidas podem ser responsabilizadas por seus crimes.",
             imagemFundo: "url('https://drive.google.com/uc?id=1bcl-Gmio6XXEajMGJF7Qq4e_cdAiwqaO')",
+            audioNarracao: "https://drive.google.com/uc?id=15U4mrczj2VzufEa6cL_WI89vPAEMVE3g",
             opcoes: [
                 {
                     texto: "E O CORNO ?",
@@ -561,6 +601,7 @@
         paginacasamento: {
             texto: "Quanto ao casamento marcado da filha de Don Vincenzo Romano... bem, este entrou em ruína, após Isabella se mandar para a Itália com seu amante Sandro. ",
             imagemFundo: "url('https://drive.google.com/uc?id=1b6Mxr7jg8vbi_AmILrG6_KNYbzPMZTC6')",
+            audioNarracao: "https://drive.google.com/uc?id=1oGU7ODW19PdpXQM8GrUVi5AqIdgaYt_7",
             opcoes: [
                 {
                     texto: "VOLTAR",
@@ -571,6 +612,7 @@
         pagina404: {
             texto: "( 404 error: File not found ) Os scripts desta seção foram tragicamente perdidos quando Kalil se esbarrou nos cabos do computador no laboratório.",
             imagemFundo: "url('https://drive.google.com/uc?id=1bapzFwXyZrJgNxJ2iQ-EhJjaWZ4qyl_I')",
+            audioNarracao: "https://drive.google.com/uc?id=1bCV6g9_BFCuomw6Fy17N4uFYTHwh0ua-",
             opcoes: [
                 {
                     texto: "VOLTAR",
@@ -581,20 +623,22 @@
         paginaconsequencias: {
             texto: "Adam e Michelle  optam por não se envolverem mais na situação e continuar com suas vidas cotidianas, ignorando as crescentes tensões na cidade e as atividades da seita. Eles acreditam que não é responsabilidade deles lidar com a situação e tentam manter distância dos acontecimentos.",
             imagemFundo: "url('https://drive.google.com/uc?id=1anuMm7epxsc4xTIggSQWsY6aCujc8UUr')",
+            audioNarracao: "https://drive.google.com/uc?id=1Bpjn-MHUr-_J9yRUH8rqMXTEbYJJWK44",
             opcoes: [
+                {
+                   texto: "NOVA JORNADA",
+                    proximaPagina: "pagina0_0"
+                }, 
                 {
                     texto: "SAIR DO JOGO",
                     proximaPagina: "paginainicial"
-                },
-                {
-                    texto: "NOVA JORNADA",
-                    proximaPagina: "pagina0_0"
                 }
             ]
         },
         paginaideia: {
             texto: "À medida que a situação na cidade fica insustentável, Michelle e Adam, consumidos pelo remorso e preocupados com o destino de Isabella e da cidade, decidem finalmente se envolver. Eles reconhecem que a seita representa uma ameaça significativa e que sua ajuda é crucial para impedir as chantagens e conspirações.",
             imagemFundo: "url('https://drive.google.com/uc?id=1aw8L4BJyb-zOeAU8U-NbRHNKZ0U2zX9T')",
+            audioNarracao: "https://drive.google.com/uc?id=1n9SwtzFzJyt5xwLy-SvRbOxiHvPaUEmy",
             opcoes: [
                 {
                     texto: "AJUDAR ISABELLA",
@@ -604,12 +648,13 @@
         },
         paginabifurcacoes: {
             imagemFundo: "url('https://drive.google.com/uc?id=1aiFO2jPusrhDzf0-DnhZHd_HOt1Qn2RI')",
+            audioNarracao: "https://drive.google.com/uc?id=1vuLgF3ts0ad6LBeFSc_g9I7TAvDeQ_aO",
             opcoes: [
-                {
+                {   
                     texto: "VOLTAR",
                     proximaPagina: "paginajuda"
                 }
-            ]
+            ]   
         },
 
         // História II começa a partir da página abaixo
@@ -1071,7 +1116,15 @@
     const paginaAtualObj = armazemdehistorias[pagina] // aqui, se obtém a seção que representa a página atual do jogo
     ElementoTextoHistoria.textContent = paginaAtualObj.texto // esta linha atualiza o conteúdo do elemento com o texto da página atual, ou seja,  com o "Id" narrativa
     document.getElementById("jogo-container").style.backgroundImage = paginaAtualObj.imagemFundo || 'none'; // define a imagem de fundo
-
+    
+    const audioNarracao = document.getElementById("audioNarracao") // nesta seção será definido o elemento de áudio com o ID "audioNarracao" no documento HTML anterior
+    audioNarracao.pause() // chamando o "pause()"" no elemento de áudio para pausar a reprodução do áudio atual, se, somente se, houver algum
+    audioNarracao.currentTime = 0 // é importente redefinir o tempo de reprodução do áudio para o segundo 0 para garantir que, quando o áudio for reproduzido novamente, ele comece do início
+    if (paginaAtualObj.audioNarracao) { // nesta linha, será verificada se a página atual "paginaAtualObj" possui o audio, propriedade que definimos como "audioNarracao", ou seja, se houver um URL de áudio definido para a página, o código dentro deste bloco será executado
+    audioNarracao.src = paginaAtualObj.audioNarracao // definindo o atributo "src" do elemento de áudio com o URL do arquivo de áudio da página atual
+    audioNarracao.play() // aqui, "play()" será executado no elemento de áudio para iniciar a reprodução do áudio da página atual
+    }
+    
     // é necessário limpar as opções anteriores quando se escolhe a próxima, para isso utiliza-se innerHTML
     ElementoOpcoes.innerHTML = "" // a princípio, tentei implementar o código  sem o conhecimento desta propriedade, mas, na interface acontecia algo inesperado com os botões - ficavam se acumulando indiscriminadamente
 
