@@ -1093,6 +1093,14 @@
 
             
             // FUNÇÃO PARA FAZER O TEXTO APARECERR LETRA POR LETRA:
+            
+            /* OBSERVÇAO IMPORTAMNTE: Optei por usar esta função porque foi a melhor forma que encontrei
+            para dar o efeito de digitação no texto seguindo ao maximo o paradigma
+            funcional. Ela usa o 'requestAnimationFrame' para criar a animação a medida 
+            que o texto avança. Devido a isso, em alguns momentos, o texto pode aparecer 
+            embaralhado ao abrir o jogo. Eu reconheço que existem maneiras de evitar isso,
+            mas elas violariam o paradigma. Enfim, escolhi utilizar essa funçao para 
+            garantir que o projeto respeite ao maximo o paradigma.  */
         letraPorLetra(paginaAtualObj.texto, ElementoTextoHistoria); // Chamando a funcao letraPorletra para exibir o texto letra por letra.
         }
         function letraPorLetra(texto, elemento, index = 0) { // definindo a funçao LetraPorLetra.
