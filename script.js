@@ -1,9 +1,9 @@
 // esta é a parte funcional, ou seja, o "script" em JavaScript, engraçado que até o coisinha de comentar já muda de "<-- -->" para "//"
     const armazemdehistorias= {// criando uma constante, chamada armazemdehistorias para armazenar o conteúdo de cada "página" do GameBook
         paginainicial: {
-            texto: "Selecione uma opção ",
+            texto: " ",
             imagemFundo: "url()",
-            opcoes: [{texto: "JOGAR - 1923 • O MISTÉRIO DO PUB ", proximaPagina: "pagina0_0"},
+            opcoes: [{texto: "1923 • O MISTÉRIO DO PUB ", proximaPagina: "pagina0_0"},
                 {texto: "TUTORIAL", proximaPagina: "pagina_intro"}]
         },
 

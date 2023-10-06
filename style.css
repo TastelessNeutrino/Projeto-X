@@ -4,7 +4,7 @@ body {  /*Aqui é onde serão definindos os estilos para alguns dos elementos do
             background-color: #ffffff; /*Define qual será a cor das bordas que ficam ao redor da caixa que contém o texto,
             a imagem e as opções. Aqui, a cor escolhida foi cinza escuro, que é representada pelo código '#242222'*/
         
-            margin: 2px; /* Cria uma margem ao redor da caixa principal, deixando uma margem entre
+            margin: 00px; /* Cria uma margem ao redor da caixa principal, deixando uma margem entre
             a imagem do fundo e a borda da tela. O 'vw' (viewport width) é uma unidade de medida que representa a largura
             da janela de visualização. O valor de 1vw é igual a 1% da largura da janela de visualização.
             Ele tem a capacidade de ajustar o tamanho do elemento de acordo com o tamanho da tela,
