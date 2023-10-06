@@ -1,9 +1,9 @@
 // esta é a parte funcional, ou seja, o "script" em JavaScript, engraçado que até o coisinha de comentar já muda de "<-- -->" para "//"
     const armazemdehistorias= {// criando uma constante, chamada armazemdehistorias para armazenar o conteúdo de cada "página" do GameBook
         paginainicial: {
-            texto: "Escolha uma história para se aventurar",
+            texto: "Selecione uma opção ",
             imagemFundo: "url()",
-            opcoes: [{texto: "1923 • O MISTÉRIO DO PUB", proximaPagina: "pagina0_0"},
+            opcoes: [{texto: "JOGAR - 1923 • O MISTÉRIO DO PUB ", proximaPagina: "pagina0_0"},
                 {texto: "TUTORIAL", proximaPagina: "pagina_intro"}]
         },
 
@@ -662,7 +662,7 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
         pagina_intro: {
             texto: 'Um livro-jogo é uma história interativa onde você toma decisões que moldam a trama. Comece lendo a história e, quando apresentadas com escolhas, escolha o que seu personagem faria. Cada escolha leva a diferentes resultados e finais. Experimente várias vezes para explorar todas as possibilidades. É uma forma envolvente de entretenimento onde você é o protagonista. ',
             imagemFundo: "url()",
-            audioNarracao:"https://drive.google.com/file/d/19rBOPStJuIpg1bM7Gi84dPknBi1uWQ7R",
+            audioNarracao: "https://drive.google.com/uc?id=1OnhdKMk__qe6KjZ4tAkBo75Sz4Eie-aI",
             opcoes: [{texto: 'Jogar exemplo', proximaPagina: 'pagina_a00'},
             {texto: 'Sair do jogo', proximaPagina: 'paginainicial'}]
         },
@@ -1173,7 +1173,7 @@ function preCarregarImagem(srcImagem) {
 async function preCarregarLoteDeImagens(arraySrcImagens) {
   const promessas = arraySrcImagens.map(preCarregarImagem);
   await Promise.all(promessas);
-}//o 'promise' somado com o 'await' é um comando que serve para ordenação, ou seja quando todos as promessas forem cumpridas ele excutara tal função
+}//o 'promise' somado com o 'await' é um comando que serve para ordenação, ou seja quando todos as promessas forem cumpridas ele executará tal função
 
 // Aqui você pode pré-carregar imagens para as primeira páginas, para que elas estejam prontas quando o usuário começar a jogar
 const imagensParaPreCarregar = [
@@ -1194,10 +1194,10 @@ const imagensParaPreCarregar = [
 
 preCarregarLoteDeImagens(imagensParaPreCarregar).then(() => {
   // Todas as imagens estão pré-carregadas, você pode iniciar seu jogo ou mostrar a primeira página agora
-  mostrarPagina("paginainicial"); //nesse caso você capenas conseguirá abrir o jogo inicial quandotodo o lote de imagens iniciais estiver pré-carregado, devido ao await e promise
+  mostrarPagina("paginainicial"); //nesse caso você apenas conseguirá abrir o jogo inicial quando todos os lotes de imagens iniciais estiver pré-carregado, devido ao await e promise
 });
 
-// Esse 'batch' ou lote de imagens será pré-carregado enquanto o jogador progredir no jogo (ainda não utilizado)
+// Esse 'batch' ou lote de imagens será pré-carregado antes do jogador iniciar o jogo
 const proximasPaginasParaPreCarregar1 = [
   'https://drive.google.com/uc?id=1aWmxrlCXbhJJSuxqHKhRNBEGnS8jJtcp',
   'https://drive.google.com/uc?id=1bEXpAyViy9wvebFJ5MWa2q_oimM2Y-KL',
@@ -1243,7 +1243,7 @@ const proximasPaginasParaPreCarregar4 = [
 
 preCarregarLoteDeImagens(proximasPaginasParaPreCarregar1).then(() => {
   // As imagens para as próximas páginas estão pré-carregadas
- mostrarPagina("paginainicial"); // Você pode continuar a lógica do jogo ou mostrar essas páginas quando necessário
+ mostrarPagina("paginainicial"); // isso irá pre carregar as imagens para as próximas páginas e mostrar a página inicial quando elas estiverem prontas, as funç~pes abaixo servem de forma análoga
 });
 preCarregarLoteDeImagens(proximasPaginasParaPreCarregar2).then(() => {
   mostrarPagina("paginainicial")
@@ -1251,7 +1251,7 @@ preCarregarLoteDeImagens(proximasPaginasParaPreCarregar2).then(() => {
 });
 preCarregarLoteDeImagens(proximasPaginasParaPreCarregar3).then(() => {
   mostrarPagina("paginainicial")
-  // Você pode continuar a lógica do jogo ou mostrar essas páginas quando necessário
+  // Você pode continuar a lógica do jogo ou mostrar essas páginas quando necessário também
 });
 
 mostrarPagina(paginainicial)
