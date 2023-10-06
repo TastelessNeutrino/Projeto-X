@@ -1108,11 +1108,10 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
         }
     };
 
-        // a seguir, optei por não currificar as funções, para que estas fiquem bem descritivas "function"
-        // cada função, sujestivamente "function", implementará algum mecanismo no jogo
+        // a seguir, funções currificadas(uso de notação arrow)
+        // cada função implementará algum mecanismo no jogo
 
-        function mostrarPagina(pagina)
-{  // como diz o nome, esta função tem como argumento "(página)" serve para  exibir a página, ou seja,  atualiza a interface do jogo com o texto da página atual e opções disponíveis na página.
+        const mostrarPagina=(pagina)=>{  // como diz o nome, esta função tem como argumento "(página)" serve para  exibir a página, ou seja,  atualiza a interface do jogo com o texto da página atual e opções disponíveis na página.
     const ElementoTextoHistoria = document.getElementById("narrativa") // esta linha buscará o referencial "Id" identificado acima, para este caso, busca o elemento narrativa
     const ElementoOpcoes = document.getElementById("opcoes") // já esta linha, buscará o referencial "Id" também identificado acima, para este caso, busca o elemento opções
     const paginaAtualObj = armazemdehistorias[pagina] // aqui, se obtém a seção que representa a página atual do jogo
@@ -1130,7 +1129,7 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
     // é necessário limpar as opções anteriores quando se escolhe a próxima, para isso utiliza-se innerHTML
     ElementoOpcoes.innerHTML = "" // a princípio, tentei implementar o código  sem o conhecimento desta propriedade, mas, na interface acontecia algo inesperado com os botões - ficavam se acumulando indiscriminadamente
 
-    function criarOpcoes(opcoes) { // função para adicionar botões para as opções usando recursividade
+    const criarOpcoes=(opcoes)=> { // função para adicionar botões para as opções usando recursividade
         if (opcoes.length === 0) { // traduzindo, quando o tamanho (length que serve como um medidor) for igual a 0, ou seja, quando não houver,
             return                // ele deverá retornar (return) o processo a seguir para trazer novos botoes de opções
         }
@@ -1148,7 +1147,7 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
     }
 }
 
-function escolherOpcao(proximaPagina) { // esta função é responsável por exibir, "mostrar" a póxima página
+const escolherOpcao=(proximaPagina) =>{ // esta função é responsável por exibir, "mostrar" a póxima página
 
     if (armazemdehistorias[proximaPagina]) { // a condicional é haver uma próxima página da história a ser retornada pela opcao
         mostrarPagina(proximaPagina) // em caso afirmativo, ela retorna, "mostra" a próxima página
@@ -1160,7 +1159,7 @@ function escolherOpcao(proximaPagina) { // esta função é responsável por exi
     efeitoSonoro.play() // como o nome diz, executará o arquivo de áudio específicado
 }
 // Função que da pre-load nas imagens (necessita apenas carregar a url das imagens usadas anteriormente já que o html salva a imagem por url no cache, ou seja essa função não precisa interferir com outras partes do codigo nas quais a imagem possui indexações específicas )
-function preCarregarImagem(srcImagem) {
+const preCarregarImagem=(srcImagem)=> {
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.onload = () => resolve(img);
