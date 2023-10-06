@@ -664,28 +664,28 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
             imagemFundo: "url()",
             audioNarracao: "https://drive.google.com/uc?id=1OnhdKMk__qe6KjZ4tAkBo75Sz4Eie-aI",
             opcoes: [{texto: 'Jogar exemplo', proximaPagina: 'pagina_a00'},
-            {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+            {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         pagina_a00: {
             texto: 'Você acabou de acordar no chão de um lugar pouco iluminado, úmido e com um forte cheiro de corpos em decomposição. Sua cabeça e corpo doem muito, e você não se lembra de nada; parece que sua memória se perdeu.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'pagina_a01'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         pagina_a01: {
             texto: 'Você se levanta para olhar o local, mas está muito escuro para enxergar algo. Com o coração a mil, você começa a tatear as paredes sujas a procura de uma porta. Finalmente, após sujar suas mãos com aquela graxa vermelha de odor vomitativo, você encontra o que parece ser a chave de luz. Após apertar alguns botões, as luzes começam a piscar.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'pagina_a02'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         pagina_a02: {
             texto: 'Ao dar uma rápida olhada ao seu redor, você percebe que existem diversos corpos sem vida na sala, todos eles usando aventais, inclusive você. Também existem balcões, armários, macas e instrumentos médicos: você constata que isso deve ser uma sala hospitalar. Mas tudo está realmente muito bagunçado e sujo de sangue. Parece que houve uma explosão aqui.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'pagina_a03'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         pagina_a03: {
@@ -694,7 +694,7 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
             opcoes: [
                 {texto: 'Fingir que não acordei e me esconder em um armário. ', proximaPagina: 'paginaopcao_a04'},
                 {texto: 'Tentar sair. ', proximaPagina: 'paginaopcao_b00'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}
             ]
         },
 
@@ -702,21 +702,21 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
             texto: 'Você decide fingir que não acordou e se esconde em um armário. Alguns instantes depois, o alarme para e tudo fica em silêncio. Mas essa calmaria é interrompida por um som agudo e enlouquecedor. Algo estranho parece estar acontecendo com alguns desses cadáveres... ',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_a05'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_a05: {
             texto: 'Você, imóvel e observando pela frestal da porta do armário, observa que alguns deles estão voltando à vida, mas como uma espécie de zumbis... ',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_a06'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_a06: {
             texto: 'Seu coração começa a palpitar e seu rosto se enche de suor. Os mortos-vivos começam a comer uns aos outros. Em instantes, a sala se tornou um caos infernal.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_a07'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_a07: {
@@ -730,42 +730,42 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
             texto: ' Você entra em desespero e procura uma saída o mais rápido possível. Mas não existem portas convencionais nessas salas, apenas aberturas semelhantes a janelas que ficam a cerca de dois metros de altura.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_b01'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_b01: {
             texto: ' Você, então, consegue escalar a parede e sair da sala, até que não foi difícil fazer isso, você pensa. Do lado de fora, você se depara com um enorme corredor cheio de mais salas, onde cada corredor leva a outro: esse lugar é um labirinto.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_b02'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_b02: {
             texto: ' Sua adrenalina está a mil por hora, você não sente mais as dores no corpo. Ao correr à procura de uma saída, você olha algumas salas e percebe que todas elas têm as mesmas coisas da que você saiu.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_b03'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_b03: {
             texto: 'Algum tempo depois, o alarme parou, mas as luzes continuam acesas e piscando. Você, já cansado e sem aguentar mais correr, senta no corredor. Em instantes, sua visão começa a escurecer e você desmaia',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_b04'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_b04: {
             texto: 'Ao acordar, você está muito sonolento e amarrado a uma maca. Você vê a silhueta de pessoas que parecem ser médicos. Então, ainda desorientado, pede ajuda, mas, em seguida, desmaia novamente.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_b05'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_b05: {
             texto: 'Ao acordar, você está muito sonolento e amarrado a uma maca. Você vê a silhueta de pessoas que parecem ser médicos. Então, ainda desorientado, pede ajuda, mas, em seguida, desmaia novamente.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_b06'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_b06: {
@@ -773,21 +773,21 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
             imagemFundo: "url()",
             opcoes: [{texto: 'Verificar a cicatriz. ', proximaPagina: 'paginaopcao_c00'},
                 {texto: 'Continuo a procura da saída.', proximaPagina: 'paginaopcao_b07'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_b07: {
             texto: '  Você ignora esse acontecimento e continua a procurar a saída. ',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_b08'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_b08: {
             texto: 'Ao caminhar alguns metros, você sente sua coxa vibrando e sua cabeça começa a doer.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_b09'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_b09: {
@@ -801,28 +801,28 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
             texto: 'Então você decide olhar direito essa cicatriz... Ao tocar na área, você sente algo. Parece ser um chip ou algo do tipo. De repente, ele começa a vibrar.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_c01'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_c01: {
             texto: 'Desesperado, você rapidamente entra em uma sala, encontra um bisturi em meio aos instrumentos médicos e, mais rápido que a luz e sem pensar nas consequências, cirurgicamente abre um buraco na sua coxa e remove o chip. Isso foi simples, você pensa, parece que faço isso ha décadas...',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_c02'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_c02: {
             texto: 'No fim das contas, remover o chip salvou sua vida, pois, segundos após você retirá-lo, ele começou a liberar uma substancia azul com um cheiro horrível. Você fica em choque com aquilo, mas precisa estancar o sangue e suturar a abertura.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_c03'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_c03: {
             texto: 'Assim que você termina de dar o ultimo ponto, as luzes se apagam por alguns minutos e depois começam a piscar, logo após isso, sirenes são acionadas e você rapidamente sai da sala. Isso pareceu familiar...',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_c04'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_c04: {
@@ -831,7 +831,7 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
             opcoes: [
                 {texto: 'Entrar em uma sala para ver mais de perto.', proximaPagina: 'paginaopcao_c05'},
                 {texto: 'Se afastar das janelas e esperar.', proximaPagina: 'paginaopcao_d00'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}
             ]
         },
 
@@ -839,21 +839,21 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
             texto: ' Você entra em uma sala e percebe que os cadáveres estão voltando à vida, mas como zumbis... ',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_c06'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_c06: {
             texto: ' Arrependido com escolha e impossibilitado de sair da sala, pois os mortos-vivos estão impedindo a saída, você se esconde em um armário e fica imóvel observando tudo pela fresta da porta.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_c07'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_c07: {
             texto: ' Seu coração começa a palpitar e seu rosto se enche de suor. Os mortos-vivos começam a comer uns aos outros. Em instantes, a sala se torna um caos infernal.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_c08'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_c08: {
@@ -867,42 +867,42 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
             texto: ' Alguns segundos depois de se agachar no chao em uma tenativa fracassada de se esconder, você ouve sons vindo das salas, parece que os mortos estão se mechendo...',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_d01'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_d01: {
             texto: 'Você está com muito medo, mas decide dar uma espiada... Ao pular para ver através da janela, você fica apavorado ao ver que os cadáveres realmente voltaram a vida.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_d02'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_d02: {
             texto: ' O barulho do seu pulo aliado ao seu grito de dor por ter reaberto o corte da coxa atrai os mortos até a abertura da janela.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_d03'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_d03: {
             texto: ' Felizmente, eles não conseguem escalar, pois parecem ser bem fracos. Assustado e com o coração a mil, você sai correndo pelos corredores para fugir daquilo. Mas é um sacrifício inútil, já que, ao correr, seu barulho atrai mais zumbis para as janelas.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_d04'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_d04: {
             texto: '  Ao virar a bifurcação de um dos corredores, você é atingido por um golpe na cabeça e perde a consciência...',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_d05'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_d05: {
             texto: 'Ao acordar, você está amarrado em uma cadeira em uma sala sem corpos. À sua frente, existe uma mesa com um rádio em cima. ',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_d06'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_d06: {
@@ -911,7 +911,7 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
             opcoes: [
                 {texto: 'Pedir ajuda uma ultima vez.', proximaPagina: 'paginaopcao_d07'},
                 {texto: 'Desistir de pedir ajuda e ouvir.', proximaPagina: 'paginaopcao_e00'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}
             ]
         },
 
@@ -926,7 +926,7 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
             texto: 'Eu sei tudo sobre você e sobre esse lugar, diz a voz. Você não lembra de nada e está cheio de dúvidas, mas posso resolver esse problema para você... basta que aceite fazer o que eu mandar...',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_e01'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_e01: {
@@ -934,7 +934,7 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
             imagemFundo: "url()",
             opcoes: [{texto: 'Aceita. ', proximaPagina: 'paginaopcao_f00'},
                 {texto: 'Recusa.', proximaPagina: 'paginaopcao_e02'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_e02: {
@@ -948,21 +948,21 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
             texto: 'Ok, agora não tem volta, diz a voz.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_f01'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_f01: {
             texto: 'Você deverá escolher entre resgatar o Kina ou o pacote. caso seja bem-sucedido, como recompensa, receberá um fragmento do mapa para O "Além Corredor".',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_f02'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_f02: {
             texto: 'Antes que pergunte algo, você deve saber que a cláusula primeira do seu contrato de vida é não fazer perguntas.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_f03'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_f03: {
@@ -971,7 +971,7 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
             opcoes: [
                 {texto: 'Resgatar o Kira.', proximaPagina: 'paginaopcao_g00'},
                 {texto: 'Resgatar o pacote.', proximaPagina: 'paginaopcao_f04'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}
             ]
         },
 
@@ -979,56 +979,56 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
             texto: 'Você, então, decide resgatar o pacote. Logo após sua decisão, um cheiro estranho toma o ambiente e você adormece.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_f05'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_f05: {
             texto: 'Ao acordar, você está em uma sala que parece um quarto de uma base militar. Seus ferimentos foram tratados e suas roupas trocadas. Agora você tem um walkie-talkie, por onde a voz se comunica com você, uma mochila, suprimentos, kit de primeiros socorros, um fone de ouvido, um equipamento semelhante a um GPS e uma espada. A voz entra em contato e manda você seguir todas as instruções por ela dadas.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_f06'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_f06: {
             texto: 'Pois bem, diz a voz, sua missão será resgatar o pacote. Para tal, você deve seguir o ponto no GPS, é lá que está seu destino. Você, então, pega suas coisas e sai da sala.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_f07'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_f07: {
             texto: 'O ponto parece estar próximo... Caminhando por cerca de duas horas, você está chegando perto. Vai dar certo, você pensa. Porém, a poucos minutos do destino, as luzes começam a piscar, e as sirenes são acionadas: você sabe o que acontecerá depois.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_f08'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_f08: {
             texto: 'Nervoso, você corre o mais rápido possível para chegar até a sala, mas não dá tempo: o perturbador som agudo já começou. Você, então, coloca os fones de ouvido e segue.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_f09'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_f09: {
             texto: 'Ao chegar bem próximo da entrada da sala, a voz entra em contato: você está quase lá, sua missão é resgatar a maleta azul no armário 09. Ao que parece, "eles" já despertaram... ',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_f10'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_f10: {
             texto: 'Você se apressa e escala para a entrada da sala. A entrada desta sala parece ser mais alta que as das demais, e você tem um pouco de dificuldades para escalar. Ao entrar no recinto, você percebe que existem zumbis muito diferentes dos demais, eles são maiores, mais fortes e têm uma aparência tão perturbadora que não parecem ter sido pessoas antes... ',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_f11'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_f11: {
             texto: 'Você foi notado, eles te viram e estão atrás de você. Ao tenta sacar sua espada, percebe que ela não está lá. Parece que caiu quando você estava entrando na sala. Desesperado, você lança o dispositivo antizumbi contra aqueles monstros e reza...',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_f12'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_f12: {
@@ -1042,63 +1042,63 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
             texto: 'Você, então, decide resgatar Kina. Logo após sua decisão, um cheiro estranho toma o ambiente e você adormece.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_g01'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_g01: {
             texto: 'Ao acordar, você está em uma sala que parece um quarto de uma base militar. Seus ferimentos foram tratados e suas roupas trocadas. Agora você tem um walkie-talkie, por onde a voz se comunica com você, uma mochila, suprimentos, kit de primeiros socorros, um tampão de ouvido, um equipamento semelhante a um GPS, um dispositivo "antizumbi" e uma espada. A voz entra em contato e manda você seguir todas as instruções por ela dadas.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_g02'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_g02: {
             texto: 'Pois bem, diz a voz, sua missão será resgatar Kina. Para tal, siga o ponto no GPS: é lá que está seu destino. Você pega suas coisas e sai da sala.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_g03'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_g03: {
             texto: 'O ponto parece estar próximo. Caminhando por cerca de duas horas, você está chegando perto. Vai dar certo, você pensa. Porém, a poucos minutos do destino, as luzes começam a piscar, e as sirenes são acionadas: você sabe o que acontecerá depois...',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_g04'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_g04: {
             texto: 'Nervoso, você corre o mais rápido possível para chegar até a sala, mas não dá tempo: o perturbador som agudo já começou. Você coloca os fones de ouvido e segue.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_g05'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_g05: {
             texto: 'Chegando bem próximo da entrada da sala, a voz entra em contato: você está quase lá, sua missão é resgatar a moça de cabelos pretos. Ao que parece, "eles" já despertaram...',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_g06'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_g06: {
             texto: 'Você se apressa e escala para a entrada da sala. Já dentro, você fica impressionado ao ver como aquela mulher sabe partir um zumbi ao meio. Você entra na brincadeira e os dois começam a ver quem consegue arrancar mais cabeças... ',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_g07'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_g07: {
             texto: 'Quando finalmente o último zumbi é ceifado, ela te encurrala na parede e te dá um soco no estômago: isso é por você ter demorado tanto, ela diz, e sorri em seguida.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_g08'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_g08: {
             texto: 'Sem entender nada, você pergunta o que está acontecendo. Porém, antes que ela responda, a voz os interrompe e dá a ordem para vocês esperarem o "som sub 01" parar para retornarem à base.',
             imagemFundo: "url()",
             opcoes: [{texto: 'Continuar', proximaPagina: 'paginaopcao_g09'},
-                {texto: 'Sair de tutorial', proximaPagina: 'paginainicial'}]
+                {texto: 'Sair do tutorial', proximaPagina: 'paginainicial'}]
         },
 
         paginaopcao_g09: {
