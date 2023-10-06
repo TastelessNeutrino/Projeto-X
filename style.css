@@ -4,7 +4,7 @@ body {  /*Aqui é onde serão definindos os estilos para alguns dos elementos do
             background-color: #ffffff; /*Define qual será a cor das bordas que ficam ao redor da caixa que contém o texto,
             a imagem e as opções. Aqui, a cor escolhida foi cinza escuro, que é representada pelo código '#242222'*/
         
-            margin: 2px; /* Cria uma margem de 2.5vw ao redor da caixa principal, deixando uma margem entre
+            margin: 2px; /* Cria uma margem ao redor da caixa principal, deixando uma margem entre
             a imagem do fundo e a borda da tela. O 'vw' (viewport width) é uma unidade de medida que representa a largura
             da janela de visualização. O valor de 1vw é igual a 1% da largura da janela de visualização.
             Ele tem a capacidade de ajustar o tamanho do elemento de acordo com o tamanho da tela,
@@ -18,11 +18,11 @@ body {  /*Aqui é onde serão definindos os estilos para alguns dos elementos do
             padding: 1px;   /*Define uma quantidade de espaço padão entre a imagem e a borda da caixa, nesse caso, 0.1vw. */        
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.74);  /*  Cria uma sombra ao redor do texto para dar um pequeno destaque entre o texto e a caixa de texto. Essa sombra tem um deslocamento horizontal e vertical de 0.2vw, um raio de 0.4vw e é semitransparente (rgba(0, 0, 0, 0.74)). */        
             background-size: cover; /* Define o tamanho para a imagem de fundo, nesse caso, está configurado para que a imagem ocupe todo o espaço da tela (cover). */        
-            background-color: #0a0a0a;  /* Define qual será a cor do fundo da página quando nenhuma imagem está sendo exibida. Aqui, a cor escolhida foi preto, que é representada pelo código '#000000' */        
+            background-color: #000000;  /* Define qual será a cor do fundo da página quando nenhuma imagem está sendo exibida. Aqui, a cor escolhida foi preto, que é representada pelo código '#000000' */        
             background-repeat: no-repeat;  /* Faz com que a imagem de fundo não se repita. */        
             min-height: 100vh;  /* Faz com que a imagem ocupe toda a altura da tela (por isso o 100). O vh (Viewport Height) é muito semelhante ao vw, a diferença é que um define a alutura e o outro, a largura.  */        
             overflow: auto;  /* Faz com que seja possível fazer a rolagem da página para ver o restante do contéudo quando o mesmo ultrapassa o tamanho da tela. */        
-            border-radius: 2vw; /*  É ele quem deixa a bordados elementos arredondadas, dando um "tchan" no visual. */
+            border-radius: 0vw; /*  É ele quem deixa a bordados elementos arredondadas, dando um "tchan" no visual. */
         }
                 
         
@@ -35,13 +35,13 @@ body {  /*Aqui é onde serão definindos os estilos para alguns dos elementos do
             display: block; /* este sere para exibir os botões em uma nova linha, toma a linha inteira, ao invés de ser um ao lado do outro */
             margin: auto; /* centraliza horizontalmente */
             margin-bottom: 5px; /* define a margem inferior do elemento */      
-            font-size: 1.2vw; /* Define qual será o tamanho da fonte do texto dos botões. */
+            font-size: 17px; /* Define qual será o tamanho da fonte do texto dos botões. */
             border-radius: 17px; /* Novamente, Ele: o comando que deixa tudo mais bonito (arredonda a borda dos botões). */
         }
                 
         
         button:hover {
-            background-color: rgb(146, 0, 0); /* Faz com que a cor dos botões mude para vermelho quando o mouse é passado por cima dos mesmos. */
+            background-color: #800000; /* Faz com que a cor dos botões mude para vermelho quando o mouse é passado por cima dos mesmos. */
         }
                 
         
