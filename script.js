@@ -1145,8 +1145,31 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
     if (paginaAtualObj.opcoes.length > 0) { // este é o momento exato em que o encerramento da recursividade é definido, quando o tamanho "length" (quantidade) de opcoes atuais seja igual a zero,
         criarOpcoes(paginaAtualObj.opcoes) // portanto, ela será executada enquanto o número de opções for maior que zero (>0)
     }
+        efeitoDigitacao(paginaAtualObj.texto) // chamando a função que da o efeito de digitalização ao texto.
 }
 
+    // Definido a função que da o efeito de digitação no texto:
+    const efeitoDigitacao = (texto) => { // Define a função dando a ela um argumento 'texto'.
+        // Verifica se o elemento narrativa atual existe.
+        const elementoNarrativaAtual = document.getElementById('narrativa'); // Procura o elemento com id 'narrativa' e o armazena em 'elementoNarrativaAtual'
+        if (elementoNarrativaAtual) { // Verifica se ele existe.
+            elementoNarrativaAtual.remove(); // Se ele existe, o remove o da pagina, para evitar que os textos das paginas se mesclem, caso o jogador avance muito rapido.
+        }
+    
+        // Criando um novo elemento paragrafo:
+        const jogoContainer = document.getElementById('jogo-container'); // Procura o elemento com id 'jogo-conatiner' e o armazena em 'jogoContainer'.
+        const novoElemento = document.createElement('p'); // Cria um novo paragrafo e o armazena em 'novoElemento'.
+        novoElemento.id = 'narrativa'; // Define o qual o ID do novoElemento, que sera a narrativa.
+    
+        // Adiciona o novo paragrafo antes da div de opções. Isso faz com que as opções sempre apareçam abaixo do texto. 
+        const opcoesDiv = document.getElementById('opcoes');
+        if (opcoesDiv) { 
+            jogoContainer.insertBefore(novoElemento, opcoesDiv);
+        }
+
+        
+        // Inicializa o texto da narrativa como vazio, para que as letras sejam adicionadas com o efeito.
+        novoElemento.innerHTML = '';
 const escolherOpcao=(proximaPagina) =>{ // esta função é responsável por exibir, "mostrar" a póxima página
 
     if (armazemdehistorias[proximaPagina]) { // a condicional é haver uma próxima página da história a ser retornada pela opcao
@@ -1253,4 +1276,4 @@ preCarregarLoteDeImagens(proximasPaginasParaPreCarregar3).then(() => {
   // Você pode continuar a lógica do jogo ou mostrar essas páginas quando necessário também
 });
 
-mostrarPagina(paginainicial)
+mostrarPagina("paginainicial")
