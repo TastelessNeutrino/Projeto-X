@@ -1176,6 +1176,7 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
                 },75*indiceletra)
             },null)
     }
+}
 
 const escolherOpcao=(proximaPagina) =>{ // esta função é responsável por exibir, "mostrar" a póxima página
 
