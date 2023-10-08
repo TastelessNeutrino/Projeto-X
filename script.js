@@ -1167,7 +1167,14 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
         }
         // Inicializa o texto da narrativa como vazio, para que as letras sejam adicionadas com o efeito.
         novoElemento.innerHTML = '';
-// resto aqui
+        // A seguir, convertimento de texto por meio do split("") "casa"-->["c","a","s", "a"]
+        const textoParaArray= texto.split("")
+        if(textoParaArray){//a seguir, por meio do reduce, haverá a adição na tela letra a letra, para tal, usou-se também a função temporizadora do js setTimeout. note que novo elemento está dentro dela.
+            textoParaArray.reduce((acumuador,letra,indiceletra)=>{
+                setTimeout(()=>{
+                    novoElemento.innerHTML+=letra;
+                },75*indiceletra)
+            },null)
     }
 
 const escolherOpcao=(proximaPagina) =>{ // esta função é responsável por exibir, "mostrar" a póxima página
