@@ -1155,7 +1155,6 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
         if (elementoNarrativaAtual) { // Verifica se ele existe.
             elementoNarrativaAtual.remove(); // Se ele existe, o remove o da pagina, para evitar que os textos das paginas se mesclem, caso o jogador avance muito rapido.
         }
-    
         // Criando um novo elemento paragrafo:
         const jogoContainer = document.getElementById('jogo-container'); // Procura o elemento com id 'jogo-conatiner' e o armazena em 'jogoContainer'.
         const novoElemento = document.createElement('p'); // Cria um novo paragrafo e o armazena em 'novoElemento'.
@@ -1166,10 +1165,11 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
         if (opcoesDiv) { 
             jogoContainer.insertBefore(novoElemento, opcoesDiv);
         }
-
-        
         // Inicializa o texto da narrativa como vazio, para que as letras sejam adicionadas com o efeito.
         novoElemento.innerHTML = '';
+// resto aqui
+    }
+
 const escolherOpcao=(proximaPagina) =>{ // esta função é responsável por exibir, "mostrar" a póxima página
 
     if (armazemdehistorias[proximaPagina]) { // a condicional é haver uma próxima página da história a ser retornada pela opcao
