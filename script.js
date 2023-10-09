@@ -447,7 +447,7 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
             audioNarracao: "https://drive.google.com/uc?id=1J6mqRJXfMKb4C5RmjBh9svh7l67F-aYH",
             opcoes:[
                 {
-                    texto: "M A T R I X",
+                    texto: "MATRIX • 1923",
                     proximaPagina: "paginabifurcacoesmatrix"
                 },
                 {
