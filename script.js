@@ -447,6 +447,10 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
             audioNarracao: "https://drive.google.com/uc?id=1J6mqRJXfMKb4C5RmjBh9svh7l67F-aYH",
             opcoes:[
                 {
+                    texto: "M A T R I X",
+                    proximaPagina: "paginabifurcacoesmatrix"
+                },
+                {
                     texto: "NOVA JORNADA",
                     proximaPagina: "pagina0_0"
                 },
@@ -455,6 +459,16 @@ pagina0_0: // esta parte definirá o conteúdo presente em cada etapa "página" 
                     proximaPagina: "paginainicial"
                 }
             ]
+        },
+        paginabifurcacoesmatrix: {
+            imagemFundo: "url('https://drive.google.com/uc?id=1aiFO2jPusrhDzf0-DnhZHd_HOt1Qn2RI')",
+            audioNarracao: "https://drive.google.com/uc?id=1vuLgF3ts0ad6LBeFSc_g9I7TAvDeQ_aO",
+            opcoes: [
+                {   
+                    texto: "VOLTAR",
+                    proximaPagina: "paginalivreto"
+                }
+            ]   
         },
         paginaespancar: {
             texto: "Após a escalada das hostilidades, o caos se instala no pub. Adam, em sua tentativa de obter informações do invasor, se vê preso na confusão e acaba detido pelas autoridades locais.",
